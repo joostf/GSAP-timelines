@@ -5,17 +5,17 @@
   "scripts": {
     "webpack": "webpack",
     "start": "node app",
-
     "build": "webpack -- --mode development",
-
     "dev": "npm-run-all --parallel dev:build dev:start",
     "dev:build": "npm run webpack -- --mode development --watch",
     "dev:start": "nodemon app"
-
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.3",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.4",
