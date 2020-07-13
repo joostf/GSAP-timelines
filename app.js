@@ -1,8 +1,11 @@
+require('dotenv').config()
+
 const express = require('express')
 const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
-const bodyParser = require("body-parser")
-const login = require('./routes/login')
+const loginRouter = require('./routes/login')
+const adminRouter = require('./routes/admin')
+
 const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3000
@@ -16,7 +19,8 @@ app.use(express.static(path.join(__dirname, 'public')))
     .use(express.urlencoded())  
     .use('/', indexRouter)
     .use('/api', apiRouter)
-    .use('/login', login)
+    .use('/login', loginRouter)
+    .use('/admin', adminRouter)
 
     
 app.listen(PORT, function() {
