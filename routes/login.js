@@ -14,14 +14,20 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   console.log(req.body)
     const userData = await login(req.body)
-    const password = req.body.password === userData.password ? true : false
-    if(password === true) {
-        console.log('correct')
-        res.redirect(`/admin/${userData.username}`)
+    if(userData) {
+      const password = req.body.password === userData.password ? true : false
+      if(password === true) {
+          console.log('correct')
+          res.redirect(`/admin/${userData.username}`)
+      } else {
+          console.log('incorrect')
+          res.redirect('/login')
+      }
     } else {
-        console.log('incorrect')
-        res.redirect('/login')
+      console.log('incorrect')
+      res.redirect('/login')
     }
+    
 })
 
 async function login(data) {
