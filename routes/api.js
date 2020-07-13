@@ -1,4 +1,5 @@
 const { v4: uuidv4 } = require('uuid');
+const nodemailer = require("nodemailer");
 const express = require('express');
 const router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
@@ -17,6 +18,7 @@ router.post('/newuser', async function(req, res) {
     }
     else {
       await createNewUserEntry(id, email)
+      sendMail(id, email)
       res.redirect('/admin')
     }
     
@@ -47,6 +49,31 @@ router.post('/newuser', async function(req, res) {
       catch(e) {
         console.error(e)
       }
+    }
+
+    function sendMail(id, email) {
+      let transport = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.EMAIL_USERNAME,
+            pass: process.env.EMAIL_PASSWORD
+        }
+    });
+
+    const message = {
+        from: 'info@minor-webdev.com', // Sender address
+        to: email,         // List of recipients (kunnen er meer zijn)
+        subject: 'Intakeformulier | HvA minor webdev', // Subject line
+        html: `<h1>Intakeformulier</h1><p>${id}</p>` // Bericht
+    };
+
+    transport.sendMail(message, function(err, info) {
+        if (err) {
+          console.log(err)
+        } else {
+          console.log(info);
+        }
+    });
     }
 
   });
