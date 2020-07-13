@@ -10,6 +10,8 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, 'public')))
+    .use(express.json())
+    .use(express.urlencoded())  
     .use('/', indexRouter)
     .use('/mail', mailRouter)
     .use('/api', apiRouter);
@@ -17,4 +19,3 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.listen(PORT, function() {
     console.log(`Application started on port: ${PORT}`);
 });
-
