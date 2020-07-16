@@ -7,17 +7,7 @@
     <div class="context">
       <h1>Admin Dashboard</h1>
     </div>
-
-    <form action="/api/newuser" method="POST" id="new-user-form">
-      <fieldset id="new-users-fieldset">
-        <legend>vul hier de emailadressen van alle studenten in die de intake moeten ontvangen:</legend>
-        <label for="emails[0]" class="entry">emailadres student 1:
-          <input type="email" id="emails[0]" name="emails[0]">
-        </label>
-      </fieldset>
-
-      <input type="submit" value="verstuur link">
-    </form>
+    <%- include("partials/form-add-emails.ejs") %>
 
   </main>
   <script src="/js/new-user-form.js"></script>

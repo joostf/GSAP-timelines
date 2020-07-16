@@ -7,11 +7,6 @@ body {
   font-family: "Exo", sans-serif;
 }
 
-form fieldset {
-  display: flex;
-  flex-direction: column;
-}
-
 .context {
   width: 100%;
   position: absolute;
