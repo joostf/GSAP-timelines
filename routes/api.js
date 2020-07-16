@@ -7,20 +7,22 @@ const uri = process.env.MONGO_URI
 const mongoDbClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 router.post('/newuser', async function(req, res) {
-    const email = req.body.email    
-    const id = uuidv4()
-    // check for mailaddress in database. if it already exists, redirect
-    const emailAlreadyUsed = await checkIfEmailIsUsed(email)
-    console.log(emailAlreadyUsed)
+  console.log(req.body);
+  
+    // const email = req.body.email    
+    // const id = uuidv4()
+    // // check for mailaddress in database. if it already exists, redirect
+    // const emailAlreadyUsed = await checkIfEmailIsUsed(email)
+    // console.log(emailAlreadyUsed)
     
-    if (emailAlreadyUsed) {
-      res.render('error', { message: 'emailadres is al gebruikt' })
-    }
-    else {
-      await createNewUserEntry(id, email)
-      sendMail(id, email)
-      res.redirect('/admin')
-    }
+    // if (emailAlreadyUsed) {
+    //   res.render('error', { message: 'emailadres is al gebruikt' })
+    // }
+    // else {
+    //   await createNewUserEntry(id, email)
+    //   sendMail(id, email)
+    //   res.redirect('/admin')
+    // }
     
     // else push new database entry with id and email.
 

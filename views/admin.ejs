@@ -8,13 +8,19 @@
       <h1>Admin Dashboard</h1>
     </div>
 
-    <form action="/api/newuser" method="POST">
-      <label for="email">emailadres student:</label>
-      <input type="email" id="email" name="email">
+    <form action="/api/newuser" method="POST" id="new-user-form">
+      <fieldset id="new-users-fieldset">
+        <legend>vul hier de emailadressen van alle studenten in die de intake moeten ontvangen:</legend>
+        <label for="email1" class="entry">emailadres student 1:
+          <input type="email" id="email1" name="email1">
+          </label>
+      </fieldset>
+      
       <input type="submit" value="verstuur link">
     </form>
 
   </main>
+  <script src="/js/new-user-form.js"></script>
 </body>
 
 </html>
