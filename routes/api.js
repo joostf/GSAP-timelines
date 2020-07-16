@@ -8,6 +8,7 @@ const mongoDbClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTo
 
 router.post('/newuser', async function(req, res) {
   console.log(req.body);
+  res.redirect('/admin')
   
     // const email = req.body.email    
     // const id = uuidv4()
