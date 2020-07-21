@@ -5,6 +5,7 @@ const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
 const adminRouter = require('./routes/admin')
 const loginRouter = require('./routes/login')
+const mailRouter = require('./routes/mail')
 const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3000
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')))
     .use('/api', apiRouter)
     .use('/login', loginRouter)
     .use('/admin', adminRouter)
+    .use('/mail', mailRouter)
     
 app.listen(PORT, function() {
     console.log(`Application started on port: ${PORT}`);
