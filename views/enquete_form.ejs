@@ -6,9 +6,12 @@
   <main class="index enquete">
     <div class="context">
       <h1>Minor web-dev</h1>
-      <a href="/enquete/form/<%- id %>">Start de enquete</a>
+        <form action="/enquete/form" method="POST">
+            <input name="id" type="text" class="hidden" value="<%- id %>">
+            <button type="submit">Versturen</button>
+        </form>
     </div>
-
+    
     <div class="splashscreen">
       <ul class="minor-logo">
         <li></li>

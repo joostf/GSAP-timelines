@@ -1,4 +1,5 @@
 require('dotenv').config()
+const bodyParser = require('body-parser')
 
 const express = require('express')
 const indexRouter = require('./routes/index')
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')))
     .use('/login', loginRouter)
     .use('/admin', adminRouter)
     .use('/enquete/form', enqueteRouter)
+    .use(bodyParser.urlencoded({extended: true}))
     .set('views', path.join(__dirname, 'views'))
     .set('view engine', 'ejs')
     //.use('/mail', mailRouter)
