@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
     });
 
     const message = {
-        from: 'info@minor-webdev.com', // Sender address
+        from: 'minorwebdev@gmail.com', // Sender address
         to: 'kylebot07@gmail.com',         // List of recipients (kunnen er meer zijn)
         subject: 'Intakeformulier | HvA minor webdev', // Subject line
         html: `<h1>Intakeformulier</h1><p>?code?</p>` // Bericht
