@@ -1,0 +1,31 @@
+.splashscreen {
+    pointer-events: none;
+}
+
+.index .context {
+    top: 45vh;
+}
+
+.index .context {
+    display: flex;
+    flex-direction: column;
+}
+
+.index .context a {
+    padding: 8px 13px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid #4e54c8;
+    color: #4e54c8;
+    background-color: #fff;
+    transition: all .3s;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.index .context a:hover, .index .context a:active {
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: #4e54c8;
+}

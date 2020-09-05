@@ -2,7 +2,11 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/:id', function(req, res) {
-    res.render('index', { title: 'Resultaten', id: req.params.id })
+    const id = req.params.id
+    res.render('enquete_form', {
+        title: 'Minor web dev enquete',
+        id: id
+    })
 })
 
 module.exports = router
