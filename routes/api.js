@@ -26,7 +26,7 @@ router.get('/users', async function(req, res) {
 
 });
 
-router.post('/newuser', async function(req, res) {
+router.post('/newusers', async function(req, res) {
   const emails = req.body.emails  
 
   client.connect(function(err) {
@@ -34,7 +34,7 @@ router.post('/newuser', async function(req, res) {
     console.log('connected succesfully')
         
     const db = client.db(dbName)
-      getAllUsers(db, function() {
+      getAllUsers(db, function(docs) {
         client.close()
       })
   })
