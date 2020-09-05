@@ -11,48 +11,59 @@ const url = process.env.MONGO_URI
 const dbName = 'users'
 
 router.get('/users', async function(req, res) {
+  if (req.session.loggedin) {
+    MongoClient.connect(url, function(err, client) {
+      assert.equal(null, err)
+      console.log('connected succesfully')
+  
+      const db = client.db(dbName)
+      db.collection('user').find({}).toArray(function(err, docs) {
+        assert.equal(err, null);
+        console.log("Found the following records")
+        console.log(docs) 
+        res.json(docs)
+      });
+      client.close()
+    })
+} else {
+    res.redirect('/login')
+}
 
-  MongoClient.connect(url, function(err, client) {
-    assert.equal(null, err)
-    console.log('connected succesfully')
-
-    const db = client.db(dbName)
-    db.collection('user').find({}).toArray(function(err, docs) {
-      assert.equal(err, null);
-      console.log("Found the following records")
-      console.log(docs) 
-      res.json(docs)
-    });
-    client.close()
-  })
 });
 
 router.post('/newuser', async function(req, res) {
 
-  const emails = req.body.emails
-  const userData = []
-
-  for (email of emails) {
-    if (email.length > 3) {
-      const newDocument = {
-        userid: uuidv4(),
-        email: email
-      }
-      userData.push(newDocument)
-    }   
-  }
-
-  MongoClient.connect(url, function(err, client) {
-    assert.equal(null, err);
-    const db = client.db(dbName)
-    db.collection('user').insertMany(userData).then(function(result) {
-      console.log(result)      
-      mail.sendEmail(userData)
+  if (req.session.loggedin) {
+    
+    const emails = req.body.emails
+    const userData = []
+  
+    for (email of emails) {
+      if (email.length > 3) {
+        const newDocument = {
+          userid: uuidv4(),
+          email: email
+        }
+        userData.push(newDocument)
+      }   
+    }
+  
+    MongoClient.connect(url, function(err, client) {
+      assert.equal(null, err);
+      const db = client.db(dbName)
+      db.collection('user').insertMany(userData).then(function(result) {
+        console.log(result)      
+        mail.sendEmail(userData)
+      })
+      client.close();
     })
-    client.close();
-  })
 
-  res.redirect('/admin')
+    res.redirect('/admin')
+
+  } else {
+      res.redirect('/login')
+  }
+  
 });
 
 module.exports = router;
