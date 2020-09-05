@@ -3,50 +3,6 @@ let css = document.getElementById('css')
 let js = document.getElementById('js')
 let code = document.getElementById("code").contentWindow.document;
 
-    html.value= `
-<main class="challenge-main">
-    <div class="context">
-        <h1>Coding Challenge</h1>
-    </div>
-    <div class="splashscreen">
-        <ul class="minor-logo">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-</main>`
-
-  css.value= `
-  body {
-    font-family: "Exo", sans-serif;
-    margin: 0;
-  }
-
-  .splashscreen {
-    background: #4e54c8;
-    width: 100%;
-    height: 100vh;
-  }
-
-  .context {
-    width: 100%;
-    position: absolute;
-    top: 20vh;
-  }
-  .context h1 {
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-  }
-  `
 function compile() {
     window.onload = function() {
         code.open();
@@ -83,7 +39,51 @@ function compile() {
   
   compile();
 
-
+  html.value= `
+  <main class="challenge-main">
+      <div class="context">
+          <h1>Coding Challenge #1</h1>
+          <p>Maak de achtergrond zwart</p>
+      </div>
+      <div class="splashscreen">
+          <ul class="minor-logo">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+      </div>
+  </main>`
+  
+    css.value= `
+    body {
+      font-family: "Exo", sans-serif;
+      margin: 0;
+    }
+  
+    .splashscreen {
+      background: #4e54c8;
+      width: 100%;
+      height: 100vh;
+    }
+  
+    .context {
+      width: 100%;
+      position: absolute;
+      top: 20vh;
+    }
+    .context h1 {
+      text-align: center;
+      color: #fff;
+      font-size: 50px;
+    }
+    `
   let minorLogo = `
   @import url(https://fonts.googleapis.com/css?family=Exo:400,700);* {
     margin: 0px;
