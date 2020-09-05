@@ -1,10 +1,14 @@
-const express = require('express');
-const router = express.Router();
 const nodemailer = require("nodemailer");
 const path = require('path')
 require('dotenv').config()
 
-router.get('/', function(req, res, next) {
+function sendEmail(users) {
+    users.map(user => (
+        mailEmail(user.email, user.id)
+    ))
+};
+
+function mailEmail(email, id) {
     let transport = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -17,7 +21,7 @@ router.get('/', function(req, res, next) {
     const imagePathRight = path.join(__dirname, '/../public/images/logo_purple_right.png')
     const message = { 
         from: 'info@minor-webdev.com', // Sender address
-        to: 'gioggmspam@gmail.com',         // List of recipients (kunnen er meer zijn)
+        to: email,         // List of recipients (kunnen er meer zijn)
         subject: 'Intakeformulier | HvA minor webdev', // Subject line
         html: `<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" style="font-family: Arial, Helvetica, sans-serif;">
         <tr>
@@ -63,7 +67,7 @@ router.get('/', function(req, res, next) {
                                                     <table align="center" cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td class="button" bgcolor="#4e54c8" style="padding-top:10px;padding-bottom:10px;border-radius: 8px;">
-                                                                <a  href="http://localhost:3000/" target="_blank" style="text-decoration: none;color:#fff;padding-left:15px;padding-right:15px;font-weight: bold;font-size:16px;">
+                                                                <a  href="http://localhost:3000/${id}" target="_blank" style="text-decoration: none;color:#fff;padding-left:15px;padding-right:15px;font-weight: bold;font-size:16px;">
                                                                     Start de enquete             
                                                                 </a>
                                                             </td>
@@ -144,8 +148,6 @@ router.get('/', function(req, res, next) {
           console.log(info);
         }
     });
+}
 
-    res.redirect('/')
-  });
-
-module.exports = router;
+module.exports = {sendEmail}
