@@ -4,11 +4,22 @@ const express = require('express')
 const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
 const adminRouter = require('./routes/admin')
-const mailRouter = require('./routes/mail')
 const loginRouter = require('./routes/login')
+// const mailRouter = require('./routes/mail')
 const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3000
+
+// const mail = require('./routes/mail')
+
+// const users = [{
+//     email: 'gioggmspam@gmail.com',
+//     id: 1,
+// }, {
+//     email: 'sinryaqua2000@gmail.com',
+//     id: 2,
+// }];
+// mail.sendEmail(users)
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
@@ -21,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')))
     .use('/api', apiRouter)
     .use('/login', loginRouter)
     .use('/admin', adminRouter)
-    .use('/mail', mailRouter)
+    //.use('/mail', mailRouter)
     
 app.listen(PORT, function() {
     console.log(`Application started on port: ${PORT}`);
