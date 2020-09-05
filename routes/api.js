@@ -23,7 +23,6 @@ router.get('/users', async function(req, res) {
         client.close()
       })
   })
-
 });
 
 router.post('/newusers', async function(req, res) {
