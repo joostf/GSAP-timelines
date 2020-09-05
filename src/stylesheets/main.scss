@@ -7,6 +7,8 @@
 
 body {
   font-family: 'Exo', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .context {
@@ -29,7 +31,7 @@ body {
 }
 
 .minor-logo {
-    z-index: 10;
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
@@ -127,6 +129,47 @@ body {
       animation-duration: 11s;
     }
   }
+}
+
+.challenge-main {
+  .context{
+  top: 20vh;
+  }
+}
+
+.code-container {
+  width: 100%;
+  position: absolute;
+  top: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    z-index: 1000;
+    margin: auto;
+    width: 25%;
+
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
+  }
+  textarea {
+    display: inline-block;
+    padding: 1em;
+    width: 100%;
+    height: 500px;
+    outline: none;
+    font-family: Courier, sans-serif;
+    font-size: 14px;
+  }
+}
+
+#code {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 900;
 }
 
 @keyframes animate {

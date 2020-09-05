@@ -5,6 +5,7 @@ const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
 const adminRouter = require('./routes/admin')
 const loginRouter = require('./routes/login')
+const enqueteRouter = require('./routes/enquete')
 // const mailRouter = require('./routes/mail')
 const app = express()
 const path = require('path')
@@ -24,13 +25,14 @@ const PORT = process.env.PORT || 3000
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static('public'))
     .use(express.json())
 
     .use(express.urlencoded())  
     .use('/', indexRouter)
     .use('/api', apiRouter)
     .use('/login', loginRouter)
+    .use('/enquete', enqueteRouter)
     .use('/admin', adminRouter)
     //.use('/mail', mailRouter)
     
