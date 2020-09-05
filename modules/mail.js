@@ -4,7 +4,7 @@ require('dotenv').config()
 
 function sendEmail(users) {
     users.map(user => (
-        mailEmail(user.email, user.id)
+        mailEmail(user.email, user.userid)
     ))
 };
 

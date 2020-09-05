@@ -12,18 +12,6 @@ const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3000
 
-// const mail = require('./routes/mail')
-
-// const users = [{
-//     email: 'gioggmspam@gmail.com',
-//     id: 1,
-// }, {
-//     email: 'sinryaqua2000@gmail.com',
-//     id: 2,
-// }];
-// mail.sendEmail(users)
-
-
 app.use(express.static(path.join(__dirname, 'public')))
     .use(express.json())
     .use(express.urlencoded())  
