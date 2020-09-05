@@ -4,7 +4,7 @@ require('dotenv').config()
 
 function sendEmail(users) {
     users.map(user => (
-        mailEmail(user.email, user.id)
+        mailEmail(user.email, user.userid)
     ))
 };
 
@@ -67,7 +67,7 @@ function mailEmail(email, id) {
                                                     <table align="center" cellspacing="0" cellpadding="0">
                                                         <tr>
                                                             <td class="button" bgcolor="#4e54c8" style="padding-top:10px;padding-bottom:10px;border-radius: 8px;">
-                                                                <a  href="http://localhost:3000/${id}" target="_blank" style="text-decoration: none;color:#fff;padding-left:15px;padding-right:15px;font-weight: bold;font-size:16px;">
+                                                                <a  href="http://localhost:3000/?id=${id}" target="_blank" style="text-decoration: none;color:#fff;padding-left:15px;padding-right:15px;font-weight: bold;font-size:16px;">
                                                                     Start de enquete             
                                                                 </a>
                                                             </td>
