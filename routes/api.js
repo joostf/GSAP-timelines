@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require('uuid');
 const nodemailer = require("nodemailer");
+const mail = require('../modules/mail')
 
 const express = require('express');
 const router = express.Router();
@@ -27,9 +28,10 @@ router.get('/users', async function(req, res) {
 });
 
 router.post('/newuser', async function(req, res) {
+
   const emails = req.body.emails
   const userData = []
-  
+
   for (email of emails) {
     if (email.length > 3) {
       const newDocument = {
@@ -45,6 +47,7 @@ router.post('/newuser', async function(req, res) {
     const db = client.db(dbName)
     db.collection('user').insertMany(userData).then(function(result) {
       console.log(result)      
+      mail.sendEmail(userData)
     })
     client.close();
   })
