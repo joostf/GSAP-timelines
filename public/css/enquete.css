@@ -1,14 +1,21 @@
 .splashscreen {
     pointer-events: none;
-}
-
-.index .context {
-    top: 45vh;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: -1;
 }
 
 .index .context {
     display: flex;
     flex-direction: column;
+    position: unset;
+}
+
+.index .context h1 {
+    margin-top: 45vh;
 }
 
 .index .context a {
@@ -28,4 +35,16 @@
     color: #fff;
     border: 2px solid #fff;
     background-color: #4e54c8;
+}
+
+.index.enquete .context h1 {
+    margin-top: 5vh;
+}
+
+.index.enquete .context {
+    top: 5vh;
+}
+
+form .hidden {
+    display: none;
 }
