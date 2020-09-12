@@ -4,7 +4,7 @@
 
 <body>
   <main class="challenge-main">
-    <form>
+    <form action="/enquete/challenge" method="POST">
       <fieldset class="context-challenge">
         <h1>Coding challenge #1</h1>
         <p>Het doel van deze challenge is om je uit te dagen om het voorbeeld na te maken. 
@@ -33,6 +33,23 @@
         <button class="previous">Vorige</button>
         <button class="verstuur" type="submit">Verstuur</button>
       </fieldset>
+
+      <div class="code-container">
+        <input name="id" type="hidden" value="<%- id %>">
+        <div>
+          <h2>HTML</h2>
+          <textarea name="html" id="html">
+          </textarea>
+        </div>
+        <div>
+          <h2>CSS</h2>
+          <textarea name="css" id="css"></textarea>
+        </div>
+        <div>
+          <h2>JavaScript</h2>
+          <textarea name="js" id="js"></textarea>
+        </div>
+      </div>
     </form>
 
     <section class="splashscreen">
@@ -49,39 +66,6 @@
         <li></li>
       </ul>
     </section>
-
-    <div class="code-container">
-      <div>
-        <h2>HTML</h2>
-        <textarea id="html">
-            </textarea>
-      </div>
-      <div>
-        <h2>CSS</h2>
-        <textarea id="css"></textarea>
-      </div>
-      <div>
-        <h2>JavaScript</h2>
-        <textarea id="js"></textarea>
-      </div>
-    </div>
-    <form class="code-container" action="/enquete/challenge" method="POST">
-      <input name="id" type="text" class="hidden" value="<%- id %>">
-      <div>
-        <h2>HTML</h2>
-        <textarea name="html" id="html">
-        </textarea>
-      </div>
-      <div>
-        <h2>CSS</h2>
-        <textarea name="css" id="css"></textarea>
-      </div>
-      <div>
-        <h2>JavaScript</h2>
-        <textarea name="js" id="js"></textarea>
-      </div>
-      <button type="submit">Send</button>
-    </form>
 
     <section class="output-container">
       <div>
