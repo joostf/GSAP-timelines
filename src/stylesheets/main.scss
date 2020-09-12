@@ -160,10 +160,11 @@ h2 {
     }
   }
   textarea {
+    resize: none;
     display: inline-block;
     padding: 1em;
     width: 100%;
-    height: 400px;
+    height: 30vh;
     outline: none;
     font-family: Courier, sans-serif;
     font-size: 14px;
@@ -195,10 +196,17 @@ h2 {
     height: 30vh;
   }
 }
-
+.hide {
+  display: none;
+}
+.display {
+  display:unset;
+}
 .context-challenge {
   margin-left: 4vw;  
   margin-top: 2.5vw;  
+  border: none;
+
   h1 {
     color: #fff;
     font-size: 50px;
@@ -225,6 +233,14 @@ h2 {
       border: 2px solid #fff;
       background-color: #4e54c8;
     }
+  }
+}
+
+.verstuur {
+  border-color: green !important;
+  // color: #fff !important;
+  &:hover {
+    // border-color: #fff !important;
   }
 }
 
