@@ -20,6 +20,10 @@ body {
   font-size: 50px;
 }
 
+h2 {
+  color: #fff;
+}
+
 .splashscreen {
   background: #4e54c8;
   width: 100%;
@@ -164,9 +168,59 @@ body {
 }
 
 #code {
-  width: 30vw;
+  width: 40vw;
   height: 30vh;
   z-index: 900;
+}
+
+.output-container {
+  bottom: 45vh;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.output-container div:first-of-type {
+  margin-left: 4vw;
+}
+.output-container div:last-of-type {
+  margin-right: 3vw;
+}
+.output-container img {
+  width: 40vw;
+  height: 30vh;
+}
+
+.context-challenge {
+  margin-left: 4vw;
+  margin-top: 2.5vw;
+}
+.context-challenge h1 {
+  color: #fff;
+  font-size: 50px;
+}
+.context-challenge p {
+  color: #fff;
+  max-width: 42%;
+}
+.context-challenge button {
+  padding: 8px 13px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid #4e54c8;
+  color: #4e54c8;
+  background-color: #fff;
+  transition: all 0.3s;
+  margin: 0 auto;
+  font-size: 18px;
+  margin-top: 30px;
+}
+.context-challenge button:hover {
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #4e54c8;
 }
 
 @-webkit-keyframes animate {
