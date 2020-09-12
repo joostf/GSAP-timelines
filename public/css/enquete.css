@@ -116,7 +116,7 @@
     margin-top: 10px;
 }
 
-.index.enquete form button {
+.index form button {
     padding: 8px 13px;
     border-radius: 10px;
     text-decoration: none;
@@ -130,7 +130,7 @@
     min-width: 100px;
 }
 
-.index.enquete form button:hover, .index.enquete form button:active {
+.index form button:hover, .index form button:active, .index.complete form button:hover , .index.complete form button:active {
     color: #fff;
     border: 2px solid #fff;
     background-color: #4e54c8;
@@ -166,4 +166,25 @@
 
 .index.enquete form fieldset .submit {
     margin-left: auto;
+}
+
+.index .index__challenge {
+    display: flex;
+    flex-direction: column;
+}
+
+.index .index__challenge * {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.index .index__challenge input {
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #ededed;
+    padding: 10px 15px;
+}
+
+.index .index__challenge button {
+    margin-top: 20px;
 }
