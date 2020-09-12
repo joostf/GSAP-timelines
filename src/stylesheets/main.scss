@@ -24,6 +24,10 @@ body {
   }
 }
 
+h2 {
+  color: #fff;
+}
+
 .splashscreen {
   background: #4e54c8;
   width: 100%;
@@ -165,11 +169,63 @@ body {
     font-size: 14px;
   }
 }
-
 #code {
-  width: 30vw;
+  width: 40vw;
   height: 30vh;
   z-index: 900;
+}
+
+.output-container {
+  bottom: 45vh;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    &:first-of-type {
+      margin-left: 4vw;
+    }
+    &:last-of-type {
+      margin-right:3vw;
+    }
+  }
+  img{
+    width: 40vw;
+    height: 30vh;
+  }
+}
+
+.context-challenge {
+  margin-left: 4vw;  
+  margin-top: 2.5vw;  
+  h1 {
+    color: #fff;
+    font-size: 50px;
+    // mix-blend-mode: difference;
+  } 
+  p {
+    color: #fff;
+    max-width: 42%;
+  }
+  button {
+    padding: 8px 13px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid #4e54c8;
+    color: #4e54c8;
+    background-color: #fff;
+    transition: all .3s;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 30px;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      border: 2px solid #fff;
+      background-color: #4e54c8;
+    }
+  }
 }
 
 @keyframes animate {

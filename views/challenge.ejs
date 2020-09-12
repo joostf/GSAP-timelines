@@ -4,7 +4,36 @@
 
 <body>
   <main class="challenge-main">
-    <div class="splashscreen">
+    <div class="context-challenge">
+      <h1>Coding challenge #1</h1>
+      <p>Het doel van deze challenge is om je uit te dagen om het voorbeeld na te maken. 
+        Voor de minor stellen wij bepaalde eisen, een paar van die eisen zijn het aanmaken van een webpagina met HTML elementen. 
+        Daarnaast is het belangrijk dat je bekend bent met het Document Object Model.
+      Daarbij kan je ook een link aanmaken, een formulier en een image tonen.</p>
+      <button>Vorige</button>
+      <button>Volgende</button>
+    </div>
+
+    <div class="context-challenge">
+      <h1>Coding challenge #2</h1>
+      <p> Voor deze opdracht is het belangrijk om de HTML documenten die je aangemaakt hebt te stylen.
+        Hier is het van belang css selectors te gebruiken zoals: id, class, child. Daarnaast 
+      </p>
+      <button>Vorige</button>
+      <button>Volgende</button>
+    </div>
+
+    <div class="context-challenge">
+      <h1>Coding challenge #3</h1>
+      <p>Het doel van deze challenge is om je uit te dagen om het voorbeeld na te maken. 
+        Voor de minor stellen wij bepaalde eisen, een paar van die eisen zijn het aanmaken van een webpagina met HTML elementen. 
+        Daarnaast is het belangrijk dat je bekend bent met het Document Object Model.
+      Daarbij kan je ook een link aanmaken, een formulier en een image tonen.</p>
+      <button>Vorige</button>
+      <button>Volgende</button>
+    </div>
+
+    <section class="splashscreen">
       <ul class="minor-logo">
         <li></li>
         <li></li>
@@ -17,6 +46,22 @@
         <li></li>
         <li></li>
       </ul>
+    </section>
+
+    <div class="code-container">
+      <div>
+        <h2>HTML</h2>
+        <textarea id="html">
+            </textarea>
+      </div>
+      <div>
+        <h2>CSS</h2>
+        <textarea id="css"></textarea>
+      </div>
+      <div>
+        <h2>JavaScript</h2>
+        <textarea id="js"></textarea>
+      </div>
     </div>
     <form class="code-container" action="/enquete/challenge" method="POST">
       <input name="id" type="text" class="hidden" value="<%- id %>">
@@ -35,14 +80,17 @@
       </div>
       <button type="submit">Send</button>
     </form>
-    <div>
-      <h2>Output</h2>
-      <iframe id="code"></iframe>
-    </div>
-    <div>
-      <h2>Output</h2>
-      <img></img>
-    </div>
+
+    <section class="output-container">
+      <div>
+        <h2>Output</h2>
+        <iframe id="code"></iframe>
+      </div>
+      <div>
+        <h2>Voorbeeld</h2>
+        <img></img>
+      </div>
+    </section>
   </main>
   <script src="/js/script.js"></script>
   <script src="/js/challenge.js"></script>
