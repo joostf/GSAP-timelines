@@ -196,8 +196,9 @@ h2 {
   width: 40vw;
   height: 30vh;
   background: url('/images/example2.png');
+  background-repeat: no-repeat;
   background-size: contain;
-  background-color: white;
+  background-color: #fff1db;
   margin: 0 !important;
 }
 
