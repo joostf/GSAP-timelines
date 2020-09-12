@@ -6,7 +6,7 @@ const url = process.env.MONGO_URI
 const dbName = 'users'
 
 
-router.get('/', function(req, res) {
+router.get('/form', function(req, res) {
     const id = req.query.id
     console.log(id)
     MongoClient.connect(url, async function(err, client) {
@@ -22,7 +22,7 @@ router.get('/', function(req, res) {
     })
 })
 
-router.post('/', async function(req,res) {
+router.post('/form', async function(req,res) {
     const id = req.body.id
     console.log(req.body)
     MongoClient.connect(url, async function(err, client) {
@@ -48,12 +48,44 @@ router.post('/', async function(req,res) {
         }}, {upsert: true})
         console.log(await db.collection('user').findOne({userid: id}))
         client.close()
-        res.redirect(`/enquete/challenge/?id=${id}`)
+        res.redirect(`/complete/?id=${id}`)
     })
 })
 
 router.get('/challenge', function(req, res) {
-    res.render('challenge', { title: 'Resultaten' })
+    const id = req.query.id
+    console.log(id)
+    MongoClient.connect(url, async function(err, client) {
+        console.log('connected succesfully')
+    
+        const db = client.db(dbName)
+        const data = await db.collection('user').findOne({userid: id})
+        res.render('challenge', {
+            title: 'Minor web dev enquete',
+            id: id
+        })
+    })
+})
+
+router.post('/challenge', function(req, res) {
+    const id = req.body.id
+    console.log(req.body)
+    MongoClient.connect(url, async function(err, client) {
+        console.log('connected succesfully')
+        console.log(id)
+        const db = client.db(dbName)
+        //console.log('first init', await db.collection('user').findOne({userid: id}))
+        await db.collection('user').updateOne({userid: id}, {$set: {
+            codechallenge: {
+                html: req.body.html,
+                css: req.body.css,
+                javascript: req.body.js
+            }
+        }}, {upsert: true})
+        console.log(await db.collection('user').findOne({userid: id}))
+        client.close()
+        res.redirect(`/complete/?id=${id}`)
+    })
 })
 
 module.exports = router
