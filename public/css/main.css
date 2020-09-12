@@ -192,9 +192,13 @@ h2 {
 .output-container div:last-of-type {
   margin-right: 3vw;
 }
-.output-container img {
+.image-example {
   width: 40vw;
   height: 30vh;
+  background: url('/images/example2.png');
+  background-size: contain;
+  background-color: white;
+  margin: 0 !important;
 }
 
 .hide {
