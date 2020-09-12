@@ -1,4 +1,9 @@
-let html = document.getElementById('html')
-let css = document.getElementById('css')
-let js = document.getElementById('js')
-let code = document.getElementById("code").contentWindow.document;
+// function compile() {
+    
+//     document.body.onkeyup = function() {
+//       let splashscreen = code.querySelector('.splashscreen')
+//       console.log(splashscreen.style)
+//   }
+// }
+  
+//   compile();
