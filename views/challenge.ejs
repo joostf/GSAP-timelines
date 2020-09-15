@@ -6,7 +6,7 @@
   <main class="challenge-main">
     <form action="/enquete/challenge" method="POST">
       <fieldset class="context-challenge">
-        <h1>Coding challenge #1</h1>
+        <legend>Coding challenge #1</legend>
         <p>Het doel van deze challenges is om je uit te dagen om het menu uit het voorbeeld na te maken.
           Voor de minor is het belangrijk dat je bekend bent met het Document Object Model. Voor dit eerste onderdeel
           van de challenge willen wij je vragen de html te schrijven voor het menu zoals dat
@@ -17,7 +17,7 @@
       </fieldset>
 
       <fieldset class="context-challenge">
-        <h1>Coding challenge #2</h1>
+        <legend>Coding challenge #2</legend>
         <p> Voor deze opdracht is het belangrijk om de HTML documenten die je aangemaakt hebt te stylen.
           Hier is het van belang css selectors te gebruiken zoals: id, class, child. Moderne standaarden zoals flexbox
           en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als in het voorbeeld.
@@ -27,57 +27,61 @@
       </fieldset>
 
       <fieldset class="context-challenge">
-        <h1>Coding challenge #3</h1>
+        <legend>Coding challenge #3</legend>
         <p>Voor deze laatste challenge willen wij graag zien wat je al weet van JavaScript. Zorg er met JavaScript voor
           dat het menu door te klikken op de knop in de header verborgen en getoond kan worden.</p>
         <button class="previous">Vorige</button>
         <button class="verstuur" type="submit">Verstuur</button>
       </fieldset>
 
-      <div class="code-container">
-        <input name="id" type="hidden" value="<%- id %>">
+      <fieldset class="code-container">
+        <legend>Type your code here</legend>
+        
         <div>
-          <h2>HTML</h2>
+          <label>HTML</label>
           <textarea name="html" id="html">
           </textarea>
         </div>
         <div id="cssInput" class="hide">
-          <h2>CSS</h2>
+          <label>CSS</label>
           <textarea name="css" id="css"></textarea>
         </div>
         <div id="jsInput" class="hide">
-          <h2>JavaScript</h2>
+          <label>JavaScript</label>
           <textarea name="js" id="js"></textarea>
         </div>
-      </div>
+
+        <input name="id" type="hidden" value="<%- id %>">
+      </fieldset>
+
+      <section class="output-container">
+        <div>
+          <h2>Output</h2>
+          <iframe id="code"></iframe>
+        </div>
+        <div>
+          <h2>Voorbeeld</h2>
+          <div class="image-example" src="/images/example2.png"></div>
+        </div>
+      </section>
+
     </form>
-
-    <section class="splashscreen">
-      <ul class="minor-logo">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </section>
-
-    <section class="output-container">
-      <div>
-        <h2>Output</h2>
-        <iframe id="code"></iframe>
-      </div>
-      <div>
-        <h2>Voorbeeld</h2>
-        <div class="image-example" src="/images/example2.png"></div>
-      </div>
-    </section>
   </main>
+
+  <section class="splashscreen">
+    <ul class="minor-logo">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
   <script src="/js/script.js"></script>
   <script src="/js/challenge.js"></script>
   <script src="/js/challenge-1.js"></script>
