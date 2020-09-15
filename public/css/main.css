@@ -22,22 +22,36 @@ legend {
   position: absolute;
   top:.5em;
 }
+label {
+  color:#fff;
+  display:block;
+  background-color: #3736A4;
+  padding:.25em;
+}
+
 
 
 h2 {
   color: #fff;
   margin:.5em 0;
 }
-
+/* context */
+.context {
+  color:#fff;
+  text-align: center
+}
 /* form */
 .challenge-main form {
  display:grid;
  grid-template-columns: 1fr 1fr;
+ grid-gap:1em;
+ padding:0 1em;
 }
-.challenge-main form > * {
-  padding-right:1em;
-  padding-left:1em;
- }
+.steps {
+  /* position:absolute;
+  top:-1em;
+  right:0; */
+}
 
 
 /* context challenge */
@@ -69,12 +83,13 @@ h2 {
   cursor: pointer;
   color: #fff;
   border: 2px solid #fff;
-  background-color: #4e54c8;
+  background-color: transparent;
 }
 
 /* code container */
 .code-container {
   grid-column: 1 / 2;
+  transform: translateY(2.1em);
 }
 .code-container > div {
   z-index: 1000;
@@ -84,33 +99,40 @@ h2 {
   text-align: center;
 }
 .code-container textarea {
-  resize: none;
   display: inline-block;
   padding: 1em;
   width: 100%;
-  height: 30vh;
+  height: 84.5vh;
   outline: none;
   font-family: Courier, sans-serif;
   font-size: 14px;
+  resize:vertical;
+  margin-bottom:2em;
 }
 
 #code {
-  width: 40vw;
-  height: 30vh;
+  width: 100%;
+  height: 50.7vh;
   z-index: 900;
-  margin-top: 1.25em;
+  border:none;
 }
 /* output container */
 .output-container {
   grid-column: 2 / 3;
+  position: relative;
+}
+.output-container > div {
+  position:fixed;
+  width:48%;
+  top:0;
 }
 
 .image-example {
-  width: 40vw;
+  width: 100%;
   height: 30vh;
   background: url('/images/example2.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .hide {
@@ -120,8 +142,6 @@ h2 {
 .display {
   display: unset;
 }
-
-
 
 .verstuur {
   border-color: green !important;
