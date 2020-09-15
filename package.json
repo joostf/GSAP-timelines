@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node app",
-    "build": "npm start",
     "dev": "npm-run-all --parallel dev:build dev:start",
     "dev:start": "nodemon app"
   },
