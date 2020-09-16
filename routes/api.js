@@ -14,13 +14,10 @@ router.get('/users', async function(req, res) {
   if (req.session.loggedin) {
     MongoClient.connect(url, function(err, client) {
       assert.equal(null, err)
-      console.log('connected succesfully')
   
       const db = client.db(dbName)
       db.collection('user').find({}).toArray(function(err, docs) {
-        assert.equal(err, null);
-        console.log("Found the following records")
-        console.log(docs) 
+        assert.equal(err, null); 
         res.json(docs)
       });
       client.close()
@@ -52,7 +49,6 @@ router.post('/newuser', async function(req, res) {
       assert.equal(null, err);
       const db = client.db(dbName)
       db.collection('user').insertMany(userData).then(function(result) {
-        console.log(result)      
         mail.sendEmail(userData)
       })
       client.close();

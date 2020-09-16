@@ -4,7 +4,7 @@
 
 <body>
   <main class="challenge-main">
-    <form action="/enquete/challenge" method="POST">
+    <form action="/intake/challenge" method="POST">
       <fieldset class="context-challenge">
         <legend>Coding challenge #1</legend>
         <p>Het doel van deze challenges is om je uit te dagen om het menu uit het voorbeeld na te maken.
@@ -13,7 +13,6 @@
           in het voorbeeld is weergegeven. De header en de menuknop krijg je vast van ons cadeau!
         </p>
         <div class="steps">
-          <button class="previous">Vorige</button>
           <button class="next">Volgende</button>
         </div>
         
@@ -37,7 +36,6 @@
           dat het menu door te klikken op de knop in de header verborgen en getoond kan worden.</p>
           <div class="steps">
             <button class="previous">Vorige</button>
-            <button class="next">Volgende</button>
           </div>
       </fieldset>
 
@@ -75,10 +73,12 @@
         </div>
       </section>
 
+      <button>Sla jouw resultaat op</button>
+
     </form>
   </main>
 
-  <section class="splashscreen">
+  <div class="splashscreen">
     <ul class="minor-logo">
       <li></li>
       <li></li>
@@ -91,10 +91,8 @@
       <li></li>
       <li></li>
     </ul>
-  </section>
-  <script src="/js/script.js"></script>
+  </div>
   <script src="/js/challenge.js"></script>
-  <script src="/js/challenge-1.js"></script>
 </body>
 
 </html>

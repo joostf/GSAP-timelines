@@ -3,10 +3,10 @@
 <%- include("partials/head.ejs") %>
 
 <body>
-  <main class="index enquete">
+  <main class="index intake">
     <div class="context">
       <h1>Minor web-dev</h1>
-        <form action="/enquete/form" method="POST">
+        <form action="/intake/form" method="POST">
             <input name="id" type="text" class="hidden" value="<%- id %>">
             <fieldset>
                 <label class="hidden-label" for="student">
@@ -116,8 +116,7 @@
       </ul>
     </div>
   </main>
-  <script src="/js/script.js"></script>
-  <script src="/js/enqueteForm.js"></script>
+  <script src="/js/intake-form.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,6 @@ function setupFieldsets(buttons) {
         }
     })
     let index = 0;
-    console.log(nextButtons)
     nextButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault()

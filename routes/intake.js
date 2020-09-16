@@ -8,14 +8,11 @@ const dbName = 'users'
 
 router.get('/form', function(req, res) {
     const id = req.query.id
-    console.log(id)
     MongoClient.connect(url, async function(err, client) {
-        console.log('connected succesfully')
-    
         const db = client.db(dbName)
         const data = await db.collection('user').findOne({userid: id})
-        res.render('enquete_form', {
-            title: 'Minor web dev enquete',
+        res.render('intake-form', {
+            title: 'Minor Web Dev Intake',
             id: id,
             data: data
         })
@@ -24,10 +21,7 @@ router.get('/form', function(req, res) {
 
 router.post('/form', async function(req,res) {
     const id = req.body.id
-    console.log(req.body)
     MongoClient.connect(url, async function(err, client) {
-        console.log('connected succesfully')
-    
         const db = client.db(dbName)
         await db.collection('user').updateOne({userid: id}, {$set: {
             student: req.body.student,
@@ -46,7 +40,6 @@ router.post('/form', async function(req,res) {
             frontend_designers: req.body.frontend_designers ? true : false,
             tech_track: req.body.tech_track ? true : false,
         }}, {upsert: true})
-        console.log(await db.collection('user').findOne({userid: id}))
         client.close()
         res.redirect(`/complete/?id=${id}`)
     })
@@ -54,14 +47,12 @@ router.post('/form', async function(req,res) {
 
 router.get('/challenge', function(req, res) {
     const id = req.query.id
-    console.log(id)
     MongoClient.connect(url, async function(err, client) {
-        console.log('connected succesfully')
     
         const db = client.db(dbName)
         const data = await db.collection('user').findOne({userid: id})
         res.render('challenge', {
-            title: 'Minor web dev enquete',
+            title: 'Minor Web Dev Intake',
             id: id
         })
     })
@@ -69,12 +60,8 @@ router.get('/challenge', function(req, res) {
 
 router.post('/challenge', function(req, res) {
     const id = req.body.id
-    console.log(req.body)
     MongoClient.connect(url, async function(err, client) {
-        console.log('connected succesfully')
-        console.log(id)
         const db = client.db(dbName)
-        //console.log('first init', await db.collection('user').findOne({userid: id}))
         await db.collection('user').updateOne({userid: id}, {$set: {
             codechallenge: {
                 html: req.body.html,
@@ -82,7 +69,6 @@ router.post('/challenge', function(req, res) {
                 javascript: req.body.js
             }
         }}, {upsert: true})
-        console.log(await db.collection('user').findOne({userid: id}))
         client.close()
         res.redirect(`/complete/?id=${id}`)
     })

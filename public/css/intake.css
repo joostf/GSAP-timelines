@@ -29,26 +29,26 @@
     background-color: #4e54c8;
 }
 
-.index.enquete .context h1 {
+.index.intake .context h1 {
     margin-top: 5vh;
 }
 
-.index.enquete .context {
+.index.intake .context {
     top: 5vh;
     color: #fff;
 }
 
-.index.enquete .context form {
+.index.intake .context form {
     width: 80%;
     margin: 0 auto;
     display: flex;
 }
 
-.index.enquete form .hidden {
+.index.intake form .hidden {
     display: none;
 }
 
-.index.enquete form fieldset {
+.index.intake form fieldset {
     display: flex;
     flex-direction: column;
     border: none;
@@ -56,32 +56,32 @@
     margin-top: 30px;
 }
 
-.index.enquete form fieldset h2 {
+.index.intake form fieldset h2 {
     max-width: 500px;
 }
 
-.index.enquete form fieldset label {
+.index.intake form fieldset label {
     display: flex;
     flex-direction: column;
 }
 
-.index.enquete form fieldset input, .index.enquete form fieldset textarea {
+.index.intake form fieldset input, .index.intake form fieldset textarea {
     border-radius: 8px;
 }
 
-.index.enquete form fieldset label.hidden-label {
+.index.intake form fieldset label.hidden-label {
     position: absolute;
     opacity: 0;
     pointer-events: none;
 }
 
-.index.enquete form fieldset label.hidden-label + input {
+.index.intake form fieldset label.hidden-label + input {
     padding: 10px;
     border: 1px solid #ededed;
     margin-top: 10px;
 }
 
-.index.enquete form fieldset textarea {
+.index.intake form fieldset textarea {
     height: 75px;
     margin-top:5px;
     margin-bottom: 15px;
@@ -89,74 +89,61 @@
     min-width: 540px;
 }
 
-.index.enquete form fieldset.checkboxes label {
+.index.intake form fieldset.checkboxes label {
     flex-direction: row;
 }
 
-.index.enquete form fieldset.checkboxes label input {
+.index.intake form fieldset.checkboxes label input {
     margin: auto 0;
     margin-right: 10px;
 }
 
-.index.enquete form fieldset.range input {
+.index.intake form fieldset.range input {
     width: 40%;
     min-width: 540px;
     margin-bottom: 10px;
 }
 
-.index.enquete form fieldset.range label:first-of-type {
+.index.intake form fieldset.range label:first-of-type {
     margin-top: 10px;
 }
 
 .index form button {
-    padding: 8px 13px;
-    border-radius: 10px;
-    text-decoration: none;
-    border: 2px solid #4e54c8;
-    color: #4e54c8;
-    background-color: #fff;
-    transition: all .3s;
-    font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
     min-width: 100px;
 }
 
-.index form button:hover, .index form button:active, .index.complete form button:hover , .index.complete form button:active {
-    color: #fff;
-    border: 2px solid #fff;
-    background-color: #4e54c8;
-}
 
-.index.enquete form fieldset button {
+.index.intake form fieldset button {
     display: none;
 }
 
-.index.enquete form fieldset button.display {
+.index.intake form fieldset button.display {
     display: unset;
 }
 
-.index.enquete form button.no-js.hide {
+.index.intake form button.no-js.hide {
     display: none;
 }
 
-.index.enquete form fieldset.hide {
+.index.intake form fieldset.hide {
     display: none;
 }
 
-.index.enquete form fieldset .buttons {
+.index.intake form fieldset .buttons {
     display: flex;
 }
 
-.index.enquete form fieldset:first-of-type button {
+.index.intake form fieldset:first-of-type button {
     margin: 20px 0 20px auto;
 }
 
-.index.enquete form fieldset:not(:first-of-type) .buttons .next {
+.index.intake form fieldset:not(:first-of-type) .buttons .next {
     margin-left: auto;
 }
 
-.index.enquete form fieldset .submit {
+.index.intake form fieldset .submit {
     margin-left: auto;
 }
 

@@ -57,7 +57,7 @@ function mailEmail(email, id) {
                                         <table width="75%" align="center" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td style="text-align: center;padding-top:30px;padding-bottom: 30px;">
-                                                    <p style="margin:0;color: #000000;">Je bent uitgenodigd voor een enquete voor de Minor Web-Dev. Deze enquete is verplicht om mee te doen aan de minor. Klik hieronder op de link om mee te doen, je kan hier ook mee starten en deze later afmaken. De data wordt opgeslagen.</p>
+                                                    <p style="margin:0;color: #000000;">Je bent uitgenodigd voor een intake voor de Minor Web-Dev. Deze intake is verplicht om mee te doen aan de minor. Klik hieronder op de link om mee te doen, je kan hier ook mee starten en deze later afmaken. De data wordt opgeslagen.</p>
                                                 </td>
                                             </tr>
                                         </table>
@@ -68,7 +68,7 @@ function mailEmail(email, id) {
                                                         <tr>
                                                             <td class="button" bgcolor="#4e54c8" style="padding-top:10px;padding-bottom:10px;border-radius: 8px;">
                                                                 <a  href="http://localhost:3000/?id=${id}" target="_blank" style="text-decoration: none;color:#fff;padding-left:15px;padding-right:15px;font-weight: bold;font-size:16px;">
-                                                                    Start de enquete             
+                                                                    Ga naar de Intake Tool             
                                                                 </a>
                                                             </td>
                                                         </tr>

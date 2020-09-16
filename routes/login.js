@@ -11,21 +11,17 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-  console.log(req.body)
     const userData = await login(req.body)
     if(userData) {
       const password = req.body.password === userData.password ? true : false
       if(password === true) {
-          console.log('correct')
           req.session.loggedin = true
           req.session.username = userData.username
           res.redirect(`/admin`)
       } else {
-          console.log('incorrect')
           res.redirect('/login')
       }
     } else {
-      console.log('incorrect')
       res.redirect('/login')
     }
     

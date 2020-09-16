@@ -20,7 +20,7 @@
     </div>
     <div class="context">
       <h1>Minor web-dev</h1>
-      <% if (hasId) { %> <a href="/enquete/form/?id=<%- id %>">Start de enquete</a>
+      <% if (hasId) { %> <a href="/intake/form/?id=<%- id %>">Start</a>
       <% } else { %>
         <form class="index__challenge" method="POST" action="/create_user">
           <input type="email" placeholder="your-email@gmail.com" name="email">
@@ -29,7 +29,6 @@
       <% } %>
     </div>
   </main>
-  <script src="/js/script.js"></script>
 </body>
 
 </html>

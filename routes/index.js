@@ -24,13 +24,12 @@ router.post('/create_user', async function(req, res) {
     MongoClient.connect(url, function(err, client) {
     assert.equal(null, err);
     const db = client.db(dbName)
-    db.collection('user').insertOne(newDocument).then(function(result) {
-        console.log(result)      
+    db.collection('user').insertOne(newDocument).then(function(result) {  
     })
     client.close();
     })
 
-    res.redirect(`/enquete/challenge/?id=${newDocument.userid}`)
+    res.redirect(`/intake/challenge/?id=${newDocument.userid}`)
   });
 
 module.exports = router
