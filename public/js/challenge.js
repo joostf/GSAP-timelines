@@ -33,7 +33,6 @@ function setupFieldsets(buttons) {
       button.addEventListener('click', function(e) {
           e.preventDefault()
           allFieldsets[index].classList.add('hide')
-         
           index += 1;
           if (index === 1) cssInput.classList.remove('hide')
           if (index === 2) jsInput.classList.remove('hide')
@@ -123,6 +122,5 @@ function compileCode() {
     js.value = `
       console.log('Check your console')`
 }
-  
 
 
