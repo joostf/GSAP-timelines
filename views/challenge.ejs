@@ -6,54 +6,38 @@
   <main class="challenge-main">
     <form action="/intake/challenge" method="POST">
       <fieldset class="context-challenge">
-        <legend>Coding challenge #1</legend>
-        <p>Het doel van deze challenges is om je uit te dagen om het menu uit het voorbeeld na te maken.
-          Voor de minor is het belangrijk dat je bekend bent met het Document Object Model. Voor dit eerste onderdeel
-          van de challenge willen wij je vragen de html te schrijven voor het menu zoals dat
-          in het voorbeeld is weergegeven. De header en de menuknop krijg je vast van ons cadeau!
-        </p>
-        <div class="steps">
-          <button class="next">Volgende</button>
-        </div>
-
+        <legend>Coding challenge</legend>
+        <ol>
+          <li><strong>HTML</strong>: Voor de minor is het belangrijk dat je bekend bent met het Document Object Model. Eerst willen wij je vragen de html te schrijven voor het menu zoals dat in het voorbeeld is weergegeven. De header en de menuknop krijg je vast van ons cadeau!</li>
+          <li><strong>CSS</strong>: Voor deze opdracht is het belangrijk om de HTML elementen die je gebruikt hebt te stylen. Hier is het van belang css selectors te gebruiken zoals: id, class, child element. Moderne standaarden zoals flexbox en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als in het voorbeeld.</li>
+          <li><strong>JavaScript</strong>: Zorg er tenslotte met JavaScript voor dat het menu door te klikken op de knop in de header verborgen en getoond kan worden.</li>
+        </ol>
       </fieldset>
-
-      <fieldset class="context-challenge">
-        <legend>Coding challenge #2</legend>
-        <p> Voor deze opdracht is het belangrijk om de HTML documenten die je aangemaakt hebt te stylen.
-          Hier is het van belang css selectors te gebruiken zoals: id, class, child. Moderne standaarden zoals flexbox
-          en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als in het voorbeeld.
-        </p>
-        <div class="steps">
-          <button class="previous">Vorige</button>
-          <button class="next">Volgende</button>
-        </div>
-      </fieldset>
-
-      <fieldset class="context-challenge">
-        <legend>Coding challenge #3</legend>
-        <p>Voor deze laatste challenge willen wij graag zien wat je al weet van JavaScript. Zorg er met JavaScript voor
-          dat het menu door te klikken op de knop in de header verborgen en getoond kan worden.</p>
-        <div class="steps">
-          <button class="previous">Vorige</button>
-        </div>
-      </fieldset>
-
       <fieldset class="code-container">
         <legend>Schrijf hieronder jouw code.</legend>
 
         <div>
           <label>HTML</label>
-          <textarea name="html" id="html">
-          </textarea>
+          <div id="html">
+            <header>
+              <h1>Coding Challenge Example</h1>
+              <button>Menu</button>
+            </header>
+          </div>
         </div>
         <div id="cssInput" class="hide">
           <label>CSS</label>
-          <textarea name="css" id="css"></textarea>
+          <div id="css">
+            header {
+              display:flex;
+            }
+          </div>
         </div>
         <div id="jsInput" class="hide">
           <label>JavaScript</label>
-          <textarea name="js" id="js"></textarea>
+          <div id="js">
+            const button = document.querySelector('button');
+          </div>
         </div>
 
         <input name="id" type="hidden" value="<%- id %>">
@@ -92,6 +76,7 @@
       <li></li>
     </ul>
   </div>
+  <script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
   <script src="/js/challenge.js"></script>
 </body>
 
