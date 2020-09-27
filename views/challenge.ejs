@@ -19,33 +19,45 @@
             in de header verborgen en getoond kan worden.</li>
         </ol>
       </fieldset>
-      <fieldset class="code-container">
-        <legend>Schrijf hieronder jouw code.</legend>
+      <fieldset class="code-container" id="code-container">
+        <legend>
+          Schrijf hieronder jouw code. <button id="button-fullscreen"><i class="fas fa-expand-alt"></i></button>
+        </legend>
 
-
-        <div class="codepanel">
-          <label class="panelLabel" data-for="html">HTML</label>
-          <div id="html" class="panelContent">
-            <header>
-              <h1>Coding Challenge Example</h1>
-              <button>Menu</button>
-            </header>
+        <div class="codepanels-container">
+          <div class="codepanel">
+            <label class="panelLabel" data-for="html">
+              HTML
+              <i class="far fa-angle-down"></i>
+            </label>
+            <div id="html" class="panelContent is-opened">
+              <header>
+                <h1>Coding Challenge Example</h1>
+                <button>Menu</button>
+              </header>
+            </div>
           </div>
-        </div>
 
-        <div class="codepanel">
-          <label class="panelLabel" data-for="css">CSS</label>
-          <div id="css" class="panelContent is-collapsed">
-            header {
-            display:flex;
-            }
+          <div class="codepanel">
+            <label class="panelLabel" data-for="css">
+              CSS
+              <i class="far fa-angle-down is-rotated"></i>
+            </label>
+            <div id="css" class="panelContent">
+              header {
+              display:flex;
+              }
+            </div>
           </div>
-        </div>
 
-        <div class="codepanel">
-          <label class="panelLabel" data-for="js">JavaScript</label>
-          <div id="js" class="panelContent is-collapsed">
-            const button = document.querySelector('button');
+          <div class="codepanel">
+            <label class="panelLabel" data-for="js">
+              JavaScript
+              <i class="far fa-angle-down is-rotated"></i>
+            </label>
+            <div id="js" class="panelContent">
+              const button = document.querySelector('button');
+            </div>
           </div>
         </div>
 
@@ -66,7 +78,7 @@
         </div>
       </section>
 
-      <button>Sla jouw resultaat op</button>
+      <button id="saveButton">Sla jouw resultaat op</button>
 
     </form>
   </main>
