@@ -66,11 +66,7 @@ h2 {
   justify-self:center;
   margin: 0 0 1em;
  }
-.steps {
-  /* position:absolute;
-  top:-1em;
-  right:0; */
-}
+
 
 
 /* context challenge */
@@ -90,11 +86,17 @@ h2 {
   margin: 0 auto;
   margin-top: 30px;
 }
-
-/* code container */
+.codepanel {
+  position: relative;
+}
 .code-container {
-  grid-column: 1 / 2;
-  transform: translateY(2.1em);
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.codeflask {
+  position: relative !important;
+  height: 33vh !important;
 }
 .code-container > div {
   z-index: 1000;
@@ -103,17 +105,6 @@ h2 {
   color: #fff;
   text-align: center;
 }
-.code-container textarea {
-  display: inline-block;
-  padding: 1em;
-  width: 100%;
-  height: 40vh;
-  outline: none;
-  font-family: Courier, sans-serif;
-  font-size: 14px;
-  resize:vertical;
-  margin-bottom:2em;
-}
 
 #code {
   width: 100%;
@@ -121,11 +112,12 @@ h2 {
   z-index: 900;
   border:none;
 }
-/* output container */
+
 .output-container {
   grid-column: 2 / 3;
   position: relative;
 }
+
 .output-container > div {
   position:fixed;
   width:calc(50% - 2em);
