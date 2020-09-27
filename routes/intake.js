@@ -5,6 +5,9 @@ const MongoClient = require('mongodb').MongoClient
 const url = process.env.MONGO_URI
 const dbName = 'users'
 
+const sanitize = require('mongo-sanitize');
+
+
 router.get('/form', function(req, res) {
   const id = req.query.id
   MongoClient.connect(url, async function(err, client) {
