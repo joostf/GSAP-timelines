@@ -1,37 +1,31 @@
-const { v4: uuidv4 } = require('uuid');
-const nodemailer = require("nodemailer");
+const { v4: uuidv4 } = require('uuid')
 const mail = require('../modules/mail')
-
-const express = require('express');
-const router = express.Router();
-
-const MongoClient = require('mongodb').MongoClient;
+const express = require('express')
 const assert = require('assert')
+const router = express.Router()
+const MongoClient = require('mongodb').MongoClient
 const url = process.env.MONGO_URI
 const dbName = 'users'
 
 router.get('/users', async function(req, res) {
   if (req.session.loggedin) {
     MongoClient.connect(url, function(err, client) {
-      assert.equal(null, err)
-  
+      assert.strictEqual(null, err)
       const db = client.db(dbName)
       db.collection('user').find({}).toArray(function(err, docs) {
-        assert.equal(err, null); 
+        assert.strictEqual(err, null) 
         res.json(docs)
-      });
+      })
       client.close()
     })
-} else {
+  } else {
     res.redirect('/login')
-}
-
-});
+  }
+})
 
 router.post('/newuser', async function(req, res) {
 
-  if (req.session.loggedin) {
-    
+  if (req.session.loggedin) {    
     const emails = req.body.emails
     const userData = []
   
@@ -46,20 +40,17 @@ router.post('/newuser', async function(req, res) {
     }
   
     MongoClient.connect(url, function(err, client) {
-      assert.equal(null, err);
+      assert.strictEqual(null, err)
       const db = client.db(dbName)
       db.collection('user').insertMany(userData).then(function(result) {
         mail.sendEmail(userData)
       })
-      client.close();
+      client.close()
     })
-
     res.redirect('/admin')
-
   } else {
-      res.redirect('/login')
+    res.redirect('/login')
   }
-  
-});
+})
 
-module.exports = router;
+module.exports = router

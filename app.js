@@ -2,7 +2,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser')
 
 const express = require('express')
-const session = require('express-session');
+const session = require('express-session')
 
 const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
@@ -15,24 +15,24 @@ const path = require('path')
 const PORT = process.env.PORT || 3000
 
 app.use(express.static(path.join(__dirname, 'public')))
-    .use(session({
-        secret: 'G0UDv1S',
-        resave: true,
-        saveUninitialized: true
-    }))
-    .use(express.json())
-    .use(express.urlencoded({extended: true}))  
-    .use('/', indexRouter)
-    .use('/api', apiRouter)
-    .use('/login', loginRouter)
-    .use('/intake', intakeRouter)
-    .use('/admin', adminRouter)
-    .use('/complete', completeRouter)
-    .use(bodyParser.urlencoded({extended: true}))
-    .set('views', path.join(__dirname, 'views'))
-    .set('view engine', 'ejs')
-    //.use('/mail', mailRouter)
+  .use(session({
+    secret: 'G0UDv1S',
+    resave: true,
+    saveUninitialized: true
+  }))
+  .use(express.json())
+  .use(express.urlencoded({extended: true}))  
+  .use('/', indexRouter)
+  .use('/api', apiRouter)
+  .use('/login', loginRouter)
+  .use('/intake', intakeRouter)
+  .use('/admin', adminRouter)
+  .use('/complete', completeRouter)
+  .use(bodyParser.urlencoded({extended: true}))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+//.use('/mail', mailRouter)
     
 app.listen(PORT, function() {
-    console.log(`Application started on port: ${PORT}`);
-});
+  console.log(`Application started on port: ${PORT}`)
+})

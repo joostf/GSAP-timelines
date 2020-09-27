@@ -6,101 +6,103 @@
   <main class="index intake">
     <div class="context">
       <h1>Minor web-dev</h1>
-        <form action="/intake/form" method="POST">
-            <input name="id" type="text" class="hidden" value="<%- id %>">
-            <fieldset>
-                <label class="hidden-label" for="student">
-                    Studentnumber
-                </label>
-                <input required placeholder="Studentnumber" id="student" name="student" type="number" value="<%- data.student %>">
-                <label class="hidden-label" for="name">
-                    Name
-                </label>
-                <input required placeholder="Name" id="name" name="name" type="text" value="<%- data.name %>">
-                <label class="hidden-label" for="study">
-                    Current study
-                </label>
-                <input required placeholder="Current study" id="study" name="study" type="text" value="<%- data.study %>">
-                <div class="buttons">
-                    <button type="button" class="next">Next</button>
-                </div>
-            </fieldset>
-            <fieldset>
-                <label for="motivation">
-                    <h2>Why would you like to participate in this Minor? What is your motivation?</h2>
-                    <textarea required id="motivation" name="motivation"><%- data.motivation %></textarea>
-                </label>
-                <label for="courses">
-                    What do you want to learn? Which courses are you looking forward to?
-                    <textarea required id="courses" name="courses"><%- data.courses %></textarea>
-                </label>
-                <label for="time">
-                    How much time do you think you should spend on this minor per week?
-                    <textarea required id="time" name="time"><%- data.time %></textarea>
-                </label>
-                <label for="spare_time">
-                    How much time do you spend on your studies? Hobbies? Work?
-                    <textarea required id="spare_time" name="spare_time"><%- data.spare_time %></textarea>
-                </label>
-                <div class="buttons">
-                    <button class="previous">Previous</button>
-                    <button class="next">Next</button>
-                </div>
-            </fieldset>
-            <fieldset class="checkboxes">
-                <h2>In what courses did you participate?</h2>
-                <label for="frontend_1">
-                    <input type="checkbox" id="frontend_1" name="frontend_1" value="frontend_1" <%if (data.frontend_1) { %> checked <% } %>>
-                    Frontend-1
-                </label>
-                <label for="blok_tech">
-                    <input type="checkbox" id="blok_tech" name="blok_tech" value="blok_tech" <%if (data.block_tech) { %> checked <% } %>>
-                    Blok tech (frontend 2 and backend)
-                </label>
-                <label for="frontend_designers">
-                    <input type="checkbox" id="frontend_designers" name="frontend_designers" value="frontend_designers" <%if (data.frontend_designers) { %> checked <% } %>>
-                    Frontend for Designers
-                </label>
-                <label for="tech_track">
-                    <input type="checkbox" id="tech_track" name="tech_track" value="tech_track" <%if (data.tech_track) { %> checked <% } %>>
-                    Tech track (semester Information Design)
-                </label>
-                <div class="buttons">
-                    <button class="previous">Previous</button>
-                    <button class="next">Next</button>
-                </div>
-            </fieldset>
-            <fieldset class="range">
-                <h2>On scale of 1 to 10, how would you rate your skills on the following subjects?</h2>
-                <label for="volume">Tech</label>
-                <input required type="range" id="tech" name="tech" value="<%- data.tech %>"
-                        min="0" max="10">
-                <label for="volume">Visual Design</label>
-                <input required type="range" id="visual" name="visual" value="<%- data.visual %>"
-                        min="0" max="10">
-                <label for="volume">IxD</label>
-                <input required type="range" id="ixd" name="ixd" value="<%- data.ixd %>"
-                        min="0" max="10">
-                <div class="buttons">
-                    <button class="previous">Previous</button>
-                    <button class="next">Next</button>
-                </div>
-            </fieldset>
-            <fieldset>
-                <label for="orientation">
-                    <h2>Do you read blogs or books? Do you go to conferences?
-                    What do you do for odd jobs or projects besides studying?</h2>
-                    <textarea required id="orientation" name="orientation"><%- data.orientation %></textarea>
-                </label>
-                <div class="buttons">
-                    <button class="previous">Previous</button>
-                    <button type="submit" class="submit">Send</button>
-                </div>
-            </fieldset>
-            <button class="no-js" type="submit">Send</button>
-        </form>
+      <form action="/intake/form" method="POST">
+        <input name="id" type="text" class="hidden" value="<%- id %>">
+        <fieldset>
+          <label class="hidden-label" for="student">
+            Studentnumber
+          </label>
+          <input required placeholder="Studentnumber" id="student" name="student" type="number"
+            value="<%- data.student %>">
+          <label class="hidden-label" for="name">
+            Name
+          </label>
+          <input required placeholder="Name" id="name" name="name" type="text" value="<%- data.name %>">
+          <label class="hidden-label" for="study">
+            Current study
+          </label>
+          <input required placeholder="Current study" id="study" name="study" type="text" value="<%- data.study %>">
+          <div class="buttons">
+            <button type="button" class="next">Next</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label for="motivation">
+            <h2>Why would you like to participate in this Minor? What is your motivation?</h2>
+            <textarea required id="motivation" name="motivation"><%- data.motivation %></textarea>
+          </label>
+          <label for="courses">
+            What do you want to learn? Which courses are you looking forward to?
+            <textarea required id="courses" name="courses"><%- data.courses %></textarea>
+          </label>
+          <label for="time">
+            How much time do you think you should spend on this minor per week?
+            <textarea required id="time" name="time"><%- data.time %></textarea>
+          </label>
+          <label for="spare_time">
+            How much time do you spend on your studies? Hobbies? Work?
+            <textarea required id="spare_time" name="spare_time"><%- data.spare_time %></textarea>
+          </label>
+          <div class="buttons">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+          </div>
+        </fieldset>
+        <fieldset class="checkboxes">
+          <h2>In what courses did you participate?</h2>
+          <label for="frontend_1">
+            <input type="checkbox" id="frontend_1" name="frontend_1" value="frontend_1" <%if (data.frontend_1) { %>
+              checked <% } %>>
+            Frontend-1
+          </label>
+          <label for="blok_tech">
+            <input type="checkbox" id="blok_tech" name="blok_tech" value="blok_tech" <%if (data.block_tech) { %> checked
+              <% } %>>
+            Blok tech (frontend 2 and backend)
+          </label>
+          <label for="frontend_designers">
+            <input type="checkbox" id="frontend_designers" name="frontend_designers" value="frontend_designers"
+              <%if (data.frontend_designers) { %> checked <% } %>>
+            Frontend for Designers
+          </label>
+          <label for="tech_track">
+            <input type="checkbox" id="tech_track" name="tech_track" value="tech_track" <%if (data.tech_track) { %>
+              checked <% } %>>
+            Tech track (semester Information Design)
+          </label>
+          <div class="buttons">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+          </div>
+        </fieldset>
+        <fieldset class="range">
+          <h2>On scale of 1 to 10, how would you rate your skills on the following subjects?</h2>
+          <label for="volume">Tech</label>
+          <input required type="range" id="tech" name="tech" value="<%- data.tech %>" min="0" max="10">
+          <label for="volume">Visual Design</label>
+          <input required type="range" id="visual" name="visual" value="<%- data.visual %>" min="0" max="10">
+          <label for="volume">IxD</label>
+          <input required type="range" id="ixd" name="ixd" value="<%- data.ixd %>" min="0" max="10">
+          <div class="buttons">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label for="orientation">
+            <h2>Do you read blogs or books? Do you go to conferences?
+              What do you do for odd jobs or projects besides studying?</h2>
+            <textarea required id="orientation" name="orientation"><%- data.orientation %></textarea>
+          </label>
+          <div class="buttons">
+            <button class="previous">Previous</button>
+            <button type="submit" class="submit">Send</button>
+          </div>
+        </fieldset>
+        <button class="no-js" type="submit">Send</button>
+      </form>
     </div>
-    
+
     <div class="splashscreen">
       <ul class="minor-logo">
         <li></li>
