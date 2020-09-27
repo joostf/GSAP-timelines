@@ -8,6 +8,14 @@ codePanels.forEach((panel) => {
   })
 })
 
+const toggleElement = (e) => {
+  document.getElementById(e.target.dataset.for).classList.toggle('is-collapsed')
+}
+
+const panelLabels = document.querySelectorAll('.panelLabel')
+panelLabels.forEach(label => {
+  label.addEventListener('click', (e) => toggleElement(e))
+})
 
 // CodeFlask.onUpdate((code => {
 //   console.log(code)
