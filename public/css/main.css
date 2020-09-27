@@ -98,6 +98,7 @@ h2 {
   position: relative !important;
   height: 33vh !important;
 }
+
 .code-container > div {
   z-index: 1000;
 }
@@ -105,6 +106,7 @@ h2 {
   color: #fff;
   text-align: center;
 }
+
 
 #code {
   width: 100%;
