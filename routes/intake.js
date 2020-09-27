@@ -63,9 +63,9 @@ router.post('/challenge', function(req, res) {
     const db = client.db(dbName)
     await db.collection('user').updateOne({userid: id}, {$set: {
       codechallenge: {
-        html: req.body.html,
-        css: req.body.css,
-        javascript: req.body.js
+        html: sanitize(req.body.html),
+        css: sanitize(req.body.css),
+        javascript: sanitize(req.body.js)
       }
     }}, {upsert: true})
     client.close()

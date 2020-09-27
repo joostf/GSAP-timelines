@@ -1,12 +1,52 @@
 const codePanels = ['html', 'css', 'js']
 
 codePanels.forEach((panel) => {
-  return new CodeFlask(`#${panel}`, {
+  const flask = new CodeFlask(`#${panel}`, {
     language: panel,
     lineNumbers: true,
-    areaId: `${panel}Area`
+    areaId: `${panel}Area`,
   })
 })
+
+function giveName(){ 
+  const codeFlaskTextAreas = document.querySelectorAll('.codeflask textarea')
+  codeFlaskTextAreas.forEach((area, i) => {
+    area.name = codePanels[i]
+    console.log(area.value)
+  })
+}
+
+function compile() {
+  let html = document.getElementById('htmlArea')
+  let css = document.getElementById('cssArea')
+  let js = document.getElementById('jsArea')
+  let code = document.querySelector('#output iframe').contentWindow.document
+
+  window.onload = (event) => {
+    injectCode()
+    watchForPress()
+  }
+
+  function watchForPress() {
+    document.body.onkeyup = function() {
+      injectCode()
+    }
+  }
+
+  function injectCode() {
+    code.open()
+    code.writeln(
+      html.value +
+          '<style>' +
+          css.value +
+          '</style>' +
+          '<script>' +
+          js.value +
+          '</script>'
+    )
+    code.close()
+  }
+}
 
 const toggleElement = (e) => {
   const rotatedIcons = document.querySelectorAll('.is-rotated')
@@ -42,3 +82,5 @@ const toggleFullscreen = (e) => {
 // CodeFlask.onUpdate((code => {
 //   console.log(code)
 // }))
+giveName()
+compile()
