@@ -89,6 +89,17 @@ h2 {
 .codepanel {
   position: relative;
 }
+
+.panelContent.is-collapsed {
+  max-height: 0;
+}
+
+.panelContent {
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height .3s ease;
+}
+
 .code-container {
   display:flex;
   flex-direction: column;

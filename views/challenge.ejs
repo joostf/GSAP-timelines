@@ -8,9 +8,15 @@
       <fieldset class="context-challenge">
         <legend>Coding challenge</legend>
         <ol>
-          <li><strong>HTML</strong>: Voor de minor is het belangrijk dat je bekend bent met het Document Object Model. Eerst willen wij je vragen de html te schrijven voor het menu zoals dat in het voorbeeld is weergegeven. De header en de menuknop krijg je vast van ons cadeau!</li>
-          <li><strong>CSS</strong>: Voor deze opdracht is het belangrijk om de HTML elementen die je gebruikt hebt te stylen. Hier is het van belang css selectors te gebruiken zoals: id, class, child element. Moderne standaarden zoals flexbox en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als in het voorbeeld.</li>
-          <li><strong>JavaScript</strong>: Zorg er tenslotte met JavaScript voor dat het menu door te klikken op de knop in de header verborgen en getoond kan worden.</li>
+          <li><strong>HTML</strong>: Voor de minor is het belangrijk dat je bekend bent met het Document Object Model.
+            Eerst willen wij je vragen de html te schrijven voor het menu zoals dat in het voorbeeld is weergegeven. De
+            header en de menuknop krijg je vast van ons cadeau!</li>
+          <li><strong>CSS</strong>: Voor deze opdracht is het belangrijk om de HTML elementen die je gebruikt hebt te
+            stylen. Hier is het van belang css selectors te gebruiken zoals: id, class, child element. Moderne
+            standaarden zoals flexbox en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als
+            in het voorbeeld.</li>
+          <li><strong>JavaScript</strong>: Zorg er tenslotte met JavaScript voor dat het menu door te klikken op de knop
+            in de header verborgen en getoond kan worden.</li>
         </ol>
       </fieldset>
       <fieldset class="code-container">
@@ -18,8 +24,8 @@
 
 
         <div class="codepanel">
-          <label>HTML</label>
-          <div id="html">
+          <label class="panelLabel" data-for="html">HTML</label>
+          <div id="html" class="panelContent">
             <header>
               <h1>Coding Challenge Example</h1>
               <button>Menu</button>
@@ -28,18 +34,18 @@
         </div>
 
         <div class="codepanel">
-          <label>CSS</label>
-          <div id="css">
+          <label class="panelLabel" data-for="css">CSS</label>
+          <div id="css" class="panelContent is-collapsed">
             header {
-              display:flex;
+            display:flex;
             }
           </div>
         </div>
 
         <div class="codepanel">
-          <label>JavaScript</label>
-          <div id="js">
-            <!-- const button = document.querySelector('button'); -->
+          <label class="panelLabel" data-for="js">JavaScript</label>
+          <div id="js" class="panelContent is-collapsed">
+            const button = document.querySelector('button');
           </div>
         </div>
 
