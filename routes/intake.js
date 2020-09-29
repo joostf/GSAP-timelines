@@ -52,10 +52,14 @@ router.get('/challenge', function(req, res) {
   MongoClient.connect(url, async function(err, client) {
     
     const db = client.db(dbName)
-    const data = await db.collection('user').findOne({userid: id})
+    let data = await db.collection('user').findOne({userid: id})
+    let dataToggle;
+    data.codechallenge === undefined ? dataToggle = false : dataToggle = true
     res.render('challenge', {
       title: 'Minor Web Dev Intake',
-      id: id
+      id: id,
+      data: data,
+      hasData: dataToggle
     })
   })
 })

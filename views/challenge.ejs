@@ -31,10 +31,14 @@
               <i class="far fa-angle-down"></i>
             </label>
             <div id="html" class="panelContent is-opened">
-              <header>
-                <h1>Coding Challenge Example</h1>
-                <button>Menu</button>
-              </header>
+              <% if (hasData) { %> 
+                <%- data.codechallenge.html %>
+                <% } else { %>
+                  <header>
+                    <h1>Coding Challenge Example</h1>
+                    <button>Menu</button>
+                  </header>
+                <% } %>
             </div>
           </div>
 
@@ -44,13 +48,17 @@
               <i class="far fa-angle-down is-rotated"></i>
             </label>
             <div id="css" class="panelContent">
-              body {
-                background: #fff;
-              }
-  
-              header {
-                display:flex;
-              }
+              <% if (hasData) { %> 
+                <%- data.codechallenge.css %>
+                <% } else { %>
+                  body {
+                    background: #fff;
+                  }
+      
+                  header {
+                    display:flex;
+                  }
+                <% } %>
             </div>
           </div>
 
@@ -60,7 +68,11 @@
               <i class="far fa-angle-down is-rotated"></i>
             </label>
             <div id="js" class="panelContent">
-              const button = document.querySelector('button');
+              <% if (hasData) { %> 
+                <%- data.codechallenge.javascript %>
+                <% } else { %>
+                  const button = document.querySelector('button');
+                <% } %>
             </div>
           </div>
         </div>
