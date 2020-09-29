@@ -88,6 +88,16 @@ h2 {
   margin-top: 30px;
 }
 
+.context-challenge ol {
+  color: #fff;
+  list-style-position: inside;
+  width: 50%;
+}
+
+.context-challenge ol li:not(:first-of-type) {
+  padding-top: 15px;
+}
+
 .code-container {
   display:flex;
   flex-direction: column;
