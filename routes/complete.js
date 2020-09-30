@@ -9,10 +9,12 @@ router.get('/', function(req, res) {
   MongoClient.connect(url, async function(err, client) {
     const db = client.db(dbName)
     const data = await db.collection('user').findOne({userid: id})
+    console.log(data)
     res.render('complete', {
       title: 'Minor Web Dev Intake',
       id: id,
-      data: data
+      data: data,
+      context:'index'
     })
   })
 })

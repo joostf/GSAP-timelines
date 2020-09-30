@@ -16,7 +16,8 @@ router.get('/form', function(req, res) {
     res.render('intake-form', {
       title: 'Minor Web Dev Intake',
       id: id,
-      data: data
+      data: data,
+      context:'intake'
     })
   })
 })
@@ -59,12 +60,14 @@ router.get('/challenge', function(req, res) {
       title: 'Minor Web Dev Intake',
       id: id,
       data: data,
-      hasData: dataToggle
+      hasData: dataToggle,
+      context: 'challenge'
     })
   })
 })
 
 router.post('/challenge', function(req, res) {
+  console.log(req.body);
   const id = req.body.id
   MongoClient.connect(url, async function(err, client) {
     const db = client.db(dbName)

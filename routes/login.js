@@ -6,7 +6,7 @@ const mongoDbClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTo
 
 
 router.get('/', async (req, res) => {
-  res.render('login')
+  res.render('login', {context:'admin'})
 })
 
 router.post('/', async (req, res) => {

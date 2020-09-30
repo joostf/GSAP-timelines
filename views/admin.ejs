@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="nl">
-<%- include("partials/head.ejs") %>
+  <%- include('partials/head') %>
 
 <body>
   <main class="index">
-    <div class="context">
-      <h1>Admin Dashboard</h1>
-    </div>
-    <%- include("partials/form-add-emails.ejs") %>
+    <h1>Admin Dashboard</h1>
 
+    <%- include("partials/form-add-emails.ejs") %>
   </main>
   <script src="/js/new-user-form.js"></script>
 </body>

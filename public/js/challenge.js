@@ -12,7 +12,6 @@ function giveName(){
   const codeFlaskTextAreas = document.querySelectorAll('.codeflask textarea')
   codeFlaskTextAreas.forEach((area, i) => {
     area.name = codePanels[i]
-    console.log(area.value)
   })
 }
 
@@ -48,6 +47,22 @@ function compile() {
   }
 }
 
+/* Edit / Normal mode */
+const input = document.querySelector('section#input');
+
+window.addEventListener('scroll', function(e) {
+  input.getBoundingClientRect().top < 50 ? editMode() : normalMode();
+});
+
+function editMode () {
+  document.body.classList.add('edit-mode');
+}
+function normalMode () {
+  document.body.classList.remove('edit-mode');
+}
+
+
+/*
 const toggleElement = (e) => {
   const rotatedIcons = document.querySelectorAll('.is-rotated')
   rotatedIcons.forEach(icon => {
@@ -79,8 +94,7 @@ const toggleFullscreen = (e) => {
   const codePanels = document.querySelectorAll('.codepanel')
   codePanels.forEach(panel => panel.classList.toggle('is-fullscreen'))
 }
-// CodeFlask.onUpdate((code => {
-//   console.log(code)
-// }))
+*/
+
 giveName()
 compile()

@@ -1,105 +1,82 @@
 <!DOCTYPE html>
 <html lang="nl">
-<%- include("partials/head.ejs") %>
+<%- include('partials/head') %>
 
 <body>
-  <main class="challenge-main">
-    <form action="/intake/challenge" method="POST">
-      <fieldset class="context-challenge">
-        <legend>Coding challenge</legend>
-        <ol>
-          <li><strong>HTML</strong>: Voor de minor is het belangrijk dat je bekend bent met het Document Object Model.
-            Eerst willen wij je vragen de html te schrijven voor het menu zoals dat in het voorbeeld is weergegeven. De
-            header en de menuknop krijg je vast van ons cadeau!</li>
-          <li><strong>CSS</strong>: Voor deze opdracht is het belangrijk om de HTML elementen die je gebruikt hebt te
-            stylen. Hier is het van belang css selectors te gebruiken zoals: id, class, child element. Moderne
-            standaarden zoals flexbox en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als
-            in het voorbeeld.</li>
-          <li><strong>JavaScript</strong>: Zorg er tenslotte met JavaScript voor dat het menu door te klikken op de knop
-            in de header verborgen en getoond kan worden.</li>
-        </ol>
-      </fieldset>
-      <fieldset class="code-container" id="code-container">
-        <legend>
-          Schrijf hieronder jouw code. <button id="button-fullscreen"><i class="fas fa-expand-alt"></i></button>
-        </legend>
 
-        <div class="codepanels-container">
-          <div class="codepanel">
-            <label class="panelLabel" data-for="html">
-              HTML
-              <i class="far fa-angle-down"></i>
-            </label>
-            <div id="html" class="panelContent is-opened">
-              <% if (hasData) { %> 
-                <%- data.codechallenge.html %>
-                <% } else { %>
-                  <header>
-                    <h1>Coding Challenge Example</h1>
-                    <button>Menu</button>
-                  </header>
-                <% } %>
-            </div>
-          </div>
-
-          <div class="codepanel">
-            <label class="panelLabel" data-for="css">
-              CSS
-              <i class="far fa-angle-down is-rotated"></i>
-            </label>
-            <div id="css" class="panelContent">
-              <% if (hasData) { %> 
-                <%- data.codechallenge.css %>
-                <% } else { %>
-                  body {
-                    background: #fff;
-                  }
-      
-                  header {
-                    display:flex;
-                  }
-                <% } %>
-            </div>
-          </div>
-
-          <div class="codepanel">
-            <label class="panelLabel" data-for="js">
-              JavaScript
-              <i class="far fa-angle-down is-rotated"></i>
-            </label>
-            <div id="js" class="panelContent">
-              <% if (hasData) { %> 
-                <%- data.codechallenge.javascript %>
-                <% } else { %>
-                  const button = document.querySelector('button');
-                <% } %>
-            </div>
-          </div>
+  <header id="top">
+    <h1>Code challenge #1</h1>
+    <p>Het doel van deze challenge is om  om het menu uit het voorbeeld na te maken met HTML, CSS en JavaScript. Volg hiervoor onderstaande stappen.</p>
+    <ol>
+      <li><strong>HTML</strong>: Voor de minor is het belangrijk dat je bekend bent met het Document Object Model. Eerst willen wij je vragen de html te schrijven voor het menu zoals dat in het voorbeeld is weergegeven. De header en de menuknop krijg je vast van ons cadeau!</li>
+      <li><strong>CSS</strong>: Voor deze opdracht is het belangrijk om de HTML elementen die je gebruikt hebt te stylen. Hier is het van belang css selectors te gebruiken zoals: id, class, child element. Moderne standaarden zoals flexbox en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als in het voorbeeld.</li>
+      <li><strong>JavaScript</strong>: Zorg er tenslotte met JavaScript voor dat het menu door te klikken op de knop in de header verborgen en getoond kan worden.</li>
+    </ol>
+    <a href="#input">Let's go! <img src="https://minor-web-intake.herokuapp.com/images/icon-up.svg" alt="Up arrow by BlackActurus from the Noun Project"></a>
+  </header>
+  
+  <section id="input">
+    <h2>Type hier je code</h2>
+    
+    <form action="/intake/challenge" id="code" method="POST">
+      <fieldset>
+        <legend>HTML</legend>
+        <div id="html">
+          <header>
+            <h1>Coding Challenge Example</h1>
+            <button>Menu</button>
+          </header>
         </div>
-
-        <input name="id" type="hidden" value="<%- id %>">
       </fieldset>
-
-      <section class="output-container">
-        <div>
-          <div>
-            <h2>Voorbeeld</h2>
-            <div class="image-example">
-              <img src="/images/example.png" alt="Voorbeeld image">
-            </div>
-          </div>
-          <div id="output">
-            <h2>Jouw resultaat</h2>
-            <iframe></iframe>
-          </div>
-
+      <fieldset>
+        <legend>CSS</legend>
+        <div id="css">
+          header {
+            display:flex;
+          }
         </div>
-      </section>
+      </fieldset>
+      <fieldset>
+        <legend>JavaScript</legend>
+        <div id="js">
+          const button = document.querySelector('button');
+        </div>
+        
+       </fieldset>
 
-      <button id="saveButton">Sla jouw resultaat op</button>
+       <ul class="toolbar">
+        <li>
+          <a href="#"><img src="https://minor-web-intake.herokuapp.com/images/icon-lamp.svg" alt="Bulb by faisal from the Noun Project"></a>
+          <section>
+            <h3>Tips & Resources</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et qui eaque hic mollitia autem, harum dolorem quas perferendis saepe, dolorum illo blanditiis dolor quo veritatis assumenda. Aliquam accusamus quia mollitia.</p>
+            <ul>
+              <li><a href="#">Flexbox guide</a></li>
+              <li><a href="#">Grid Layout guide</a></li>
+              <li><a href="#">Media Queries guide</a></li>
+            </ul>
+          </section>
+        </li>
+        <li><a href="#"><img src="https://minor-web-intake.herokuapp.com/images/icon-calendar.svg" alt="Calendar by faisal from the Noun Project"></a></li>
+        <li><button><img src="https://minor-web-intake.herokuapp.com/images/icon-accept.svg" alt="Accept by faisal from the Noun Project"></button></li>
+        <li><a href="#top"><img src="https://minor-web-intake.herokuapp.com/images/icon-up.svg" alt="Arrow by faisal from the Noun Project"></a></li>
+      </ul>
 
+      <input name="id" type="hidden" value="<%- id %>">
     </form>
-  </main>
+  </section>
+  
+  <section id="example">
+    <h2>Voorbeeld</h2>
+    <img src="https://minor-web-intake.herokuapp.com/images/example.png" alt="Artis menu component">
+  </section>
+  
+  <section id="output">
+    <h2>Resultaat</h2>
+    <iframe></iframe>
+  </section>
+  
+  
 
   <div class="splashscreen">
     <ul class="minor-logo">
@@ -115,6 +92,7 @@
       <li></li>
     </ul>
   </div>
+
   <script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
   <script src="/js/challenge.js"></script>
 </body>
