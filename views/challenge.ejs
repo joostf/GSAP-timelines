@@ -6,12 +6,17 @@
 
   <header id="top">
     <h1>Code challenge #1</h1>
-    <p>Het doel van deze challenge is om  om het menu uit het voorbeeld na te maken met HTML, CSS en JavaScript. Volg hiervoor onderstaande stappen.</p>
-    <ol>
-      <li><strong>HTML</strong>: Voor de minor is het belangrijk dat je bekend bent met het Document Object Model. Eerst willen wij je vragen de html te schrijven voor het menu zoals dat in het voorbeeld is weergegeven. De header en de menuknop krijg je vast van ons cadeau!</li>
-      <li><strong>CSS</strong>: Voor deze opdracht is het belangrijk om de HTML elementen die je gebruikt hebt te stylen. Hier is het van belang css selectors te gebruiken zoals: id, class, child element. Moderne standaarden zoals flexbox en / of grid zijn pluspunten! Probeer het menu zo te stylen dat het er uitziet als in het voorbeeld.</li>
-      <li><strong>JavaScript</strong>: Zorg er tenslotte met JavaScript voor dat het menu door te klikken op de knop in de header verborgen en getoond kan worden.</li>
-    </ol>
+    <p>In deze code challenge ga je een digitaal visitekaartje maken met HTML, CSS en JavaScript. In de onderstaande aanwijzingen noemen we een aantal web technieken waarvan wij bij de minor uitgaan dat je ze beheerst. Door deze code challenge te doen krijg jij een idee in hoeverre je genoeg kennis al hebt, of dat je genoeg affiniteit hebt om het te gaan leren.</p>
+
+    <h2>Aanwijzingen</h2>
+    <p>Maak het voorbeeld kaartje na of bedenk iets beters om te coden. Je krijgt van ons al wat HTML cadeau. Je kan zelf elementen toevoegen of aanpassen.</p>
+    <p>De bedoeling is dat je een mooi kaartje maakt over jezelf, en dat je met een <strong>micro-interactie</strong> iets verandert of iets laat verschijnen.</p>
+    <p>Voor de minor WEB is het belangrijk dat je het <a href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> object begrijpt en weet hoe je in CSS <strong>selectors</strong> gebruikt om HTML <strong>elementen</strong> te stylen.</p>
+    <p>In de almanac op <a href="https://css-tricks.com/almanac/">CSS-tricks</a> kun je zien welke selectors er allemaal zijn. Gebruik in je CSS een aantal van deze selectors om je kaartje te maken.</p>
+    <p>Om elementen op de juiste plek te positioneren kan je handig gebruik maken van <strong>Flexbox</strong> of <strong>Grid Layout</strong>. Dit zijn twee leuke online games om deze technieken onder de knie te krijgen: <a href="https://flexboxfroggy.com/">Flexbox Froggy</a> &amp; <a href="https://cssgridgarden.com/">Grid Garden</a></p>
+    <p>Voor het maken van een micro-interactie kan je CSS en JavaScript samen laten werken. Gebruik hiervoor onder andere het <strong>ClassList Object</strong>. <a href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/"></a>Hier kun je lezen</a> hoe je dat kan doen.</p>
+  
+
     <a href="#input">Let's go! <img src="https://minor-web-intake.herokuapp.com/images/icon-up.svg" alt="Up arrow by BlackActurus from the Noun Project"></a>
   </header>
   
@@ -23,16 +28,23 @@
         <legend>HTML</legend>
         <div id="html">
           <header>
-            <h1>Coding Challenge Example</h1>
-            <button>Menu</button>
+            <a href="#">Language</a>
+            <h1>Artis</h1>
+            <button>X</button>
           </header>
         </div>
       </fieldset>
       <fieldset>
         <legend>CSS</legend>
         <div id="css">
+          body {
+            font-family:open sans
+          }
           header {
+            width:100%;
             display:flex;
+            align-items:center;
+            justify-content:space-between;
           }
         </div>
       </fieldset>
@@ -45,7 +57,7 @@
        </fieldset>
 
        <ul class="toolbar">
-        <li>
+        <li><!--
           <a href="#"><img src="https://minor-web-intake.herokuapp.com/images/icon-lamp.svg" alt="Bulb by faisal from the Noun Project"></a>
           <section>
             <h3>Tips & Resources</h3>
@@ -57,7 +69,7 @@
             </ul>
           </section>
         </li>
-        <li><a href="#"><img src="https://minor-web-intake.herokuapp.com/images/icon-calendar.svg" alt="Calendar by faisal from the Noun Project"></a></li>
+        <li><a href="#"><img src="https://minor-web-intake.herokuapp.com/images/icon-calendar.svg" alt="Calendar by faisal from the Noun Project"></a></li>-->
         <li><button><img src="https://minor-web-intake.herokuapp.com/images/icon-accept.svg" alt="Accept by faisal from the Noun Project"></button></li>
         <li><a href="#top"><img src="https://minor-web-intake.herokuapp.com/images/icon-up.svg" alt="Arrow by faisal from the Noun Project"></a></li>
       </ul>

@@ -1,6 +1,4 @@
 /* generic */
-
-
 body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,11 +9,20 @@ body {
 body > * {
   padding:0;
 }
-h1, h2 {
+h1, section h2 {
   font-size: 1.25em;
   margin:-.5rem 0 0;
   padding:.5rem;
   background-color: var(--secondary);
+}
+header h2 {
+  color:#333
+}
+p {
+  margin:1rem 0;
+}
+ol {
+  margin:2rem 0;
 }
 img {
   max-width:100%
@@ -62,13 +69,14 @@ header {
   grid-area: header;
   display:flex;
   flex-direction:column;
-  padding:.5rem 0;
+  padding:.5rem 1rem;
   
   background-color: #d3f1fb;
   background: #fff;
 }
 header h1 {
   background-color: var(--secondary);
+  margin:-.5rem -1rem;
 }
 header p {
   padding: 0 .5rem;
@@ -177,7 +185,7 @@ ul.toolbar li {
 }
 
 ul.toolbar li:last-child {
-  margin-left:auto;
+
   margin-right:0;
   border-left:1px solid var(--secondary);
   
