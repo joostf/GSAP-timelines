@@ -92,7 +92,6 @@ header ol {
 header > a {
   padding-bottom:1.5rem;
   overflow:hidden;
-  margin-top: -1rem;
 }
 header a img {
   position:absolute;
@@ -164,9 +163,10 @@ section#example {
     align-items:center;
     justify-content:flex-end;
     background: rgb(0,239,255);
-    background: linear-gradient(0deg, rgba(0,239,255,1) 20%, #4e54c8 100%);
+    background: linear-gradient(0deg, #731500 20%, gold 100%);
     box-shadow:0 0 20px 20px rgba(0,0,0,.1);
     margin-top: 3rem;
+    border-radius:1rem;
   }
   section#example article h1 {
     margin:2rem 0 .5rem;
@@ -174,7 +174,7 @@ section#example {
   }
 
   section#example article em {
-    color: rgba(0,239,255,1);
+    color: #731500;
   }
   
   section#example article img {
@@ -207,6 +207,7 @@ section#example {
     border-top: 1px solid rgba(0,0,0,0.3);
     padding-top: .25rem;
     margin-top: .25rem;
+    color: #731500;
   }
   section#example article dt:nth-of-type(1) { grid-area: html-dt; }
   section#example article dt:nth-of-type(2) { grid-area: css-dt; transform: translateY(1rem);}
@@ -214,7 +215,8 @@ section#example {
   
   section#example article dd {
     margin:0;
-    padding-left:0.3rem
+    padding-left:0.3rem;
+    
   }
   section#example article dd:nth-of-type(2) {  
     transform: translateY(1rem);
@@ -227,6 +229,8 @@ section#example {
     margin-top: 0;
     background:rgba(255,255,255, 0.3);
     text-align:center;
+    border-radius: 0 0 1rem 1rem;
+    color: var(--primary)
   }
 
 /* output */
@@ -254,7 +258,7 @@ ul.toolbar {
   display:flex;
   justify-content:flex-end;
   z-index:1000;
-  background-color: #c7fbbd;
+  background-color: var(--tertiary);
   list-style:none;
   margin:0;
   align-items:center;
@@ -262,18 +266,18 @@ ul.toolbar {
   transform:translateY(100%);
   opacity:0;
   padding:0;
-  border-top:.5rem solid #88c57c;
+  border-top:.5rem solid var(--secondary);
   overflow:hidden;
   box-shadow:0 0 20px 10px rgba(0,0,0,.1);
 }
 ul.toolbar li {
-  border-left:1px solid #88c57c;
+  border-left:1px solid var(--secondary);
   height:100%;
 }
 
 ul.toolbar li:last-child {
   margin-right:0;
-  border-right:1px solid #88c57c;
+  border-right:1px solid var(--secondary);
   
 }
 ul.toolbar li:last-child img {
@@ -282,7 +286,7 @@ ul.toolbar li:last-child img {
 }
 ul.toolbar li > button,
 ul.toolbar li > a {
-  background-color: #aff5a2;
+  background-color: var(--tertiary);
   border-radius:0;
   border:none;
   display:block;
@@ -292,12 +296,13 @@ ul.toolbar li > a {
   vertical-align: center;
   text-decoration: none;
   line-height: 2;
+  color:var(--primary)
 }
 
 ul.toolbar li > button:hover,
 ul.toolbar li > a:hover,
 ul.toolbar li > button:focus {
-  background-color: #88c57c;
+  background-color: var(--primary);
   color:#333;
   outline:none;
 }
