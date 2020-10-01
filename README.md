@@ -5,9 +5,9 @@
 
 ## How about a section that describes how to install this project? 🤓
 
-## ...but how does one use this project? What are its features? 🤔
+## But how does one use this project? What are its features? 🤔
 
-## What is teh flow of the app? 💬
+## Explain the flow of the app 💬
 
 ## Maybe a checklist of done stuff and stuff still on your wishlist? ✅ 
 
