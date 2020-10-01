@@ -119,6 +119,7 @@ section {
 section#input {
   grid-area: input;
   background-color: var(--primary);
+  padding-top: .5rem;
 }
   section#input form {
     display:flex;
@@ -157,6 +158,7 @@ section#output {
   display:flex;
   flex-direction:column;
   background-color: var(--primary);
+  padding-top: .5rem;
 }
 section#output iframe {
   border:none;
