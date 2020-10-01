@@ -140,16 +140,93 @@ section#example {
   grid-area: example;
   background-color: #fff;
   padding:.5rem 0;
+  display:flex;
+
+  align-items: center;
 }
-  section#example h2 {
+  section#example > h2 {
     background-color: var(--secondary);
+    width:100%;
   }  
-  section#example img {
+  /* section#example img {
     flex-grow: 1;
     align-self:center;
     margin: 0;
     min-width:30em;
     max-width:35em;
+  } */
+
+  section#example article {
+    width:50%;
+    min-width:22.5em;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    background: rgb(0,239,255);
+    background: linear-gradient(0deg, rgba(0,239,255,1) 20%, #4e54c8 100%);
+    box-shadow:0 0 20px 20px rgba(0,0,0,.1);
+    margin-top: 3rem;
+  }
+  section#example article h1 {
+    margin:2rem 0 .5rem;
+    background:transparent;
+  }
+
+  section#example article em {
+    color: rgba(0,239,255,1);
+  }
+  
+  section#example article img {
+    width:10em;
+    border-radius:10em;
+    border:5px solid #fff;
+    box-shadow:0 0 2px 2px rgba(0,0,0,.2);
+    position:relative;
+    top:2rem;
+  }
+  section#example article dl {
+    width:100%;
+    background: rgb(255,255,255);
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "html-dd css-dd js-dd"
+      "html-dt css-dt js-dt"
+      ;
+    justify-items:center;
+    align-items:start;
+    padding:5rem 0 3rem;
+    margin-top: -3rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  section#example article dt {
+    font-weight: bold;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    padding-top: .25rem;
+    margin-top: .25rem;
+  }
+  section#example article dt:nth-of-type(1) { grid-area: html-dt; }
+  section#example article dt:nth-of-type(2) { grid-area: css-dt; transform: translateY(1rem);}
+  section#example article dt:nth-of-type(3) { grid-area: js-dt; }
+  
+  section#example article dd {
+    margin:0;
+    padding-left:0.3rem
+  }
+  section#example article dd:nth-of-type(2) {  
+    transform: translateY(1rem);
+  }
+  section#example article p { 
+    margin:0
+  }
+  section#example article p:last-of-type {
+    padding:3rem 2rem;
+    margin-top: 0;
+    background:rgba(255,255,255, 0.3);
+    text-align:center;
   }
 
 /* output */
