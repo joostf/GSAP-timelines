@@ -1,4 +1,5 @@
-## Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+# Minor Web Code Intake Tool
+## Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 
 
 ## Maybe a table of contents here? 📚
 
