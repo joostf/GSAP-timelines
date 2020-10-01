@@ -92,7 +92,7 @@ header ol {
 header > a {
   padding-bottom:1.5rem;
   overflow:hidden;
-  margin-bottom: 1rem;
+  margin-top: -1rem;
 }
 header a img {
   position:absolute;
@@ -188,6 +188,7 @@ ul.toolbar {
 }
 ul.toolbar li {
   border-left:1px solid #88c57c;
+  height:100%;
 }
 
 ul.toolbar li:last-child {
@@ -200,32 +201,31 @@ ul.toolbar li:last-child img {
 
 }
 ul.toolbar li > button,
-ul.toolbar li > a{
+ul.toolbar li > a {
   background-color: #aff5a2;
   border-radius:0;
   border:none;
-  padding:0;
-  height:3rem;
   display:block;
   overflow:hidden;
-  padding:.75rem .5rem 0;
+  padding:0 .5rem;
+  position: relative;
+  vertical-align: center;
+  text-decoration: none;
+  line-height: 2;
 }
 
 ul.toolbar li > button:hover,
-ul.toolbar li > a:hover {
-  background-color: #88c57c;
-}
+ul.toolbar li > a:hover,
 ul.toolbar li > button:focus {
-  outline:none;
   background-color: #88c57c;
+  color:#333;
+  outline:none;
 }
+
 ul.toolbar section {
   display:none;
 }
-ul.toolbar li img {
-  height:2rem;
-  opacity:1;
-}
+
 
 
 /* Edit mode */
