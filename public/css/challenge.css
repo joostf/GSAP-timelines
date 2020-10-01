@@ -43,7 +43,7 @@ fieldset {
   border:none;
   position:relative;
   border-bottom:1px solid var(--tertiary);
-  border-right:1px solid var(--tertiary);
+  border-right:1px solid #eee;
 }
 fieldset:last-of-type {
   border-bottom:none;
@@ -137,7 +137,7 @@ section#input {
 /* example */
 section#example {
   grid-area: example;
-  background-color: #fff;
+  background-color: #eee;
   padding:.5rem 0;
   display:flex;
 
