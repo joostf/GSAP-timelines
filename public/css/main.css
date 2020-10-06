@@ -17,7 +17,13 @@ html {
 
 body {
   font-family: "Exo", sans-serif;
+  line-height: 1.5;
+  
   overflow-x: hidden;
+}
+main > p {
+  color:#fff;
+  margin:2rem 0;
 }
 fieldset {
   border:none;
@@ -41,6 +47,7 @@ input {
   border: 1px solid #ededed;
   padding: 10px 15px;
 }
+a,
 button {
   padding: 8px 13px;
   border-radius: 10px;
@@ -50,9 +57,14 @@ button {
   background-color: var(--primary);
   transition: all 0.3s;
   font-size:18px;
+  outline:none;
 }
+a:hover,
+a:active,
+a:focus,
 button:hover,
-button:active {
+button:active,
+button:focus {
   cursor: pointer;
   color: var(--primary);
   border: 2px solid var(--primary);

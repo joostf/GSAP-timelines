@@ -13,7 +13,7 @@ router.get('/form', function(req, res) {
   MongoClient.connect(url, async function(err, client) {
     const db = client.db(dbName)
     const data = await db.collection('user').findOne({userid: id})
-    res.render('intake-form', {
+    res.render('intake', {
       title: 'Minor Web Dev Intake',
       id: id,
       data: data,

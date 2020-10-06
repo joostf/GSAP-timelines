@@ -32,9 +32,21 @@ a, button {
   color:#333;
   font-size: inherit;
   font-family: inherit;
+  border:none;
+  background-color: transparent;
+  text-decoration: underline;
+  border-radius:0;
 }
-a:hover {
-  text-decoration:none;
+a:hover,
+a:active,
+a:focus,
+button:hover,
+button:active,
+button:focus {
+  color:#333;
+  border:none;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 fieldset {
