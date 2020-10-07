@@ -12,17 +12,23 @@ Use the following instructions to install and run the project
 
 - 2: Clone the repo
 
-```git clone https://github.com/cmda-minor-web/intake-tool.git```
+```
+git clone https://github.com/cmda-minor-web/intake-tool.git
+```
 
 - 3: Go into the right folder
 
-```cd intake-tool```
+```
+cd intake-tool
+```
 
 - 4: Install all packages
 
-```npm install```
+```
+npm install
+```
 
--5: Create a .env file containing the following credentials:
+- 5: Create a .env file containing the following credentials:
 
 ```
 PORT= The port you want to use when running this project
