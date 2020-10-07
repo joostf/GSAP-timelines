@@ -43,7 +43,23 @@ npm start
 
 You should now be able to browse to localhost:{Your port} and use the app
 
-## But how does one use this project? What are its features? 🤔
+## Features
+
+### Coding challenge
+A big part of this app is the coding challenge. The coding challenge features a couple of nifty things to make it more fun for the easier.
+#### Codeflask
+The coding challenge has three different panels each featuring their own respective language; HTML, CSS and JavaScript. The panels have code hightlighting, line numbers and indenting support.
+#### Saving so you can finish it later
+The code you write can be saved for future use, just press the save button and when you return to the app you can type the same email and your code will be there!
+
+### Email 
+Once a user has filled in the form, an email will be sent to the email filled in the .env file. 
+
+### Intake form
+
+
+### MongoDB 
+
 
 ## App flow
 <img width="100%" src="https://github.com/cmda-minor-web/intake-tool/blob/master/flow.png" /> 
