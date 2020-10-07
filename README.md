@@ -46,4 +46,5 @@ You should now be able to browse to localhost:{Your port} and use the app
 
 ## Maybe a checklist of done stuff and stuff still on your wishlist? ✅ 
 
-## How about a license here? 📜 (or is it a licence?) 🤷 
+## License 📜
+[Check out the license here!](https://github.com/cmda-minor-web/intake-tool/blob/master/LICENSE)
