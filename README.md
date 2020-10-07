@@ -5,37 +5,40 @@
 
 ## Maybe a table of contents here? 📚
 
-## How about a section that describes how to install this project? 🤓
+## Installation 🤓
 Use the following instructions to install and run the project
 
 - 1: Open your terminal
 
 - 2: Clone the repo
-
 ```
 git clone https://github.com/cmda-minor-web/intake-tool.git
 ```
 
 - 3: Go into the right folder
-
 ```
 cd intake-tool
 ```
 
 - 4: Install all packages
-
 ```
 npm install
 ```
 
 - 5: Create a .env file containing the following credentials:
-
 ```
 PORT= The port you want to use when running this project
 EMAIL_PASSWORD= Your email password
 EMAIL_USERNAME= Your email username
 MONGO_URI= Your MongoDB URI
 ```
+
+- 6: Run the project
+```
+npm start
+```
+
+You should now be able to browse to localhost:{Your port} and use the app
 
 ## But how does one use this project? What are its features? 🤔
 
