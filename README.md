@@ -1,7 +1,10 @@
 # Minor Web Code Intake Tool
-## Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 
-<img width="500" src="https://user-images.githubusercontent.com/43671292/95306737-11ac2180-0888-11eb-8401-33a079590ad1.png" /> 
-<img width="700" src="https://user-images.githubusercontent.com/43671292/95306823-2ab4d280-0888-11eb-8157-1848907abdba.png" />
+## Add a nice poster image here at the end of the week, showing off your shiny frontend 📸
+
+<p float="left">
+  <img width="49%" src="https://user-images.githubusercontent.com/43671292/95306737-11ac2180-0888-11eb-8401-33a079590ad1.png" /> 
+  <img width="49%" src="https://user-images.githubusercontent.com/43671292/95306823-2ab4d280-0888-11eb-8157-1848907abdba.png" />
+</p>
 
 ## Maybe a table of contents here? 📚
 
@@ -42,7 +45,9 @@ You should now be able to browse to localhost:{Your port} and use the app
 
 ## But how does one use this project? What are its features? 🤔
 
-## Explain the flow of the app 💬
+## App flow
+<img width="100%" src="https://github.com/cmda-minor-web/intake-tool/blob/master/flow.png" /> 
+
 
 ## Maybe a checklist of done stuff and stuff still on your wishlist? ✅ 
 
