@@ -1,12 +1,9 @@
-# Minor Web Code Intake Tool
-## Add a nice poster image here at the end of the week, showing off your shiny frontend 📸
+# Minor Web Code Challenge & Intake Tool
 
 <p float="left">
   <img width="49%" src="https://user-images.githubusercontent.com/43671292/95306737-11ac2180-0888-11eb-8401-33a079590ad1.png" /> 
   <img width="49%" src="https://user-images.githubusercontent.com/43671292/95306823-2ab4d280-0888-11eb-8157-1848907abdba.png" />
 </p>
-
-## Maybe a table of contents here? 📚
 
 ## Installation 🤓
 Use the following instructions to install and run the project
@@ -47,10 +44,12 @@ You should now be able to browse to localhost:{Your port} and use the app
 
 ### Coding challenge
 A big part of this app is the coding challenge. The coding challenge features a couple of nifty things to make it more fun for the easier.
+
 #### Codeflask
 The coding challenge has three different panels each featuring their own respective language; HTML, CSS and JavaScript. The panels have code hightlighting, line numbers and indenting support.
+
 #### Saving so you can finish it later
-The code you write can be saved for future use, just press the save button and when you return to the app you can type the same email and your code will be there!
+The code you write can be saved for future use, just press the save button and when you return to the app you can type the same url and your code will be there!
 
 ### Email 
 Once a user has filled in the form, an email will be sent to the email filled in the .env file. 
