@@ -52,19 +52,29 @@ The coding challenge has three different panels each featuring their own respect
 The code you write can be saved for future use, just press the save button and when you return to the app you can type the same url and your code will be there!
 
 ### Email 
-Once a user has filled in the form, an email will be sent to the email filled in the .env file. 
+Once a user has filled in the form, an email will be sent to the email filled in the .env file. The email features an email-template found in the src map.
 
 ### Intake form
-
+Previous the minor web dev did everything by paper, asking questions if you've done previous tech projects or not. Now it will be done online. This way the user fills in the enhanced form and sends the data to the teacher, who will then decide if the student is fit for the minor. 
 
 ### MongoDB 
+Everything is saved in MongoDB, the data from the form, the HTML / CSS / JS from the coding challenge is also saved in MongoDB. The data structure is built with a single email that the user has first filled in.
 
+#### Code injection
+To provide some security to the database we have introduced mongo-sanitize. Which will check for possible injections or commands known to MongoDB and remove them or change their characters to something harmless.
 
 ## App flow
 <img width="100%" src="https://github.com/cmda-minor-web/intake-tool/blob/master/flow.png" /> 
 
 
-## Maybe a checklist of done stuff and stuff still on your wishlist? ✅ 
+## TO DO ✅ 
+- [ ] Redo the flow in the app itself
+- [ ] Fix the arrow functions not being saved properly in the database (mongo-sanatize)
+- [ ] Redo design if needed
+- [ ] Remove some leftover SCSS
+- [ ] Add autosave in coding challenge
+- [ ] Fix CSS form
+- [ ] Send email to minorwebdev@gmail.com notifying someones done
 
 ## License 📜
 [Check out the license here!](https://github.com/cmda-minor-web/intake-tool/blob/master/LICENSE)
