@@ -63,7 +63,7 @@ Everything is saved in MongoDB, the data from the form, the HTML / CSS / JS from
 #### Code injection
 To provide some security to the database we have introduced mongo-sanitize. Which will check for possible injections or commands known to MongoDB and remove them or change their characters to something harmless.
 
-## App flow
+## Desired app flow
 <img width="100%" src="https://github.com/cmda-minor-web/intake-tool/blob/master/flow.png" /> 
 
 
