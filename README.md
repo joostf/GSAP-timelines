@@ -76,5 +76,8 @@ To provide some security to the database we have introduced mongo-sanitize. Whic
 - [ ] Fix CSS form
 - [ ] Send email to minorwebdev@gmail.com notifying someones done
 
+## Icons
+The icons used in this tools are made by [Tabler](https://tablericons.com/)
+
 ## License 📜
 [Check out the license here!](https://github.com/cmda-minor-web/intake-tool/blob/master/LICENSE)
