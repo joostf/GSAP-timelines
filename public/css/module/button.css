@@ -1,0 +1,10 @@
+button {
+  padding: 8px 13px;
+  font-size: 18px;
+  
+  background: var(--primary);
+  color: var(--secondary);
+
+  border: 2px solid var(--secondary);
+  border-radius: 10px;
+}

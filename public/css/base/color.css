@@ -1,0 +1,12 @@
+h1,
+h2 {
+  color: var(--primary);
+}
+
+legend {
+  color: var(--primary);
+}
+
+.splashscreen {
+  background: var(--secondary);
+}

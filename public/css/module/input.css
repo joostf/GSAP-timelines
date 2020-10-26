@@ -1,0 +1,11 @@
+input {
+  /* TODO: create class and assign margin instead of global input */
+  margin-top: 15px;
+  margin-bottom: 1rem;
+
+  padding: 10px 15px;
+
+  /* TODO: create color variable */
+  border: 1px solid #ededed;
+  border-radius: 8px;
+}
