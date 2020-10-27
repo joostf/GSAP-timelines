@@ -1,17 +1,4 @@
-.splashscreen {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-
-  z-index: -1;
-}
-
-.splashscreen .minor-logo {
+.triangle_group {
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -23,7 +10,7 @@
   z-index: 10;
 }
 
-.minor-logo .minor-logo-triangle {
+.triangle__item {
   position: absolute;
   display: block;
   height: 20px;
@@ -35,6 +22,4 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90%;
-
-  mix-blend-mode: difference;
 }

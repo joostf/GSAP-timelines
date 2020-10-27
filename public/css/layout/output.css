@@ -1,0 +1,30 @@
+.l-output {
+  position: relative;
+  grid-area: output;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  z-index: 2;
+}
+
+.output__title {
+  height: 5%;
+  margin: 0;
+  padding: 0.65rem 1.5rem;
+  background-color: var(--secondary);
+}
+
+.output__frame {
+  flex-grow: 1;
+  border: none;
+  background: var(--primary);
+  margin: 0;
+}
+
+.output__button {
+  position: absolute;
+  bottom: 2em;
+  right: 2rem;
+}

@@ -5,13 +5,18 @@
 @import "./base/typography.css";
 
 @import "./layout/default.css";
-@import "./layout/body.css";
+@import "./layout/challenge.css";
+@import "./layout/example.css";
 @import "./layout/form.css";
-@import "./layout/main.css";
+@import "./layout/information.css";
+@import "./layout/input.css";
+@import "./layout/navigation.css";
+@import "./layout/output.css";
+@import "./layout/splashscreen.css";
 
 @import "./module/button.css";
 @import "./module/input.css";
-@import "./module/splashscreen.css";
+@import "./module/triangle.css";
 
 @import "./state/animation.css";
 @import "./state/transition.css";

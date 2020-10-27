@@ -2,7 +2,7 @@ form {
   display: flex;
   flex-direction: column;
 }
-
+/* 
 legend {
   position: absolute;
   width: 100%;
@@ -11,4 +11,12 @@ legend {
 
   display: flex;
   justify-content: space-between;
+} */
+
+.form__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
 }

@@ -1,0 +1,24 @@
+.l-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: information;
+  height: 100vh;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.l-information > * {
+  color: var(--primary);
+  width: 35rem;
+}
+
+.information__link {
+  position: relative;
+  overflow: hidden;
+
+  padding-bottom: 1rem;
+}

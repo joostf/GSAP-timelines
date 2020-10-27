@@ -1,0 +1,38 @@
+.l-input {
+  grid-area: input;
+  height: 95vh;
+  width: 100%;
+  background-color: var(--primary);
+  z-index: 2;
+}
+
+.input__title {
+  height: 5%;
+  margin: 0;
+  padding: 0.65rem 1.5rem;
+  background-color: var(--secondary);
+}
+
+.input__form {
+  height: 95%;
+}
+
+.input__code {
+  height: 33.33%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.input__code > div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.input__legend {
+  background: var(--tertiary);
+  font-size: 0.8rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  z-index: 5;
+}

@@ -1,11 +1,23 @@
-input {
-  /* TODO: create class and assign margin instead of global input */
-  margin-top: 15px;
-  margin-bottom: 1rem;
+.input {
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 0.8rem;
 
-  padding: 10px 15px;
+  background: var(--primary);
+  color: var(--secondary);
 
-  /* TODO: create color variable */
-  border: 1px solid #ededed;
-  border-radius: 8px;
+  border: 1px solid var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 15px rgb(49, 53, 131);
+
+  outline: none;
+
+  min-width: 15rem;
+
+  /* transition: ease-in 0.2s; */
+}
+
+.form__input:focus {
+  box-shadow: 0 0 15px rgba(129, 134, 236, 1);
+  /* transition: ease-in 0.2s; */
 }

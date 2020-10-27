@@ -2,11 +2,25 @@
 
 body {
   font-family: "Exo", sans-serif;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 2rem;
 }
 
 legend {
   font-family: inherit;
-  font-size: 1.5em;
   font-weight: bold;
+}
+
+.welcome__subtitle {
+  font-weight: 500;
+  margin: 0;
+}
+
+.welcome__title {
+  margin-bottom: 0;
+}
+
+.welcome__text {
+  color: var(--primary);
+  margin: 2rem 0;
 }
