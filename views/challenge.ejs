@@ -70,7 +70,9 @@
                 
               </article>
         </div>
+        <i class="input__arrow input__arrow--down"></i>
       </fieldset>
+      <div class="input__resizer"></div>
       <fieldset class="input__code input__css">
         <legend class="input__legend">CSS</legend>
         <div id="css">
@@ -89,12 +91,16 @@
               background-color:#eee;
             }
         </div>
+        <i class="input__arrow input__arrow--down"></i>
       </fieldset>
+      <div class="input__resizer"></div>
+      <!-- <span class="input__resizer--marker">-</span> -->
       <fieldset class="input__code input__js">
         <legend class="input__legend">JavaScript</legend>
         <div id="js">
           const button = document.querySelector('button');
         </div>
+        <i class="input__arrow input__arrow--down"></i>
        </fieldset>
     </form>
     <input name="id" type="hidden" value="<%- id %>">
@@ -102,9 +108,11 @@
   <section id="output" class="l-output">
     <h3 class="output__title">Resultaat</h3>
     <iframe class="output__frame"></iframe>
-    <button class="button output__button">opslaan 👍</button>
+    <!-- form="code" -->
+    <button class="button output__button" type="submit">opslaan 👍</button>
   </section>
   <script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
   <script src="/js/challenge.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 </html>
