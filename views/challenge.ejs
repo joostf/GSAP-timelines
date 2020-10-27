@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="nl">
 <%- include('partials/head') %>
-
-<body>
-
-  <header id="top">
+<body class="l-challenge">
+  <section id="top" class="l-information">
     <h1>Code challenge</h1>
-    <p>In deze code challenge ga je een digitaal visitekaartje maken met HTML, CSS en JavaScript. Door deze code challenge te doen krijg jij een idee in hoeverre je al genoeg kennis hebt, of raak je misschien extra gemotiveerd om het te gaan leren.</p>
-
-    <h2>Hints</h2>
+    <!-- <p>In deze code challenge ga je een digitaal visitekaartje maken met HTML, CSS en JavaScript. Door deze code challenge te doen krijg jij een idee in hoeverre je al genoeg kennis hebt, of raak je misschien extra gemotiveerd om het te gaan leren.</p> -->
     <p>Maak het voorbeeld kaartje na of bedenk iets beters om te coden. Je krijgt van ons al wat HTML cadeau. Je kan zelf elementen toevoegen of aanpassen.</p>
     <p>De bedoeling is dat je een mooi kaartje maakt over jezelf, en dat je met een <strong>micro-interactie</strong> iets verandert of iets laat verschijnen.</p>
     <p>Voor de minor WEB is het belangrijk dat je het <a href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> object begrijpt en weet hoe je in CSS <strong>selectors</strong> gebruikt om HTML <strong>elementen</strong> te stylen. In de almanac op <a href="https://css-tricks.com/almanac/">CSS-tricks</a> kun je zien welke selectors er allemaal zijn. Gebruik in je CSS een aantal van deze selectors om je kaartje te maken.</p>
     <p>Om elementen op de juiste plek te positioneren kan je handig gebruik maken van <strong>Flexbox</strong> of <strong>Grid Layout</strong>. Oefen <a href="https://flexboxfroggy.com/">Flexbox Froggy</a> en <a href="https://cssgridgarden.com/">Grid Garden</a> om deze technieken onder de knie te krijgen.</p>
     <p>Voor het maken van een micro-interactie kan je CSS en JavaScript samen laten werken. Gebruik hiervoor onder andere het <strong>ClassList Object</strong>. <a href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/"></a>Hier kun je lezen</a> hoe je dat kan doen. Lukt het jou om het kaartje te laten omdraaien?</p>
-  
-
-    <a href="#input">Let's go! <img src="https://minor-web-intake.herokuapp.com/images/icon-up.svg" alt="Up arrow by BlackActurus from the Noun Project"></a>
-  </header>
-  
-  <section id="input">
-    <h2>Type hier je code</h2>
-    
-    <form action="/intake/challenge" id="code" method="POST">
-      <fieldset>
-        <legend>HTML</legend>
+    <a class="information__link" href="#navigation"><button class="button information__button">Let's go!</button></a>
+  </section>
+  <section id="example" class="l-example">
+    <button class="button example__button">Bekijk het voorbeeld</button>
+    <article class="example__card example__card--hidden">
+        <h1 class="card__title">Jane Doe</h1>
+        <p class="card__subtitle">Creative Frontend Developer in spé</p>
+      
+        <img class="card__img" src="https://minor-web-intake.herokuapp.com/images/creative-coder.png" alt="Creative Coder">
+        
+        <dl class="card__table">
+          <dt class="card__table-row">HTML</dt><dd class="card__table-icon">🏆🏆🏆</dd>
+          <dt class="card__table-row">CSS</dt><dd class="card__table-icon">🏆🏆</dd>
+          <dt class="card__table-row">JavaScript</dt><dd class="card__table-icon">🏆🏆🏆🏆</dd>
+        </dl>
+        
+        <p class="card__text">Het WEB is te gek! <br> Met HTML, CSS en JavaScript kan ik vette, interactieve web apps maken.</p>
+      </article>
+  </section>
+  <div class="l-triangle">
+    <ul class="triangle__group">
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+      <li class="triangle__item"></li>
+    </ul>
+  </div>
+  <section id="navigation" class="l-navigation">
+    <nav class="navigation"></nav>
+  </section>
+  <section id="input" class="l-input">
+    <h3 class="input__title">Code editor</h3>  
+    <form class="input__form" action="/intake/challenge" id="code" method="POST">
+      <fieldset class="input__code input__html">
+        <legend class="input__legend">HTML</legend>
         <div id="html">
             <article>
-                <h1>Jou naam</h1>
+                <h1>Jouw naam</h1>
                 <p><em>Creative Frontend Developer in spé</em></p>
               
                 <!-- Link bijvoorbeeld naar een van jou online profiel foto's 😎 -->
@@ -45,8 +71,8 @@
               </article>
         </div>
       </fieldset>
-      <fieldset>
-        <legend>CSS</legend>
+      <fieldset class="input__code input__css">
+        <legend class="input__legend">CSS</legend>
         <div id="css">
             * {
               box-sizing:border-box;
@@ -64,53 +90,21 @@
             }
         </div>
       </fieldset>
-      <fieldset>
-        <legend>JavaScript</legend>
+      <fieldset class="input__code input__js">
+        <legend class="input__legend">JavaScript</legend>
         <div id="js">
           const button = document.querySelector('button');
         </div>
-        
        </fieldset>
-
-       <ul class="toolbar">
-        <li>
-          <button>opslaan 👍</button>
-        </li>
-        <li>
-          <a href="#top">naar boven ☝️</a>
-        </li>
-      </ul>
-
-      <input name="id" type="hidden" value="<%- id %>">
     </form>
+    <input name="id" type="hidden" value="<%- id %>">
   </section>
-  
-  <section id="example">
-    <h2>Voorbeeld</h2>
-    
-    <article>
-        <h1>Jane Doe</h1>
-        <p><em>Creative Frontend Developer in spé</em></p>
-      
-        <img src="https://minor-web-intake.herokuapp.com/images/creative-coder.png" alt="Creative Coder">
-        
-        <dl>
-          <dt>HTML</dt><dd>🏆🏆🏆</dd>
-          <dt>CSS</dt><dd>🏆🏆</dd>
-          <dt>JavaScript</dt><dd>🏆🏆🏆🏆</dd>
-        </dl>
-        
-        <p>Het WEB is te gek! <br> Met HTML, CSS en JavaScript kan ik vette, interactieve web apps maken.</p>
-      </article>
+  <section id="output" class="l-output">
+    <h3 class="output__title">Resultaat</h3>
+    <iframe class="output__frame"></iframe>
+    <button class="button output__button">opslaan 👍</button>
   </section>
-  
-  <section id="output">
-    <h2>Resultaat</h2>
-    <iframe></iframe>
-  </section>
-
   <script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
   <script src="/js/challenge.js"></script>
 </body>
-
 </html>
