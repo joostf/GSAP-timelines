@@ -31,13 +31,16 @@ divider.forEach((bar) => {
   bar.addEventListener("mousedown", resizer);
 });
 
-const arrow = document.querySelectorAll(".input__arrow");
+const arrow = document.querySelectorAll(".input__collapse");
 
-// create toggle
 arrow.forEach((elem) => {
   const parent = elem.parentElement;
+  const child = elem.firstElementChild;
+  console.log(parent);
+  child.classList.add("input__arrow--down");
+  parent.classList.add("input__code--open");
   elem.addEventListener("click", () => {
-    parent.style.height = `3.33%`;
-    elem.style.transform = `rotate(-135deg)`;
+    child.classList.toggle("input__arrow--up");
+    parent.classList.toggle("input__code--close");
   });
 });

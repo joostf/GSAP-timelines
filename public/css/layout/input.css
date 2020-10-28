@@ -19,10 +19,21 @@
 }
 
 .input__code {
-  height: 33.33%;
-  min-height: 3.33%;
+  min-height: 3.3%;
+  flex: 1;
   overflow: hidden;
   z-index: 1;
+}
+
+.input__code--open {
+  height: 33.33%;
+  transition: ease-in 0.2s;
+}
+
+.input__code--close {
+  height: 3.3%;
+  flex: 0;
+  transition: ease-in 0.2s;
 }
 
 .input__code > div {
@@ -57,11 +68,17 @@
 } */
 
 .input__collapse {
-  position: absolute;
-  top: 0.35rem;
+  position: absolute !important;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  top: 0.1rem;
   right: 0.5rem;
   border: none;
   background: none;
+  cursor: pointer;
+}
+
+.input__collapse:hover {
   cursor: pointer;
 }
 
@@ -75,9 +92,18 @@
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
+
+  transform-origin: 65% 65%;
 }
 
 .input__arrow--down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  transition: transform ease-in 0.2s;
+}
+
+.input__arrow--up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transition: transform ease-in 0.2s;
 }
