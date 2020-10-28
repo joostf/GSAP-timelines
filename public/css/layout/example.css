@@ -1,5 +1,7 @@
 .l-example {
-  grid-area: example;
+  grid-column: 21/41;
+  grid-row: 1/2;
+
   display: flex;
   flex-direction: column;
   align-items: center;

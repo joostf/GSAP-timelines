@@ -1,8 +1,5 @@
 .l-challenge {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "information example"
-    "navigation navigation"
-    "input output";
+  grid-template-columns: repeat(40, 2.5%);
+  grid-template-rows: 100vh 5vh 95vh;
 }

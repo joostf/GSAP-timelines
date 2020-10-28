@@ -1,6 +1,7 @@
 .l-output {
   position: relative;
-  grid-area: output;
+  grid-row: 3/4;
+  grid-column: 21/41;
   height: 95vh;
   width: 100%;
   display: flex;

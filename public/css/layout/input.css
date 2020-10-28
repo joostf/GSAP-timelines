@@ -1,5 +1,6 @@
 .l-input {
-  grid-area: input;
+  grid-row: 3/4;
+  grid-column: 1/21;
   height: 95vh;
   width: 100%;
   background-color: var(--primary);
