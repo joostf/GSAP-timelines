@@ -12,6 +12,16 @@
   transition: 0.2s ease-in;
 }
 
+.navigation__example .check {
+  opacity: 0;
+  transition: .2s ease-in;
+}
+
+.navigation__example:hover .check {
+  opacity: 1;
+  transition: 0.2s ease-in;
+}
+
 .navigation__preview:hover .move {
   transform: translate(3px, 0px);
   transition: 0.2s ease-in;

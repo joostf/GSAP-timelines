@@ -49,6 +49,18 @@
       <h3 class="navigation__title">web design & development</h3>
       <ul class="navigation__list">
         <li class="navigation__item">
+          <button class="navigation__button navigation__example">
+            <svg xmlns="http://www.w3.org/2000/svg" class="navigation__icon icon icon-tabler icon-tabler-file-check" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+              <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+              <path class="check" d="M9 15l2 2l4 -4" />
+            </svg>
+            Voorbeeld
+          </button>
+          <span class="navigation__tooltip navigation__tooltip--hidden">Verberg of toon het voorbeeld</span>
+        </li>
+        <li class="navigation__item">
           <button class="navigation__button navigation__preview navigation__preview--open">
             <svg xmlns="http://www.w3.org/2000/svg" class="navigation__icon icon icon-tabler icon-tabler-arrow-bar-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -59,7 +71,7 @@
             </svg>
             Preview
           </button>
-          <span class="navigation__tooltip navigation__tooltip--hidden">Verberg of toon het Resultaat</span>
+          <span class="navigation__tooltip navigation__tooltip--hidden">Verberg of toon het resultaat</span>
         </li>
         <li class="navigation__item">
           <button class="navigation__button navigation__save" form="code">
@@ -190,6 +202,22 @@
       Resultaat
     </h3>
     <iframe class="output__frame"></iframe>
+  </section>
+  <section class="l-example--modal">
+    <article class="example__card card__modal">
+      <h1 class="card__title">Jane Doe</h1>
+      <p class="card__subtitle">Creative Frontend Developer in spé</p>
+    
+      <img class="card__img" src="https://minor-web-intake.herokuapp.com/images/creative-coder.png" alt="Creative Coder">
+      
+      <dl class="card__table">
+        <dt class="card__table-row">HTML</dt><dd class="card__table-icon">🏆🏆🏆</dd>
+        <dt class="card__table-row">CSS</dt><dd class="card__table-icon">🏆🏆</dd>
+        <dt class="card__table-row">JavaScript</dt><dd class="card__table-icon">🏆🏆🏆🏆</dd>
+      </dl>
+      
+      <p class="card__text">Het WEB is te gek! <br> Met HTML, CSS en JavaScript kan ik vette, interactieve web apps maken.</p>
+    </article>
   </section>
   <script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
   <script src="/js/challenge.js"></script>

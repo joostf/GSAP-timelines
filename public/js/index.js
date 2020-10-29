@@ -67,3 +67,53 @@ preview.addEventListener("click", () => {
   inputPanel.classList.toggle("expand");
   outputPanel.classList.toggle("collapse");
 });
+
+// show example modal
+const exampleModalButton = document.querySelector(".navigation__example");
+const exampleModal = document.querySelector(".l-example--modal");
+
+exampleModalButton.addEventListener("click", () => {
+  exampleModal.classList.toggle("l-example--modal--show");
+});
+
+// draggable example
+// https://www.w3schools.com/howto/howto_js_draggable.asp
+dragElement(exampleModal);
+
+function dragElement(elem) {
+  let currentX = 0;
+  let currentY = 0;
+  let initX = 0;
+  let initY = 0;
+
+  elem.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    initX = e.clientX;
+    initY = e.clientY;
+
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+
+    currentX = initX - e.clientX;
+    currentY = initY - e.clientY;
+    initX = e.clientX;
+    initY = e.clientY;
+
+    elem.style.top = elem.offsetTop - currentY + "px";
+    elem.style.left = elem.offsetLeft - currentX + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
