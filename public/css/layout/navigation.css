@@ -23,8 +23,8 @@
 .navigation__list {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 50%;
+  justify-content: space-between;
+  width: 60%;
 }
 
 .navigation__item {

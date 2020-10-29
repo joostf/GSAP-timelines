@@ -35,6 +35,10 @@
   transform: rotate(180deg);
 }
 
+.navigation__up:hover > .navigation__icon {
+  transform: rotate(360deg);
+}
+
 .navigation__icon {
   width: 1.5rem;
   margin-right: 0.75rem;
