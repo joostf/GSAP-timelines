@@ -1,9 +1,68 @@
 .l-navigation {
   grid-column: 1/41;
   grid-row: 2/3;
-  height: 5vh;
+  height: 4vh;
   width: 100%;
-  background-color: red;
+  background-color: var(--quaternary);
 
   z-index: 2;
+}
+
+.navigation__editor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navigation__button {
+  background: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navigation__button:hover {
+  cursor: pointer;
+}
+
+.navigation__icon .move {
+  transition: 0.2s ease-in;
+}
+
+.navigation__preview:hover .move {
+  transform: translate(3px, 0px);
+  transition: 0.2s ease-in;
+}
+
+.navigation__save:hover > .navigation__icon {
+  transform: scale(1.15);
+}
+
+.navigation__tips:hover > .navigation__icon {
+  transform: rotate(180deg);
+}
+
+.navigation__icon {
+  width: 1.5rem;
+  margin-right: 0.75rem;
+  transition: 0.2s ease-in;
+}
+
+.navigation__icon--toggle {
+  transform: rotate(180deg);
+  transition: 0.2s ease-in;
 }

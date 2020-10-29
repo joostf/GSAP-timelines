@@ -44,3 +44,16 @@ arrow.forEach((elem) => {
     parent.classList.toggle("input__code--close");
   });
 });
+
+const preview = document.querySelector(".navigation__preview");
+const inputPanel = document.querySelector("#input");
+const outputPanel = document.querySelector("#output");
+const previewIcon = document.querySelector(".navigation__preview svg");
+console.log(previewIcon);
+
+preview.addEventListener("click", () => {
+  console.log("collapse", "add class to icon");
+  previewIcon.classList.toggle("navigation__icon--toggle");
+  inputPanel.classList.toggle("expand");
+  outputPanel.classList.toggle("collapse");
+});

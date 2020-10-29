@@ -4,8 +4,8 @@
 @import "./base/color.css";
 @import "./base/typography.css";
 
-@import "./layout/default.css";
 @import "./layout/challenge.css";
+@import "./layout/default.css";
 @import "./layout/example.css";
 @import "./layout/form.css";
 @import "./layout/information.css";
@@ -19,3 +19,4 @@
 @import "./module/triangle.css";
 
 @import "./state/animation.css";
+@import "./state/toggle.css";
