@@ -5,12 +5,13 @@
   <section id="top" class="l-information">
     <h1>Code challenge</h1>
     <!-- <p>In deze code challenge ga je een digitaal visitekaartje maken met HTML, CSS en JavaScript. Door deze code challenge te doen krijg jij een idee in hoeverre je al genoeg kennis hebt, of raak je misschien extra gemotiveerd om het te gaan leren.</p> -->
-    <p>Maak het voorbeeld kaartje na of bedenk iets beters om te coden. Je krijgt van ons al wat HTML cadeau. Je kan zelf elementen toevoegen of aanpassen.</p>
-    <p>De bedoeling is dat je een mooi kaartje maakt over jezelf, en dat je met een <strong>micro-interactie</strong> iets verandert of iets laat verschijnen.</p>
-    <p>Voor de minor WEB is het belangrijk dat je het <a href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> object begrijpt en weet hoe je in CSS <strong>selectors</strong> gebruikt om HTML <strong>elementen</strong> te stylen. In de almanac op <a href="https://css-tricks.com/almanac/">CSS-tricks</a> kun je zien welke selectors er allemaal zijn. Gebruik in je CSS een aantal van deze selectors om je kaartje te maken.</p>
-    <p>Om elementen op de juiste plek te positioneren kan je handig gebruik maken van <strong>Flexbox</strong> of <strong>Grid Layout</strong>. Oefen <a href="https://flexboxfroggy.com/">Flexbox Froggy</a> en <a href="https://cssgridgarden.com/">Grid Garden</a> om deze technieken onder de knie te krijgen.</p>
-    <p>Voor het maken van een micro-interactie kan je CSS en JavaScript samen laten werken. Gebruik hiervoor onder andere het <strong>ClassList Object</strong>. <a href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/"></a>Hier kun je lezen</a> hoe je dat kan doen. Lukt het jou om het kaartje te laten omdraaien?</p>
-    <a class="information__link" href="#navigation"><button class="button information__button">Let's go!</button></a>
+    <p>Maak het voorbeeld na of bedenk iets anders om te coden. Je krijgt van ons al wat HTML cadeau. Je kan zelf elementen toevoegen, verwijderen of aanpassen.</p>
+    <p>De bedoeling is dat je een mooi visitekaartje over jezelf maakt. Door middel van <em>micro-interacties</em> kan je elementen veranderen, laten verschijnen of andere toffe dingen mee doen.</p>
+    <p>Voor de minor WEB is het belangrijk dat je de <a class="information__link" href="https://developer.mozilla.org/en-US/docs/Glossary/DOM">DOM</a> goed begrijpt en weet hoe je <a class="information__link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a> gebruikt om <a class="information__link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS">HTML Elementen</a> te stylen. In de <a class="information__link" href="https://css-tricks.com/almanac/">almanac</a> van CSS-tricks zijn alle selectoren te vinden. Gebruik in je CSS een aantal van deze selectoren om het kaartje te maken.</p>
+    <p>Om de elementen op de juiste plek te krijgen, zijn er verschillende<em>properties</em> om gebruik van te maken. De belangrijkste zijn <a class="information__link" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flebox</a> en <a class="information__link" href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid</a>.</p>
+    <p>Met <a class="information__link" href="https://flexboxfroggy.com/">Flexbox Froggy</a> en <a class="information__link" href="https://cssgridgarden.com/">Grid Garden</a> kun je oefenen om deze technieken onder de knie te krijgen.</p>
+    <p>Voor het maken van een micro-interactie kan je CSS en JavaScript samen laten werken. Gebruik hiervoor onder andere <a class="information__link" href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/">ClassList Object</a>.</p>
+    <a href="#navigation"><button class="button information__button">Let's go!</button></a>
   </section>
   <section id="example" class="l-example">
     <button class="button example__button">Bekijk het voorbeeld</button>
@@ -59,7 +60,7 @@
           </button>
         </li>
         <li class="navigation__item">
-          <button class="navigation__button navigation__save">
+          <button class="navigation__button navigation__save" form="code">
             <svg xmlns="http://www.w3.org/2000/svg" class="navigation__icon icon icon-tabler icon-tabler-device-floppy" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
@@ -84,7 +85,15 @@
     </nav>
   </section>
   <section id="input" class="l-input">
-    <h3 class="input__title">Code editor</h3>  
+    <h3 class="input__title title--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" class="header__icon icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <polyline points="7 8 3 12 7 16" />
+        <polyline points="17 8 21 12 17 16" />
+        <line x1="14" y1="4" x2="10" y2="20" />
+      </svg>
+      Code editor
+    </h3>  
     <form class="input__form" action="/intake/challenge" id="code" method="POST">
       <fieldset class="input__code input__html">
         <legend class="input__legend">HTML</legend>
@@ -108,7 +117,10 @@
               </article>
         </div>
         <div class="input__collapse">
-          <i class="input__arrow input__arrow--down"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" class="legend__icon icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
         </div>
       </fieldset>
       <div class="input__resizer"></div>
@@ -131,7 +143,10 @@
             }
         </div>
         <div class="input__collapse">
-          <i class="input__arrow input__arrow--down"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" class="legend__icon icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
         </div>
       </fieldset>
       <div class="input__resizer"></div>
@@ -141,16 +156,28 @@
         <div id="js">
           const button = document.querySelector('button');
         </div>
-        <div class="input__collapse"><i class="input__arrow input__arrow--down"></i></div>
+        <div class="input__collapse">
+          <svg xmlns="http://www.w3.org/2000/svg" class="legend__icon icon icon-tabler icon-tabler-chevron-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
        </fieldset>
     </form>
     <input name="id" type="hidden" value="<%- id %>">
   </section>
   <section id="output" class="l-output">
-    <h3 class="output__title">Resultaat</h3>
+    <h3 class="output__title title--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" class="header__icon icon icon-tabler icon-tabler-file-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+        <path d="M10 13l-1 2l1 2" />
+        <path d="M14 13l1 2l-1 2" />
+      </svg>
+      Resultaat
+    </h3>
     <iframe class="output__frame"></iframe>
-    <!-- form="code" -->
-    <button class="button output__button" type="submit">opslaan 👍</button>
   </section>
   <script src="https://unpkg.com/codeflask/build/codeflask.min.js"></script>
   <script src="/js/challenge.js"></script>

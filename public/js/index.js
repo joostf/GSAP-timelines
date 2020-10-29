@@ -36,11 +36,9 @@ const arrow = document.querySelectorAll(".input__collapse");
 arrow.forEach((elem) => {
   const parent = elem.parentElement;
   const child = elem.firstElementChild;
-  console.log(parent);
-  child.classList.add("input__arrow--down");
   parent.classList.add("input__code--open");
   elem.addEventListener("click", () => {
-    child.classList.toggle("input__arrow--up");
+    child.classList.toggle("legend__icon--active");
     parent.classList.toggle("input__code--close");
   });
 });

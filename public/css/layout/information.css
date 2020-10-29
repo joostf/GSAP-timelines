@@ -17,10 +17,3 @@
   color: var(--primary);
   width: 35rem;
 }
-
-.information__link {
-  position: relative;
-  overflow: hidden;
-
-  padding-bottom: 1rem;
-}
