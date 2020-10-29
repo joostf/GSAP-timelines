@@ -8,7 +8,7 @@
     <p>Maak het voorbeeld na of bedenk iets anders om te coden. Je krijgt van ons al wat HTML cadeau. Je kan zelf elementen toevoegen, verwijderen of aanpassen.</p>
     <p>De bedoeling is dat je een mooi visitekaartje over jezelf maakt. Door middel van <em>micro-interacties</em> kan je elementen veranderen, laten verschijnen of andere toffe dingen mee doen.</p>
     <p>Voor de minor WEB is het belangrijk dat je de <a class="information__link" href="https://developer.mozilla.org/en-US/docs/Glossary/DOM">DOM</a> goed begrijpt en weet hoe je <a class="information__link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors</a> gebruikt om <a class="information__link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS">HTML Elementen</a> te stylen. In de <a class="information__link" href="https://css-tricks.com/almanac/">almanac</a> van CSS-tricks zijn alle selectoren te vinden. Gebruik in je CSS een aantal van deze selectoren om het kaartje te maken.</p>
-    <p>Om de elementen op de juiste plek te krijgen, zijn er verschillende<em>properties</em> om gebruik van te maken. De belangrijkste zijn <a class="information__link" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flebox</a> en <a class="information__link" href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid</a>.</p>
+    <p>Om de elementen op de juiste plek te krijgen, zijn er verschillende <em>properties</em> om gebruik van te maken. De belangrijkste zijn <a class="information__link" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flebox</a> en <a class="information__link" href="https://css-tricks.com/snippets/css/complete-guide-grid/">Grid</a>.</p>
     <p>Met <a class="information__link" href="https://flexboxfroggy.com/">Flexbox Froggy</a> en <a class="information__link" href="https://cssgridgarden.com/">Grid Garden</a> kun je oefenen om deze technieken onder de knie te krijgen.</p>
     <p>Voor het maken van een micro-interactie kan je CSS en JavaScript samen laten werken. Gebruik hiervoor onder andere <a class="information__link" href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/">ClassList Object</a>.</p>
     <a href="#navigation"><button class="button information__button">Let's go!</button></a>
@@ -46,6 +46,7 @@
   </div>
   <section id="navigation" class="l-navigation">
     <nav class="navigation__editor">
+      <h3 class="navigation__title">web design & development</h3>
       <ul class="navigation__list">
         <li class="navigation__item">
           <button class="navigation__button navigation__preview navigation__preview--open">
@@ -58,6 +59,7 @@
             </svg>
             Preview
           </button>
+          <span class="navigation__tooltip navigation__tooltip--hidden">Verberg of toon het Resultaat</span>
         </li>
         <li class="navigation__item">
           <button class="navigation__button navigation__save" form="code">
@@ -69,6 +71,7 @@
             </svg>
             Opslaan
           </button>
+          <span class="navigation__tooltip navigation__tooltip--hidden">Sla je werk op als je klaar bent!</span>
         </li>
         <li class="navigation__item">
           <button class="navigation__button navigation__tips">
@@ -80,6 +83,15 @@
             </svg>
             Tips
           </button>
+          <span class="navigation__tooltip navigation__tooltip--hidden">
+            <ul class="tooltip__list">
+              <li class="tooltip__item"><a href="">HTML</a></li>
+              <li class="tooltip__item"><a href="">CSS</a></li>
+              <li class="tooltip__item"><a href="">JavaScript</a></li>
+              <li class="tooltip__item"><a href="">Flexbox</a></li>
+              <li class="tooltip__item"><a href="">Grid</a></li>
+            </ul>
+          </span>
         </li>
       </ul>
     </nav>

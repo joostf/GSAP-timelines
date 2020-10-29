@@ -5,22 +5,32 @@
   width: 100%;
   background-color: var(--quaternary);
 
-  z-index: 2;
+  z-index: 10;
 }
 
 .navigation__editor {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
+}
+
+.navigation__title {
+  margin-left: 1.5rem;
 }
 
 .navigation__list {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
+  width: 50%;
+}
+
+.navigation__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation__button {
@@ -37,4 +47,23 @@
 
 .navigation__button:hover {
   cursor: pointer;
+}
+
+.navigation__tooltip {
+  position: absolute;
+  top: 115%;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  box-shadow: 0 1px 15px rgba(49, 53, 131, 0.25);
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  text-align: center;
+  text-transform: uppercase;
+opacity: 0;
+}
+
+.navigation__item:hover .navigation__tooltip {
+  opacity: 1;
+  transition: 0.2s ease-in;
 }
