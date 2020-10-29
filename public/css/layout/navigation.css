@@ -67,3 +67,7 @@ opacity: 0;
   opacity: 1;
   transition: 0.2s ease-in;
 }
+
+.tooltip__list {
+  text-align: left;
+}
