@@ -13,4 +13,12 @@
   z-index: 100;
 }
 
+.example__close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
 
+.example__close-btn .close {
+  fill: var(--primary);
+}

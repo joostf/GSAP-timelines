@@ -117,3 +117,11 @@ function dragElement(elem) {
     document.onmousemove = null;
   }
 }
+
+// close draggable example
+
+const closeBtnModal = document.querySelector(".example__close-btn");
+
+closeBtnModal.addEventListener("click", () => {
+  exampleModal.classList.toggle("l-example--modal--show");
+});
