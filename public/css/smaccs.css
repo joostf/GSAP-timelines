@@ -5,12 +5,12 @@
 @import "./base/typography.css";
 
 @import "./layout/challenge.css";
-@import "./layout/default.css";
 @import "./layout/example.css";
 @import "./layout/example-modal.css";
 @import "./layout/form.css";
 @import "./layout/information.css";
 @import "./layout/input.css";
+@import "./layout/intake.css";
 @import "./layout/navigation.css";
 @import "./layout/output.css";
 @import "./layout/splashscreen.css";

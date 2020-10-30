@@ -12,6 +12,7 @@
   box-shadow: 0 1px 15px rgb(49, 53, 131);
 
   cursor: pointer;
+  transition: ease-in 0.2s;
 }
 
 .button:hover {
@@ -22,6 +23,9 @@
   min-width: 15rem;
 }
 
+.button:hover,
+.button:focus,
 .form__submit:focus {
   box-shadow: 0 0 15px rgba(129, 134, 236, 1);
+  transition: ease-in 0.2s;
 }

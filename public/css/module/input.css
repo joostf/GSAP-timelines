@@ -1,4 +1,5 @@
-.input {
+.input,
+.textarea {
   padding: 0.75rem 1rem;
   font-family: inherit;
   font-size: 0.8rem;
@@ -14,10 +15,18 @@
 
   min-width: 15rem;
 
-  /* transition: ease-in 0.2s; */
+  transition: ease-in 0.2s;
 }
 
-.form__input:focus {
+.textarea {
+  resize: none;
+  height: 6rem;
+  max-height: 6rem;
+}
+
+.form__input:focus,
+.input:focus,
+.textarea:focus {
   box-shadow: 0 0 15px rgba(129, 134, 236, 1);
-  /* transition: ease-in 0.2s; */
+  transition: ease-in 0.2s;
 }
