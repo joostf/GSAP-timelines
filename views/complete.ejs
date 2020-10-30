@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="nl">
   <%- include('partials/head') %>
-
-<body>
-  <main class="index complete">
-
-    <h1>Minor Web Design & Development</h1>
-
-    <p>Je hebt de intake afgerond. Als je er <em>na de code challenge</em> nog meer van overtuigd bent geraakt dat dit de minor voor jou is, vul dan je motivatie in in het intake formulier.</p>
-    <a href="/intake/form/?id=<%- id %>">Vul het intake formulier in</a>
-  </main>
-  <div class="splashscreen">
-    <ul class="minor-logo">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-</body>
-
+  <body class="l-splashscreen">
+    <main class="l-welcome">
+      <h1 class="welcome__title">Minor Web Design & Development</h1>
+      <p class="welcome__text">
+        Je hebt de intake afgerond. Als je er
+        <em>na de code challenge</em>
+        nog meer van overtuigd bent geraakt dat dit de minor voor jou is, vul dan je motivatie in in het intake formulier.
+      </p>
+      <a href="/intake/form/?id=<%- id %>"><button class="button">Vul het formulier in!</button></a>
+    </main>
+    <div class="l-triangle">
+      <ul class="triangle__group">
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+      </ul>
+    </div>
+  </body>
 </html>
