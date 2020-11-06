@@ -16,7 +16,14 @@
     <p>Voor het maken van een micro-interactie kan je CSS en JavaScript samen laten werken. Gebruik hiervoor onder andere het <strong>ClassList Object</strong>. <a href="https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/"></a>Hier kun je lezen</a> hoe je dat kan doen. Lukt het jou om het kaartje te laten omdraaien?</p>
   
 
-    <a href="#input">Let's go! <img src="https://minor-web-intake.herokuapp.com/images/icon-up.svg" alt="Up arrow by BlackActurus from the Noun Project"></a>
+    <a href="#input">Let's go! 
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-down" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <line x1="12" y1="5" x2="12" y2="19" />
+        <line x1="16" y1="15" x2="12" y2="19" />
+        <line x1="8" y1="15" x2="12" y2="19" />
+      </svg>
+    </a>
   </header>
   
   <section id="input">
@@ -67,17 +74,31 @@
       <fieldset>
         <legend>JavaScript</legend>
         <div id="js">
-          const button = document.querySelector('button');
+          var button = document.querySelector('button');
         </div>
         
        </fieldset>
 
        <ul class="toolbar">
         <li>
-          <button>opslaan 👍</button>
+          <button>opslaan 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+              <polyline points="7 11 12 16 17 11" />
+              <line x1="12" y1="4" x2="12" y2="16" />
+            </svg>
+        </button>
         </li>
         <li>
-          <a href="#top">naar boven ☝️</a>
+          <a href="#top">naar boven 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="16" y1="9" x2="12" y2="5" />
+              <line x1="8" y1="9" x2="12" y2="5" />
+            </svg>
+          </a>
         </li>
       </ul>
 

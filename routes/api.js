@@ -14,6 +14,8 @@ router.get('/users', async function(req, res) {
       const db = client.db(dbName)
       db.collection('user').find({}).toArray(function(err, docs) {
         assert.strictEqual(err, null) 
+
+        console.log(docs)
         res.json(docs)
       })
       client.close()
