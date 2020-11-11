@@ -1,5 +1,5 @@
 .l-example {
-  grid-column: 21/41;
+  grid-column: 21/-1;
   grid-row: 1/2;
 
   display: flex;

@@ -1,10 +1,9 @@
 .l-navigation {
-  grid-column: 1/41;
+  grid-column: 1 / -1;
   grid-row: 2/3;
   height: 4vh;
   width: 100%;
   background-color: var(--quaternary);
-
   z-index: 10;
 }
 
@@ -24,25 +23,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
 }
 
 .navigation__item {
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .navigation__button {
   background: none;
   border: none;
-
   display: flex;
   align-items: center;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
   color: var(--primary);
   text-transform: uppercase;
   font-weight: bold;
+  white-space: nowrap;
+  font-size: .7rem;
 }
 
 .navigation__button:hover {

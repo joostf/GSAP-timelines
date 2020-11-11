@@ -1,8 +1,8 @@
 .l-output {
   position: relative;
   grid-row: 3/4;
-  grid-column: 21/41;
-  height: 96vh;
+  grid-column: 21/-1;
+  height: 97vh;
   width: 100%;
   display: flex;
   flex-direction: column;
