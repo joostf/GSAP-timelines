@@ -9,7 +9,7 @@ const dbName = 'users'
 
 router.get('/', function(req, res) {
   let hasId = req.query.id ? true : false
-  res.render('index', {title: 'Resultaten', id: req.query.id, hasId: hasId, context: 'index' })
+  res.render('index', {title: 'Resultaten', id: req.query.id, hasId: hasId})
 })
 
 router.post('/create_user', async function(req, res) {

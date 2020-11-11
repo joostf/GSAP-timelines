@@ -1,0 +1,31 @@
+.button {
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  background: var(--primary);
+  color: var(--secondary);
+
+  border: 1px solid var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 15px rgb(49, 53, 131);
+
+  cursor: pointer;
+  transition: ease-in 0.2s;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.form__submit {
+  min-width: 15rem;
+}
+
+.button:hover,
+.button:focus,
+.form__submit:focus {
+  box-shadow: 0 0 15px rgba(129, 134, 236, 1);
+  transition: ease-in 0.2s;
+}

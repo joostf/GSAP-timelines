@@ -1,0 +1,83 @@
+.l-navigation {
+  grid-column: 1 / -1;
+  grid-row: 2/3;
+  height: 4vh;
+  width: 100%;
+  background-color: var(--quaternary);
+  z-index: 10;
+}
+
+.navigation__editor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.navigation__title {
+  margin-left: 1.5rem;
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__item {
+  position: relative;
+}
+
+.navigation__button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem 0 0;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: .7rem;
+}
+
+.navigation__button:hover {
+  cursor: pointer;
+}
+
+.navigation__tooltip {
+  position: absolute;
+  top: 115%;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  box-shadow: 0 1px 15px rgba(49, 53, 131, 0.25);
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.75;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+}
+
+.navigation__tooltip:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--primary);
+  right: 25%;
+  top: -8px;
+}
+
+.navigation__item:hover .navigation__tooltip {
+  opacity: 1;
+  transition: 0.2s ease-in;
+}
+
+.tooltip__list {
+  text-align: left;
+}

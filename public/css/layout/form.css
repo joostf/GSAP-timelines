@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+/* 
+legend {
+  position: absolute;
+  width: 100%;
+
+  top: 0.5em;
+
+  display: flex;
+  justify-content: space-between;
+} */
+
+.form__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+}
