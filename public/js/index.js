@@ -14,10 +14,22 @@ const arrow = document.querySelectorAll(".input__collapse");
 arrow.forEach((elem) => {
   const parent = elem.parentElement;
   const child = elem.firstElementChild;
-  parent.classList.add("input__code--open");
+
   elem.addEventListener("click", () => {
-    child.classList.toggle("legend__icon--active");
-    parent.classList.toggle("input__code--close");
+    let closedPanels = document.querySelectorAll(".input__code--close");
+    let activeArrows = document.querySelectorAll(".legend__icon--active");
+
+    if (closedPanels.length === 2) {
+      closedPanels.forEach((elem) => {
+        elem.classList.remove("input__code--close");
+      });
+      activeArrows.forEach((elem) => {
+        elem.classList.remove("legend__icon--active");
+      });
+    } else {
+      child.classList.toggle("legend__icon--active");
+      parent.classList.toggle("input__code--close");
+    }
   });
 });
 
@@ -26,7 +38,6 @@ const preview = document.querySelector(".navigation__preview");
 const inputPanel = document.querySelector("#input");
 const outputPanel = document.querySelector("#output");
 const previewIcon = document.querySelector(".navigation__preview svg");
-console.log(previewIcon);
 
 preview.addEventListener("click", () => {
   previewIcon.classList.toggle("navigation__icon--toggle");

@@ -20,15 +20,12 @@
 }
 
 .input__code {
+  height: 33.33%;
   min-height: 3.3%;
   flex: 1;
+  transition: ease-in 0.2s;
   overflow: hidden;
   z-index: 1;
-}
-
-.input__code--open {
-  height: 33.33%;
-  transition: ease-in 0.2s;
 }
 
 .input__code--close {
