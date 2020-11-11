@@ -20,13 +20,17 @@
 .l-information > .information__link {
   width:auto;
   margin-top: 1rem;
-}
-.l-information .information__button {
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding:0 1rem;
+  transition:ease-in .1s;
 }
+.l-information > .information__link:hover,
+.l-information > .information__link:focus {
+  transform:scale(.97)
+}
+
  .information__icon {
   width:1.5rem;
   margin-left: .5rem;

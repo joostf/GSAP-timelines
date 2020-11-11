@@ -26,6 +26,6 @@
 .button:hover,
 .button:focus,
 .form__submit:focus {
-  box-shadow: 0 0 15px rgba(129, 134, 236, 1);
+  box-shadow: 0 0 15px rgba(129, 134, 236, 0);
   transition: ease-in 0.2s;
 }

@@ -5,7 +5,7 @@
   letter-spacing: 1px;
 }
 
-.information__link:after {
+p .information__link:after {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -18,7 +18,7 @@
   transition: 0.2s ease-in;
 }
 
-.information__link:hover:after {
+p .information__link:hover:after {
   opacity: 1;
   width: 100%;
   transition: 0.2s ease-in;
