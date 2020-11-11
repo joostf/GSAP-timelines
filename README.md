@@ -67,6 +67,13 @@ To provide some security to the database we have introduced mongo-sanitize. Whic
 <img width="100%" src="https://github.com/cmda-minor-web/intake-tool/blob/master/flow.png" /> 
 
 
+## Best practices
+
+- [] CSS methodology (SMACSS)[http://smacss.com/book/prototyping]
+
+## Icons
+The icons used in this tools are made by [Tabler](https://tablericons.com/)
+
 ## TO DO ✅ 
 - [ ] Redo the flow in the app itself
 - [ ] Fix the arrow functions not being saved properly in the database (mongo-sanatize)
@@ -75,9 +82,6 @@ To provide some security to the database we have introduced mongo-sanitize. Whic
 - [ ] Add autosave in coding challenge
 - [ ] Fix CSS form
 - [ ] Send email to minorwebdev@gmail.com notifying someones done
-
-## Icons
-The icons used in this tools are made by [Tabler](https://tablericons.com/)
 
 ## License 📜
 [Check out the license here!](https://github.com/cmda-minor-web/intake-tool/blob/master/LICENSE)
