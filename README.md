@@ -69,7 +69,7 @@ To provide some security to the database we have introduced mongo-sanitize. Whic
 
 ## Best practices
 
-- [] CSS methodology (SMACSS)[http://smacss.com/book/prototyping]
+- [ ] CSS methodology (SMACSS)[http://smacss.com/book/prototyping]
 
 ## Icons
 The icons used in this tools are made by [Tabler](https://tablericons.com/)
