@@ -15,6 +15,7 @@ router.get('/users', async function(req, res) {
       db.collection('user').find({}).toArray(function(err, docs) {
         assert.strictEqual(err, null) 
         res.json(docs)
+        console.log(JSON.parse(docs).explanation);
       })
       client.close()
     })
@@ -22,6 +23,7 @@ router.get('/users', async function(req, res) {
     res.redirect('/login')
   }
 })
+
 
 router.post('/newuser', async function(req, res) {
 
