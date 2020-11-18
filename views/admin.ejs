@@ -2,48 +2,34 @@
 <html lang="nl">
 	  <%- include('partials/head') %>
 
-<body>
-	<main class="index">
-	<aside>
-		<img src="http://localhost:70/images/logo_white.png">
-		<h1>Dashboard</h1>
-		<ul class="sideMenu">
-			<li class="selected">
-				Gebruikers
-			</li>
-
-
-		</ul>
-	</aside>
-
-    <section>
+<body class="l-splashscreen">
+	<main class="l-welcome">
 		<h2>Gebruikers</h2>
 		<ul>
 			<% usersList.length %>
-    	<% for (var i =0; i <= 10;  i++ ) { %>
-    	<li>
+		<% for (var i =0; i <= 10;  i++ ) { %>
+		<li>
 			<a href="">
-			  <%= usersList[i] %>
+			<%= usersList[i] %>
 			</a>
-    	</li>
+		</li>
 		<% } %>
 		</ul> 
-    </section>
-  </main>
-  <div class="splashscreen">
-	<ul class="minor-logo">
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	  <li></li>
-	</ul>
-  </div>
+	</main>
+	<div class="l-triangle">
+		<ul class="triangle__group">
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		  <li class="triangle__item"></li>
+		</ul>
+	  </div>
   <script src="/js/new-user.js"></script>
 </body>
 

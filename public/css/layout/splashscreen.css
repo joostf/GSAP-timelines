@@ -18,6 +18,12 @@
 
   z-index: 1;
 }
+.l-welcome form {
+  flex-direction:column;
+}
+.l-welcome form input {
+  margin-bottom: 2rem;
+}
 
 .l-triangle {
   position: fixed;

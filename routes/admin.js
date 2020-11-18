@@ -9,20 +9,20 @@ let usersList = [];
 
 router.get('/', async function(req, res) {
   if (req.session.loggedin) {
-    MongoClient.connect(url, function(err, client){
+    await MongoClient.connect(url, async function(err, client){
       const db = client.db('users');
-      db.collection('user').find({}).toArray(function(err, users){
+      await db.collection('user').find({}).toArray(function(err, users){
         let counter;
         for(counter= 0; counter <= (users.length-1); counter++) {
-          console.log(users[counter].email);
           if(!usersList.includes(users[counter].email) && !users[counter].email == ""){
             usersList.push(users[counter].email);
           }
         }
-      })
+
         res.render('admin', {
           context:'admin',
           usersList
+        })
       })
     })
   } else {

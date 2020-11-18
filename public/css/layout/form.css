@@ -20,3 +20,9 @@ legend {
 
   width: 100%;
 }
+label {
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
