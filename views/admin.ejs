@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <%- include('partials/head') %>
+	  <%- include('partials/head') %>
 
 <body>
-  <main class="index">
-    <h1>Admin Dashboard</h1>
+	<main class="index">
+	<aside>
+		<img src="http://localhost:70/images/logo_white.png">
+		<h1>Dashboard</h1>
+		<ul class="sideMenu">
+			<li class="selected">
+				Gebruikers
+			</li>
 
-    <%- include("partials/add-emails.ejs") %>
+
+		</ul>
+	</aside>
+
+    <section>
+		<h2>Gebruikers</h2>
+		<ul>
+			<% usersList.length %>
+    	<% for (var i =0; i <= 10;  i++ ) { %>
+    	<li>
+			<a href="">
+			  <%= usersList[i] %>
+			</a>
+    	</li>
+		<% } %>
+		</ul> 
+    </section>
   </main>
+  <div class="splashscreen">
+	<ul class="minor-logo">
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	  <li></li>
+	</ul>
+  </div>
   <script src="/js/new-user.js"></script>
 </body>
 

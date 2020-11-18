@@ -17,6 +17,7 @@ router.get('/users', async function(req, res) {
 
         console.log(docs)
         res.json(docs)
+        console.log(JSON.parse(docs).explanation);
       })
       client.close()
     })
@@ -24,6 +25,7 @@ router.get('/users', async function(req, res) {
     res.redirect('/login')
   }
 })
+
 
 router.post('/newuser', async function(req, res) {
 

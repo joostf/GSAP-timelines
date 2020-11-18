@@ -4,9 +4,10 @@ const MongoClient = require('mongodb').MongoClient
 const uri = process.env.MONGO_URI
 const mongoDbClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
+const url = process.env.MONGO_URI;
 
 router.get('/', async (req, res) => {
-  res.render('login', {context:'admin'})
+  res.render('login', {context:'login'})
 })
 
 router.post('/', async (req, res) => {

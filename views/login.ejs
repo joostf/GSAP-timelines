@@ -3,15 +3,32 @@
   <%- include('partials/head') %>
 
 <body>
-  <form action="/login" method="POST">
-    <label for="username">Gebruikersnaam</label>
-    <input id="username" name="username" type="text">
+	<section class="loginForm">
+		<h1> Admin Dashboard</h1>
+	  	<form  action="/login" method="POST">
+		    <label for="username">Gebruikersnaam</label>
+		    <input id="username" name="username" type="text">
 
-    <label for="username">Wachtwoord</label>
-    <input id="password" name="password" type="password">
-    
-    <button type="submit">Inloggen</button>
-</form>
+		    <label for="username">Wachtwoord</label>
+		    <input id="password" name="password" type="password">
+		    
+		    <button type="submit">Inloggen</button>
+		</form>
+	</section>
+    <div class="splashscreen">
+      <ul class="minor-logo">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
 </body>
 
 </html>
