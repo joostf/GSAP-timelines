@@ -1,0 +1,92 @@
+.l-intake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 75%;
+  width: 100%;
+  height: 100%;
+  margin: 7.5rem 0;
+  z-index: 1;
+}
+
+.intake__title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.intake__title,
+.intake__form {
+  margin-bottom: auto;
+}
+
+.intake__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0 auto;
+}
+
+.intake__fieldset--hide {
+  display: none;
+}
+
+.intake__label {
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.intake__label--big {
+  font-size: 1.75rem;
+}
+
+.intake__label--small {
+  font-size: 1.25rem;
+}
+
+.intake__label--flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 1rem 0;
+  color: var(--primary);
+}
+
+.intake__label--flex:first-of-type {
+  padding-top: 1.5rem;
+}
+
+.intake__label--flex:last-of-type {
+  padding-bottom: 1.5rem;
+}
+
+.intake__input,
+.intake__textarea {
+  margin-bottom: 2rem;
+}
+
+.intake__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.intake__button--full {
+  width: 100%;
+}
+
+.intake__button--half {
+  width: 45%;
+}
+
+.intake__input--range {
+  width: 75%;
+}
+
+.intake__input--range:focus {
+  cursor: grab;
+}

@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="nl">
   <%- include('partials/head') %>
-
-<body>
-  <main class="index">
-    
-
-    <h1>Minor Web Design & Development</h1>
-    <% if (hasId) { %> <a href="/intake/form/?id=<%- id %>">Start</a>
-    <% } else { %>
-      <form class="index__challenge" method="POST" action="/create_user">
-        <input type="email" placeholder="your-email@gmail.com" name="email">
-        <button type="submit">Start de challenge</button>
+  <body class="l-splashscreen">
+    <main class="l-welcome">
+      <h2 class="welcome__subtitle">Welkom bij de code challenge voor de</h2>
+      <h1 class="welcome__title">Minor Web Design & Development</h1>
+      <p class="welcome__text">
+        In deze code challenge ga je een digitaal visitekaartje maken met HTML, CSS en JavaScript. Door deze code challenge te doen krijg jij een idee in hoeverre je al genoeg kennis hebt, of raak je
+        misschien extra gemotiveerd om het te gaan leren.
+      </p>
+      <% if (hasId) { %>
+      <a href="/intake/form/?id=<%- id %>">Start</a>
+      <% } else { %>
+      <form class="form form__user" method="POST" action="/create_user">
+        <input class="input form__input" type="email" placeholder="Email" name="email" autocomplete="off" />
+        <button class="button button--white form__submit form__submit--disabled" type="submit">Start de challenge</button>
       </form>
-    <% } %>
-
-  </main>
-
-  <div class="splashscreen">
-    <ul class="minor-logo">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-</body>
-
+      <% } %>
+    </main>
+    <div class="l-triangle">
+      <ul class="triangle__group">
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+        <li class="triangle__item"></li>
+      </ul>
+    </div>
+  </body>
 </html>
