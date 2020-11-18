@@ -16,12 +16,12 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.static(path.join(__dirname, 'public')))
   .use(session({
-    secret: 'G0UDv1S',
+    secret: process.env.ADMIN_PASSWORD,
     resave: true,
     saveUninitialized: true
   }))
   .use(express.json())
-  .use(express.urlencoded({extended: true}))  
+  .use(express.urlencoded({extended: true}))
   .use('/', indexRouter)
   .use('/api', apiRouter)
   .use('/login', loginRouter)
