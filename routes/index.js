@@ -12,14 +12,14 @@ router.get('/', function(req, res) {
   res.render('index', {title: 'Resultaten', id: req.query.id, hasId: hasId})
 })
 
-router.post('/create_user', async function(req, res) {
+router.post('/create_user',async function(req, res) {
   const email = req.body.email
   const newDocument = {
     userid: uuidv4(),
     email: email
   }
 
-  MongoClient.connect(url, function(err, client) {
+  await MongoClient.connect(url, function(err, client) {
     assert.strictEqual(null, err)
     const db = client.db(dbName)
     db.collection('user').insertOne(newDocument).then(function(result) {})
