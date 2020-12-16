@@ -1,0 +1,72 @@
+.l-input {
+  grid-row: 3/4;
+  grid-column: 1/21;
+  height: 96vh;
+  width: 100%;
+  background-color: var(--primary);
+  z-index: 2;
+}
+
+.input__title {
+  height: 5%;
+  margin: 0;
+  padding: 0.65rem 1.5rem;
+  background-color: var(--secondary);
+}
+
+.input__form {
+  height: 95%;
+  min-height: 95%;
+}
+
+.input__code {
+  height: 33.33%;
+  min-height: 3.3%;
+  flex: 1;
+  transition: ease-in 0.2s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.input__code--close {
+  height: 3.3%;
+  flex: 0;
+  transition: ease-in 0.2s;
+}
+
+.input__code > div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.input__legend {
+  background: var(--tertiary);
+  font-size: 0.8rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  z-index: 5;
+}
+
+.input__resizer {
+  position: relative;
+  background: var(--secondary);
+  height: 0.75rem;
+  width: 100%;
+  cursor: row-resize;
+  text-align: center;
+}
+
+.input__collapse {
+  position: absolute !important;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  top: -0.45rem;
+  right: 0.5rem;
+  border: none;
+  background: none;
+}
+
+.input__collapse:hover {
+  cursor: pointer;
+}

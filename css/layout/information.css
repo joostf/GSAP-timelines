@@ -1,0 +1,38 @@
+.l-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 1/21;
+  grid-row: 1/2;
+  
+  height: 100vh;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.l-information > * {
+  color: var(--primary);
+  width: 35vw;
+}
+.l-information > .information__link {
+  width:auto;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding:0 1rem;
+  transition:ease-in .1s;
+}
+.l-information > .information__link:hover,
+.l-information > .information__link:focus {
+  transform:scale(.97)
+}
+
+ .information__icon {
+  width:1.5rem;
+  margin-left: .5rem;
+  transform:rotate(180deg)
+}
