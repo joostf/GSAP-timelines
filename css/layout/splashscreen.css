@@ -13,8 +13,18 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  z-index: 2;
+  z-index: 5;
 }
+.welcome__subtitle{
+  overflow: hidden;
+  width: 20.18em;
+  white-space: nowrap;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-box-sizing:content-box;
+  box-sizing:content-box;
+}
+
 .l-welcome form {
   flex-direction:column;
 }
