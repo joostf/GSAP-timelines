@@ -17,10 +17,11 @@ const tlSpaceWelder = () => {
   let floatingY = Math.floor(Math.random() * 10) + 5;
   const tl = gsap.timeline({})
   
-  tl.to(spaceWelder, {duration: 1, opacity:1})
-    .to(spaceWelder, {duration: 3, x: floatingX, y: floatingY, repeat: -1, yoyo: true })
+  tl.to(spaceWelder, 1,  {opacity:1})
+    .to(spaceWelder, 3, {x: floatingX, y: floatingY })
+    .to(spaceWelder, 5, {scale:.5, x:'-5vw', y:'-12vh', transformOrigin: 'center center'}, '+=2')
     .staggerTo(sparkles1,.1,{opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false}, .025)
-    .staggerTo(sparkles2,.15, {opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, delay:0.5}, .025);
+    .staggerTo(sparkles2,.15, {opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, delay:0.5}, .025)
   
   return tl
 }
@@ -31,9 +32,10 @@ const tlSpaceNerd = () => {
   let floatingY = Math.floor(Math.random() * 10) + 5;
   const tl = gsap.timeline({})
   
-  tl.to(spaceNerd,{duration: 3, opacity:1})
-    .to(spaceNerd,{duration:3, x: floatingX, y: -floatingY, repeat: -1, yoyo: true})
-    .to(spaceNerdArm,{rotate: 2, repeat: -1, duration: 2, yoyo: true });
+  tl.to(spaceNerd, 3, {opacity:1})
+    .to(spaceNerd, 3, {x: floatingX, y: -floatingY})
+    .to(spaceNerdArm,{rotate: 2, repeat: -1, duration: 2, yoyo: true })
+    .to(spaceNerd, 5, {scale:.5, y:'10vh', x:'40vw', transformOrigin: 'center center'}, '+=1')
   
     return tl
 }
@@ -47,11 +49,13 @@ const tlRocket = () => {
     y: planetPosition.top
   }
   
-  tl.to(rocket, { duration:1, opacity:1})
-    .to(rocketFlames, { duration:.1, opacity:0, repeat: -1, yoyo:true})
-    .to(rocket, { duration:2, delay: 1, top:rocketDestination.y, left:rocketDestination.x, scale: .6, rotate: -100 })
-    .to(rocketFlames, { duration:3, opacity:0})
-    .to(rocketFlames, { duration:100, opacity:0}); // lame hack for now, handle rocketflames in own timeline so solve this
+  tl.to(rocket, 1, {opacity:1})
+    .to(rocketFlames, .1, { opacity:0, repeat: -1, yoyo:true})
+    .to(rocket, 2, {x:'5vw', y:'-5vh' })
+    .to(rocket, 2, {x:'50vw', y:'-45vh', scale: .8, rotate: -100 })
+    .to(rocket, 1, {y:'-30vh'}, '+=2')
+    .to(rocketFlames, 3, {opacity:0}, '-=1')
+    .to(rocketFlames, 100, {opacity:0}); // lame hack for now, handle rocketflames in own timeline so solve this
   
   return tl 
 } 
@@ -60,7 +64,8 @@ const tlRocket = () => {
 const tlPlanet = () => {
   const tl = gsap.timeline({})
   
-  tl.to(planet, { duration:1, opacity:1}) 
+  tl.to(planet, 1,  {opacity:1})
+    .to(planet, 10, {scale:6, x:'-5vh', transformOrigin: 'center top'})
   
   return tl 
 } 
