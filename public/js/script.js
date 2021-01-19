@@ -81,7 +81,7 @@ const master = () => {
           .add(tlSpaceNerd(), 0.75)
           .add(tlSpaceWelder(),1)
           .add(tlRocket(),1)
-          //.add(tlIntro(), 10)
+          .add(tlIntro(), 12)
 }
 master();
 
