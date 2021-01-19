@@ -1,0 +1,145 @@
+/* planet */
+.planet-1 {
+  fill: #10161c;
+  stroke: #242576;
+}
+.planet-1,
+.planet-3,
+.planet-4 {
+  stroke-miterlimit: 10;
+}
+.planet-2 {
+  fill: none;
+}
+.planet-3 {
+  fill: #4e54c8;
+  stroke: #4e54c8;
+}
+.planet-4 {
+  fill: #d1ce02d3;
+  stroke: #d1ce02d3;
+}
+
+/* space nerd */
+#spaceNerd g {
+  isolation: isolate;
+}
+.nerd-2 {
+  fill: #3b3c8f;
+}
+.nerd-3 {
+  fill: #3a2a83;
+}
+.nerd-4 {
+  fill: #5a4092;
+}
+.nerd-5 {
+  fill: #5e509d;
+}
+.nerd-6 {
+  fill: #3c4697;
+}
+.nerd-7 {
+  fill: #372771;
+}
+.nerd-8 {
+  fill: #d7569a;
+}
+.nerd-9 {
+  fill: #b7328a;
+}
+.nerd-10 {
+  fill: #319dd1;
+}
+.nerd-11 {
+  fill: #d73a8b;
+}
+.nerd-12 {
+  fill: none;
+  stroke: #1d1d1b;
+  stroke-miterlimit: 10;
+}
+.nerd-13 {
+  opacity: 0.75;
+  mix-blend-mode: screen;
+}
+.nerd-14 {
+  fill: #fbba39;
+}
+.nerd-15 {
+  fill: #7ab8db;
+}
+
+/* rock */
+.rock-1 {
+  fill: none;
+}
+.rock-2 {
+  fill: #fbba39;
+}
+.rock-3 {
+  fill: #d7569a;
+}
+.rock-4 {
+  fill: #5e509d;
+}
+.rock-5 {
+  fill: #d73a8b;
+}
+.rock-6 {
+  fill: #fcc742;
+}
+.rock-7 {
+  fill: #319dd1;
+}
+.rock-8 {
+  clip-path: url(#clip-path);
+}
+.rock-9 {
+  fill: #7ab8db;
+}
+
+/* space welder */
+.welder-1 {
+  fill: #372771;
+}
+.welder-2 {
+  fill: #5e509d;
+}
+.welder-3 {
+  fill: #3a2a83;
+}
+.welder-4 {
+  fill: #3a3a8e;
+}
+.welder-5 {
+  fill: #5a4092;
+}
+.welder-6 {
+  fill: #3b3c8f;
+}
+.welder-7 {
+  fill: #3c4697;
+}
+.welder-8 {
+  fill: #d73a8b;
+}
+.welder-9 {
+  fill: #319dd1;
+}
+.welder-10 {
+  fill: #d7569a;
+}
+.welder-11 {
+  fill: #7ab8db;
+}
+.welder-12 {
+  fill: #fcc742;
+}
+
+.spark-1 {
+  fill: #fcc742;
+}
+.spark-2 {
+  fill: #fbba39;
+}

@@ -1,0 +1,60 @@
+@font-face {
+  font-family: neutronium;
+  src: url("/fonts/neutronium.ttf");
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* svg element containers */
+svg {
+  position:absolute;
+}
+
+#rocket {
+  height: 10vw;
+  width: 20vw;
+  left: 5vw;
+  bottom: 5vw;
+  transform: rotate(-25deg);
+  z-index: 100;
+  opacity:0;
+}
+#planet {
+  height: 20vw;
+  width: 20vw;
+  right: 5vh;
+  top: 5vh;
+  z-index:20;
+  opacity:0;
+}
+#space-welder {
+  height: 300px;
+  width: 300px;
+  right: 5vw;
+  bottom: 2.5vw;
+  z-index:50;
+  opacity:0;
+}
+
+#space-welder #sparkles {
+  transform:translate(-250px, -50px)
+}
+#space-welder #sparkles > * {
+  opacity:0
+}
+
+#space-nerd {
+  height: 300px;
+  width: 300px;
+  left: 50px;
+  top: 100px;
+  z-index:50;
+  opacity:0;
+}
+
+
+
+
+
