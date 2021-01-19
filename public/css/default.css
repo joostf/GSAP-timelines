@@ -16,15 +16,38 @@ body {
 main {
   padding:5rem;
   max-width: 50vw;
+  position:relative;
+  z-index:1000;
 }
   h1  {
     line-height: 1.25;
+    font-size: 1.75em;
   }
   h1 em,
   strong {
     color: #d1ce02d3;
     font-style: normal;
   }
+  main div {
+    display:flex;
+  }
+ a, button {
+   border-radius:1rem;
+   background:rgba(78, 84, 200, .2);
+   padding:1rem 2rem;
+   font-size: 1em;
+   color:#fff;
+   text-decoration: none;
+   border:none;
+   margin-right:1rem;
+   transition:.25s;
+   margin-bottom: 2em;
+   cursor:pointer;
+ }
+ a:hover, button:hover, a:focus, button:focus {
+  background:rgba(78, 84, 200, 1);
+  transform:scale(1.05);
+ }
 
 
 /* svg element containers */
