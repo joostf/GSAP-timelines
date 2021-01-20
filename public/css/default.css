@@ -12,6 +12,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   overflow:hidden;
+  margin:0;
 }
 
 main {
@@ -51,6 +52,7 @@ a, button {
  a:hover, button:hover, a:focus, button:focus {
   background:rgba(78, 84, 200, 1);
   transform:scale(1.05);
+  outline:none;
  }
 
 

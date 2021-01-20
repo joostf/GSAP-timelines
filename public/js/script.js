@@ -13,6 +13,7 @@ const main = $('main')
 const introTitle = $('h1')
 const introText = $('main > p')
 const introCTA = $('main > div')
+const resetButton = $('main button')
 
 // child timelines
 // Introduction
@@ -92,6 +93,10 @@ const master = () => {
           
 }
 master();
+
+resetButton.addEventListener('click', function(){
+  tlMaster.restart()
+})
 
 // helper functions
 function $(element) {
