@@ -19,11 +19,11 @@ main {
   max-width: 50vw;
   position:relative;
   z-index:1000;
-  
 }
   h1  {
     line-height: 1.25;
     font-size: 1.75em;
+    white-space:no-wrap;
   }
   h1 em,
   strong {
@@ -45,6 +45,7 @@ a, button {
    transition:.25s;
    margin-bottom: 2em;
    cursor:pointer;
+   white-space:nowrap;
  }
  a:hover, button:hover, a:focus, button:focus {
   background:rgba(78, 84, 200, 1);

@@ -9,7 +9,8 @@ const sparkles2 = $$('.spark-2')
 const rocket = $('#rocket')
 const rocketFlames = $('#rocket-flames')
 const planet = $('#planet')
-const introText = $$('main > *')
+const introTitle = $('h1')
+const introText = $$('main > h1 ~ *')
 
 // child timelines
 // space welder
@@ -22,7 +23,7 @@ const tlSpaceWelder = () => {
     .to(spaceWelder, 3, {x: floatingX, y: floatingY })
     .to(spaceWelder, 5, {scale:.5, x:'-5vw', y:'-12vh', transformOrigin: 'center center'}, '+=2')
     .staggerTo(sparkles1,.1,{opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, stagger:.025})
-    .staggerTo(sparkles2,.15, {opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, delay:0.5, stagger:.025})
+    .staggerTo(sparkles2,.15, {opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, delay:.5, stagger:.025})
   
   return tl
 }
@@ -70,18 +71,20 @@ const tlPlanet = () => {
 const tlIntro = () => {
   const tl = gsap.timeline({})
   
-  tl.staggerFrom(introText, 0.5,  {opacity:0, y:'-2.5vh', stagger:.75})
+  tl.from(introTitle, .5, {opacity:0})
+    .staggerFrom(introText, .5, {opacity:0, y:'-2.5vh', delay:10, stagger:.75})
     
   return tl 
 }
 
 // master timeline
 const master = () => {
-  tlMaster.add(tlPlanet(),0.5)
-          .add(tlSpaceNerd(), 0.75)
+  tlMaster.add(tlIntro(), .25)
+          .add(tlPlanet(), .5)
+          .add(tlSpaceNerd(), .75)
           .add(tlSpaceWelder(),1)
           .add(tlRocket(),1)
-          .add(tlIntro(), 12)
+          
 }
 master();
 
