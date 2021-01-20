@@ -33,7 +33,7 @@ main {
   main div {
     display:flex;
   }
- a, button {
+a, button {
    border-radius:1rem;
    background:rgba(78, 84, 200, .2);
    padding:1rem 2rem;
@@ -80,7 +80,7 @@ svg {
   right: 5vw;
   bottom: 2.5vw;
   z-index:50;
-  opacity:0;
+  opacity:1;
 }
 
 #space-welder #sparkles {
@@ -96,7 +96,7 @@ svg {
   left: 50px;
   top: 100px;
   z-index:50;
-  opacity:0;
+  opacity:1;
 }
 
 

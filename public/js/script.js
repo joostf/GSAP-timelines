@@ -18,7 +18,7 @@ const tlSpaceWelder = () => {
   let floatingY = Math.floor(Math.random() * 10) + 5
   const tl = gsap.timeline({})
   
-  tl.to(spaceWelder, 1,  {opacity:1})
+  tl.from(spaceWelder, 3, {opacity:0, scale:0})
     .to(spaceWelder, 3, {x: floatingX, y: floatingY })
     .to(spaceWelder, 5, {scale:.5, x:'-5vw', y:'-12vh', transformOrigin: 'center center'}, '+=2')
     .staggerTo(sparkles1,.1,{opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, stagger:.025})
@@ -33,7 +33,7 @@ const tlSpaceNerd = () => {
   let floatingY = Math.floor(Math.random() * 10) + 5
   const tl = gsap.timeline({})
   
-  tl.to(spaceNerd, 3, {opacity:1})
+  tl.from(spaceNerd, 3, {opacity:0, scale:0})
     .to(spaceNerd, 3, {x: floatingX, y: -floatingY})
     .to(spaceNerdArm,{rotate: 2, repeat: -1, duration: 2, yoyo: true })
     .to(spaceNerd, 5, {scale:.5, y:'10vh', x:'40vw', transformOrigin: 'center center'}, '-=2')
