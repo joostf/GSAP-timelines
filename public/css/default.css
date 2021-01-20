@@ -15,14 +15,14 @@ body {
 }
 
 main {
-  padding:5rem;
+  padding:2.5rem 5rem;
   max-width: 50vw;
-  position:relative;
+  position:absolute;
   z-index:1000;
 }
   h1  {
     line-height: 1.25;
-    font-size: 1.75em;
+    font-size: 1.85em;
     white-space:no-wrap;
   }
   h1 em,

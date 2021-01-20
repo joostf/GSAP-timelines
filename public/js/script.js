@@ -9,10 +9,24 @@ const sparkles2 = $$('.spark-2')
 const rocket = $('#rocket')
 const rocketFlames = $('#rocket-flames')
 const planet = $('#planet')
+const main = $('main')
 const introTitle = $('h1')
-const introText = $$('main > h1 ~ *')
+const introText = $('main > p')
+const introCTA = $('main > div')
 
 // child timelines
+// Introduction
+const tlIntro = () => {
+  const tl = gsap.timeline({})
+  
+  tl.from(introTitle, .5, {opacity:0})
+    .staggerFrom([introText, introCTA], .5, {opacity:0, y:'-2.5vh', delay:10, stagger:.75})
+    .to(introText, .5, {opacity:0, y:'-2.5vh', delay:8})
+    .to(introText, .5, {height:0, delay:.25})
+    .to(introCTA, .5, {y:'-2.5vh', delay:.25})
+    
+  return tl 
+}
 // space welder
 const tlSpaceWelder = () => {
   let floatingX =  Math.floor(Math.random() * 15) + 7
@@ -67,15 +81,7 @@ const tlPlanet = () => {
   return tl 
 }
 
-// Introduction
-const tlIntro = () => {
-  const tl = gsap.timeline({})
-  
-  tl.from(introTitle, .5, {opacity:0})
-    .staggerFrom(introText, .5, {opacity:0, y:'-2.5vh', delay:10, stagger:.75})
-    
-  return tl 
-}
+
 
 // master timeline
 const master = () => {
