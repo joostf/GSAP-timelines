@@ -23,7 +23,6 @@ const tlIntro = () => {
     .staggerFrom([introText, introCTA], .5, {opacity:0, y:'-2.5vh', delay:10, stagger:.75})
     .to(introText, .5, {opacity:0, y:'-2.5vh', delay:8})
     .to(introText, .5, {height:0, delay:.25})
-    .to(introCTA, .5, {y:'-2.5vh', delay:.25})
     
   return tl 
 }
