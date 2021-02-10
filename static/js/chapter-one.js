@@ -2,8 +2,8 @@ import { el } from './elements.js'
 
 const tlChapterOne = gsap.timeline({ defaults: {duration: 1 } })
 
-
 // child timelines
+
 // Introduction
 const tlIntro = () => {
   const tl = gsap.timeline({})
@@ -62,11 +62,8 @@ const tlPlanet = () => {
   tl.to(el.planet, 1,  {opacity:1})
     .to(el.planet, 2, {attr:{viewBox:'0 0 200 300'}})
 
-    
-  
   return tl 
 }
-
 
 // master timeline
 export const chapterOne = () => {

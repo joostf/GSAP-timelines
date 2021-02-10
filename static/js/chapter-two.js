@@ -2,6 +2,9 @@ import { el } from './elements.js'
 
 const tlChapterTwo = gsap.timeline({ defaults: {duration: 1 } })
 
+// child timelines
+
+// Introduction
 const tlIntro = () => {
     const tl = gsap.timeline()
     
@@ -9,7 +12,7 @@ const tlIntro = () => {
     
     return tl 
   }
-
+// master timeline
 export const chapterTwo = () => {
     tlChapterTwo
           .pause()
