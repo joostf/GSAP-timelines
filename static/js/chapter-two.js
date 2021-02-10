@@ -5,7 +5,7 @@ const tlChapterTwo = gsap.timeline({ defaults: {duration: 1 } })
 const tlIntro = () => {
     const tl = gsap.timeline()
     
-    tl.to(el.planet, 1, {attr:{viewBox:'0 0 100 250'}})
+    tl.to(el.planet, 1, {attr:{viewBox:'90 150 110 50'}})
     
     return tl 
   }
