@@ -12,5 +12,7 @@ export const el = {
     main:$('main'),
     introTitle: $('h1'),
     introText: $('main > p'),
-    introCTA:  $('main > div')
+    introCTA:  $('main > div'),
+    ch2Trigger:  $('#ch2Trigger'),
+    chalTrigger:  $('#challengeTrigger')
 }
