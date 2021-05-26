@@ -6,12 +6,13 @@ const tlChapterTwo = gsap.timeline({ defaults: {duration: 1 } })
 
 // Introduction
 const tlIntro = () => {
-    const tl = gsap.timeline()
-    
-    tl.to(el.planet, 1, {attr:{viewBox:'90 150 110 50'}})
-    
-    return tl 
-  }
+  const tl = gsap.timeline()
+
+  tl.to(el.planet, 1, {attr:{viewBox:'90 150 110 50'}})
+
+  return tl 
+}
+
 // master timeline
 export const chapterTwo = () => {
     tlChapterTwo

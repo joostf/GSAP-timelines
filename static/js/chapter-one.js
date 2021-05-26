@@ -78,8 +78,7 @@ export const chapterOne = () => {
   return tlChapterOne;
 }
 
-// Wrapping infinite tweens in callbacks preventing them blocking the master timeline
-
+// Wrapping infinite tweens in callbacks preventing them from blocking the master timeline
 function coding (){
   TweenMax.to(el.spaceNerdArm, 2, {rotate: 2, repeat: -1, yoyo: true })
 }

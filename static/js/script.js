@@ -13,7 +13,9 @@ ch1.then(startCh2)
 
 function startCh2 () {
     // fake delay, solve this in ch2 timeline later
+
     setTimeout(function(){
         ch2.play()
+        
     }, 2000)
 }
