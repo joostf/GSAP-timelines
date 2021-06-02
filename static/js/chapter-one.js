@@ -1,4 +1,4 @@
-import { el } from './elements.js'
+import { el } from './utils/elements.js'
 
 const tlChapterOne = gsap.timeline({ defaults: { duration: 1 } })
 

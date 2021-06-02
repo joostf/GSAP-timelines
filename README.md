@@ -14,3 +14,5 @@
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 
+# Todo
+- [ ] Replace absolute values of transform to dynamic calculations

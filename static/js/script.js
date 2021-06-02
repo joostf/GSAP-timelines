@@ -1,6 +1,6 @@
 import { chapterOne } from './chapter-one.js'
 import { chapterTwo } from './chapter-two.js'
-import { el } from './elements.js'
+import { el } from './utils/elements.js'
 
 // initialize chapters
 const ch1 = chapterOne()
