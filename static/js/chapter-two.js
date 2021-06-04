@@ -21,7 +21,7 @@ const tlPlanet = () => {
   tl.to(el.planet, 1, {opacity: 0})
     .to(el.planet, 1, {scale:3.7 , x:-800, y:800})
     .to(el.planet, 1, {opacity: 1})
-    .to(el.planet, 4, { x:-800, y:560,})
+    .to(el.planet, 4, { x:-600, y:360,})
 
     return tl 
 }
@@ -47,17 +47,21 @@ const tlSpaceNerd = () => {
   const tl = gsap.timeline({})
   
   tl.to(el.spaceNerd, 3, {opacity:1, scale:1.2})
-    .to(el.spaceNerd, 3, {x: floatingX, y: -floatingY,onComplete:coding, yoyo: true})  
+    .to(el.spaceNerd, 3, {x: floatingX, y: -floatingY,onComplete:coding})  
     return tl
 }
 
 
 // space welder
 const tlSpaceWelder = () => {
+  let floatingX =  Math.floor(Math.random() * 5) + 3
+  let floatingY = Math.floor(Math.random() * 10) + 5
   const tl = gsap.timeline({})
   
+
+  
   tl.to(el.spaceWelder, 3, {opacity:1, y: -10 })
-    .to(el.spaceWelder, 5, {scale:.8,  transformOrigin: 'center center', onComplete:sparks}, '+=2')
+    .to(el.spaceWelder, 5, {scale:.8,  x: floatingX, y: -floatingY, onComplete:sparks}, '+=2')
   
   return tl
 }

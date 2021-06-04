@@ -10,8 +10,6 @@ const tlIntro = () => {
   
   tl.from(el.introTitle, .5, {opacity:0})
     .staggerFrom([el.introText, el.introCTA], .5, {opacity:0, y:'-2.5vh', delay:10, stagger:.75})
-
-    
   return tl 
 }
 
@@ -49,6 +47,8 @@ export const chapterOne = () => {
 
   return tlChapterOne;
 }
+
+console.dir(tlChapterOne)
 
 // Wrapping infinite tweens in callbacks preventing them blocking the master timeline
 function flames() {
