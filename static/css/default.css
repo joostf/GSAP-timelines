@@ -83,10 +83,10 @@ svg {
 #space-welder {
   height: 300px;
   width: 300px;
-  right: 5vw;
+  right: 30vw;
   bottom: 2.5vw;
   z-index:50;
-  opacity:1;
+  opacity:0;
 }
 
 #space-welder #sparkles {
@@ -99,10 +99,10 @@ svg {
 #space-nerd {
   height: 300px;
   width: 300px;
-  left: 50px;
-  top: 100px;
+  left: 590px;
+  bottom: 25px;
   z-index:50;
-  opacity:1;
+  opacity:0;
 }
 
 
