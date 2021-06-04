@@ -38,8 +38,6 @@ const tlRocket = () => {
   return tl 
 } 
 
-
-
 // space nerd
 const tlSpaceNerd = () => {
   let floatingX =  Math.floor(Math.random() * 5) + 3
@@ -51,14 +49,11 @@ const tlSpaceNerd = () => {
     return tl
 }
 
-
 // space welder
 const tlSpaceWelder = () => {
   let floatingX =  Math.floor(Math.random() * 5) + 3
   let floatingY = Math.floor(Math.random() * 10) + 5
   const tl = gsap.timeline({})
-  
-
   
   tl.to(el.spaceWelder, 3, {opacity:1, y: -10 })
     .to(el.spaceWelder, 5, {scale:.8,  x: floatingX, y: -floatingY, onComplete:sparks}, '+=2')
@@ -78,7 +73,6 @@ export const chapterTwo = () => {
           .add(tlSpaceNerd(), 8)
   return tlChapterTwo;
 }
-
 
 // Wrapping infinite tweens in callbacks preventing them blocking the master timeline
 function coding (){

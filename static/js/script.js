@@ -17,5 +17,5 @@ function startCh2 () {
     // fake delay, solve this in ch2 timeline later
     setTimeout(function(){
         ch2.play()
-    }, 1000)
+    }, 2000)
 }

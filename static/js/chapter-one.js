@@ -48,7 +48,16 @@ export const chapterOne = () => {
   return tlChapterOne;
 }
 
-console.dir(tlChapterOne)
+
+// Wrapping infinite tweens in callbacks preventing them from blocking the master timeline
+function coding (){
+  TweenMax.to(el.spaceNerdArm, 2, {rotate: 2, repeat: -1, yoyo: true })
+}
+
+function sparks() {
+  TweenMax.staggerTo(el.sparkles1,.1,{opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, stagger:.025})
+  TweenMax.staggerTo(el.sparkles2,.15, {opacity: 1, x:-10, y:-10, repeat: -1, yoyo: false, delay:.5, stagger:.025})
+}
 
 // Wrapping infinite tweens in callbacks preventing them blocking the master timeline
 function flames() {
