@@ -14,8 +14,5 @@ ch1.play()
 el.ch2Trigger.addEventListener("click", startCh2);
 
 function startCh2 () {
-    // fake delay, solve this in ch2 timeline later
-    setTimeout(function(){
         ch2.play()
-    }, 2000)
 }
