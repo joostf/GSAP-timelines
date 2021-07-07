@@ -14,6 +14,6 @@ ch1.play()
 //ch1.then(startCh2)
 el.ch2Trigger.addEventListener("click", startCh2);
 
-function startCh2 () {
-        ch2.play()
+function startCh2() {
+   ch2.play()
 }
