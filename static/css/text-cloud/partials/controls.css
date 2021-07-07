@@ -15,7 +15,5 @@
 
 .cloud .controls svg.disabled{
    pointer-events: none;
-}
-.cloud .controls svg.disabled > *{
-   stroke: rgb(209, 209, 209);
+   opacity: .2;
 }

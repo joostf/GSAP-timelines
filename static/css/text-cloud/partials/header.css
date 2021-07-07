@@ -1,6 +1,6 @@
 .cloud header{
    padding: 5px 15px;
-   background: lightcoral;
+   background: #5e509d;
    color: white;
    font-size: 10px;
 }
@@ -24,7 +24,6 @@
 }
 .cloud header h1.category button{
    width: auto;
-   background: white;
    font-size: 10px;
    margin-right: 5px;
 }

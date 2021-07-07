@@ -9,6 +9,8 @@
    z-index: 1000000000;
    position: fixed;
    /* display: none; */
+   top: 30vh;
+   left: 30vw;
 }
 
 .cloud * {
@@ -20,7 +22,7 @@
 .cloud h1,
 .cloud h2,
 .cloud h3{
-   color: black;
+   color: white;
 }
 
 .cloud .content {
@@ -37,7 +39,7 @@
 }
 
 .cloud{
-   background: white;
+   background: #d7569a;
    border-radius: 5px;
    font-size: 12px;
    width: 300px;
