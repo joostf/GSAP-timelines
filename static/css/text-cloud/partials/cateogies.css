@@ -1,0 +1,10 @@
+.cloud .categories,
+.cloud .category {
+	grid-column: 1;
+	grid-row: 1;
+}
+.cloud .category {
+   grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	display: grid;
+}

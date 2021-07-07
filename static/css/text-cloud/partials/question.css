@@ -1,0 +1,17 @@
+.cloud .question {
+	grid-column: 1;
+	grid-row: 1;
+	display: flex;
+	flex-direction: column;
+}
+.cloud .question h3 {
+	font-size: 1.1rem;
+}
+
+.cloud .question .options-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 10px 0;
+}

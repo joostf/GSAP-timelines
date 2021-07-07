@@ -1,0 +1,24 @@
+.cloud .option{
+   border: solid 1px #b4b4b4;
+   padding: 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-weight: bold;
+   margin: 5px 0;
+}
+
+.cloud .option:hover{
+   border-color: black;
+}
+
+.cloud .option.correct,
+.cloud .option.incorrect{
+   color: white;
+}
+
+.cloud .option.correct{
+   background-color: lightgreen;
+}
+.cloud .option.incorrect{
+   background-color: tomato;
+}

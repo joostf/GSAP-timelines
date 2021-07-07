@@ -1,0 +1,41 @@
+@import url(./partials//button.css);
+@import url(./partials//question.css);
+@import url(./partials//cateogies.css);
+@import url(./partials//header.css);
+@import url(./partials//controls.css);
+@import url(./partials//option.css);
+
+.cloud{
+   z-index: 1000000000;
+   display: none;
+}
+
+.cloud * {
+   margin: 0;
+   padding: 0;
+}
+
+.cloud button{
+   color: black;
+}
+
+.cloud .content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+   padding: 15px;
+}
+
+.cloud .hidden {
+   opacity: 0;
+	user-select: none;
+	pointer-events: none;
+}
+
+.cloud{
+   background: white;
+   border-radius: 5px;
+   font-size: 12px;
+   width: 300px;
+   overflow: hidden;
+}

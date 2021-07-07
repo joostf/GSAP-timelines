@@ -1,0 +1,21 @@
+.cloud .controls{
+   width: 80%;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+}
+
+.cloud .controls svg{
+   width: 20px;
+   cursor: pointer;
+}
+.cloud .controls .progress{
+   font-weight: bold;
+}
+
+.cloud .controls svg.disabled{
+   pointer-events: none;
+}
+.cloud .controls svg.disabled > *{
+   stroke: rgb(209, 209, 209);
+}

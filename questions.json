@@ -1,0 +1,57 @@
+[
+   {
+      "type": "javascript",
+      "question": "Javascript Vraag 1",
+      "options": [
+         "A J1",
+         "B J1",
+         "C J1"
+      ],
+      "answer": 1,
+      "point": 2
+   },
+   {
+      "type": "javascript",
+      "question": "Javascript Vraag 2",
+      "options": [
+         "A J2",
+         "B J2",
+         "C J2"
+      ],
+      "answer": 0,
+      "point": 2
+   },
+   {
+      "type": "css",
+      "question": "Css Vraag",
+      "options": [
+         "A CSS",
+         "B CSS",
+         "C CSS"
+      ],
+      "answer": 2,
+      "point": 2
+   },
+   {
+      "type": "html",
+      "question": "Html Vraag",
+      "options": [
+         "A HTML",
+         "B HTML",
+         "C HTML"
+      ],
+      "answer": 1,
+      "point": 2
+   },
+   {
+      "type": "react",
+      "question": "Html Vraag",
+      "options": [
+         "A HTML",
+         "B HTML",
+         "C HTML"
+      ],
+      "answer": 1,
+      "point": 2
+   }
+]
