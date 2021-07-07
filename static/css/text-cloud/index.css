@@ -11,6 +11,8 @@
    position: fixed;
    top: 30vh;
    left: 30vw;
+   opacity: 0;
+   transform: scale(0);
 }
 
 .cloud * {

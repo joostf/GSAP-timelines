@@ -23,7 +23,14 @@ const tlPlanet = () => {
 
 // rocket
 const tlRocket = () => {
-   const tl = gsap.timeline({})
+   const tl = gsap.timeline({
+      onComplete: ()=>{
+         const {top, left} = el.rocket.getBoundingClientRect()
+         el.cloud.style.top = `${top}px`
+         el.cloud.style.left = `${left}px`
+         el.cloud.style.pointerEvents = 'block'
+      }
+   })
    tl.to(el.rocket, 1, { scale: .3, transformOrigin: '50% 100%' })
       .to(el.rocket, 1, { yPercent: 120, ease: 'elastic.out(1, 0.3)' }, '+=2')
       .to(el.rocketFlames, 1, { display: 'none' })
@@ -39,11 +46,15 @@ const tlSpaceNerd = () => {
    return tl
 }
 const tlQuestions = () => {
-   console.log(el.rocket)
-   // const tl = gsap.timeline({})
-
-   // tl.to(el.spaceNerd, 3, { opacity: 0, scale: .1 })
-   // return tl
+   const tl = gsap.timeline({})
+   tl
+      .to(el.cloud, 1, { 
+         opacity: 1, 
+         display: 'block',
+         scale: 1,
+         translateY: '-100%'
+      })
+   return tl
 }
 
 
