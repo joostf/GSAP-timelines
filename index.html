@@ -14,55 +14,6 @@
 </head>
 
 <body>
-   <template id="question-template">
-      <div class="question hidden">
-         <h3></h3>
-         <div class="options-container"></div>
-         <div class="controls">
-            <svg 
-               fill="none" 
-               class="prev disabled"
-               stroke="currentColor" 
-               viewBox="0 0 24 24" 
-               xmlns="http://www.w3.org/2000/svg"
-            >
-               <path 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M15 19l-7-7 7-7"
-               ></path>
-            </svg>
-            <p class="progress"></p>
-            <svg
-               fill="none" 
-               class="next disabled"
-               stroke="currentColor" 
-               viewBox="0 0 24 24"
-               xmlns="http://www.w3.org/2000/svg"
-            >
-               <path 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M9 5l7 7-7 7"
-               ></path>
-            </svg>
-         </div>
-      </div>
-   </template>
-   <div class="cloud">
-      <header>
-         <h1 class="all_categories">Selecteer categorie vragen</h1>
-         <h1 class="category hidden">
-            <button>Terug</button> <span></span>
-         </h1>
-      </header>
-      <div class="content">
-         <div class="categories">
-         </div>
-      </div>
-   </div>
    <main>
       <h1>Minor Web Design <br>& Development <em>/ Intake</em></h1>
       <p>
@@ -363,7 +314,35 @@
       <div id='gradient'></div>
    </div>
 
-
+   <template id="question-template">
+      <div class="question hidden">
+         <h3></h3>
+         <div class="options-container"></div>
+         <div class="controls">
+            <svg fill="none" class="prev disabled" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            <p class="progress"></p>
+            <svg fill="none" class="next disabled" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+         </div>
+      </div>
+   </template>
+   <div class="cloud">
+      <header>
+         <h1 class="all_categories">Selecteer categorie vragen</h1>
+         <h1 class="category hidden">
+            <button>Terug</button> <span></span>
+         </h1>
+      </header>
+      <div class="content">
+         <div class="categories">
+         </div>
+      </div>
+   </div>
 
 </body>
 
