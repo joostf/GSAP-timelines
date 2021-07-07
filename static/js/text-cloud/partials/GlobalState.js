@@ -17,9 +17,9 @@ export class GlobalState {
       this.wrong_answers++
    }
    setVisibleContainer(){
-      const categories = document.querySelector('.categories')
-      const questions = document.querySelectorAll('.question')
-      const header = document.querySelector('header')
+      const categories = document.querySelector('.cloud .categories')
+      const questions = document.querySelectorAll('.cloud .question')
+      const header = document.querySelector('.cloud header')
 
       questions.forEach(question =>{
          if(!question.classList.contains('hidden')){
@@ -47,7 +47,7 @@ export class GlobalState {
       }
    }
    init(){
-      const headerBackBtn = document.querySelector('header h1.category button')
+      const headerBackBtn = document.querySelector('.cloud header h1.category button')
       headerBackBtn.addEventListener('click', ()=>{
          this.category_selected = false
          this.setVisibleContainer()

@@ -6,7 +6,7 @@ export class CategoryContainer{
       this.global_state = global_state
       this.current_question = 0
       this.questions = questions
-      this.main_container = document.body.querySelector('.content')
+      this.main_container = document.body.querySelector('.cloud .content')
       this.category_container = document.createElement('div')
       this.category_container.classList.add('category')
       this.category_container.dataset.category = type

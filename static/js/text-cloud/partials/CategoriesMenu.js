@@ -2,7 +2,7 @@ import { getUniqueTypes } from "./utils/getUniqueTypes.js"
 
 export class CategoriesMenu{
    constructor(data, category_containers, global_state){
-      this.container = document.querySelector('.content .categories')
+      this.container = document.querySelector('.cloud .content .categories')
       this.data = data
       this.createButtons(this.data)
       this.category_containers = category_containers
