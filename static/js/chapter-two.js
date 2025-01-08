@@ -21,7 +21,7 @@ function tlPlanet() {
    const tl = gsap.timeline({})
 
    tl.to(el.planet, 1, { scale: 6, yPercent: 120 })
-   .to(el.ch2Trigger, .5, {opacity:0, yPercent:200})
+      .to(el.ch2Trigger, .5, {opacity:0, yPercent:200})
 
    return tl
 }
@@ -51,7 +51,7 @@ function tlSpaceNerd() {
 function tlSpaceWelder () {
    const tl = gsap.timeline()
 
-   tl.to(el.spaceWelder, 1, { yPercent:30, xPercent: -28, scale: .05, opacity: 1, }, '+=1')
+   tl.to(el.spaceWelder, 1, { yPercent:30, xPercent: 0, scale: .05, opacity: 1, }, '+=1')
       .to(el.sparkes1, .1, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, stagger: .025 }, 2)
       .to(el.sparkes2, .15, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, delay: .5, stagger: .025 }, 2)
       .to(el.ch3Trigger, .5, {opacity:1, yPercent:0})

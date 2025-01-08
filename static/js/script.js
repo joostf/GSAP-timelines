@@ -1,7 +1,7 @@
 import { chapterOne } from './chapter-one.js'
 import { chapterTwo } from './chapter-two.js'
 import { chapterThree } from './chapter-three.js'
-import { el } from './elements.js'
+import { el } from './elements.js' // this is overengineerd 💩
 
 // initialize chapters
 const ch1 = chapterOne()
@@ -10,8 +10,6 @@ const ch3 = chapterThree()
 
 // start chapter 1
 ch1.play()
-
-
 
 el.ch2Trigger.addEventListener("click", startCh2);
 el.ch3Trigger.addEventListener("click", startCh3);

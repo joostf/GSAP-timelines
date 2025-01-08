@@ -6,12 +6,14 @@
 
   bron: https://gsap.com/docs/v3/GSAP/
 
-# DEMO (nested timelines)
+# DEMO (nested) timelines
 
   Disclaimers
+  - GSAP Performance
+  - GSAP cross browser
   - SVG: coordinaten systeem is anders, dus in de demo niet responsive
   - Vanilla JS deepdive 
-  - Performance
+  
 
 # Opdracht: Scene 3 afmaken
   - Fork deze repo: https://github.dev/joostf/GSAP-timelines/
