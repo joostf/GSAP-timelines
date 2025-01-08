@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Minor Web Design & Deveplopment Intake</title>
+   <title>GSAP Timelines</title>
    <link rel="stylesheet" href="static/css/default.css">
    <link rel="stylesheet" href="static/css/background.css">
    <link rel="stylesheet" href="static/css/svg.css">
@@ -15,23 +15,15 @@
 
 <body>
    <main>
-      <h1>Minor Web Design <br>& Development <em>/ Intake</em></h1>
-      <p>
-         Howdy space cadet! Tof dat je geïnteresseerd bent in onze minor.
-         <br>Deze intake bestaat uit een <strong>code challenge</strong> en een <strong>vragenlijst</strong>.
-         <!--Door de challenge aan te gaan kan je ervaren of designen en nerden met web technieken jou ding is. Als je daarvan overtuigd bent, kan je je motivatie in het intake formulier invullen!-->
-      </p>
-
-      <div>
-         <button id="ch2Trigger">Huh hoezo? Vertel me meer!</button>
-         <a id="challenge-trigger" href="#">Doe de challenge!</a>
-      </div>
+      <h1>GSAP <em>Nested timelines</em></h1>
+      <p>GSAP | GreenSock Animation Platform is een krachtige JavaScript library voor het maken van vloeiende en geavanceerde animaties op websites. Het is snel, flexibel en werkt in alle moderne browsers.</p>
+      <p>Dit voorbeeld laat zien hoe je (nested) timelines kan gebruiken om complexe animaties te structureren en te synchroniseren.</p> 
    </main>
 
+   <button id="next">Ga verder <em>👽</em></button>
 
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 400" preserveAspectRatio="xMidYMax slice">
 
-      <svg id="space">
          <g id="planet">
             <path class="planet-2"
                d="M98.26,212.22C84.33,222.36,77,231.71,79.36,238.07s14.07,8.55,31.24,7a75.08,75.08,0,0,1-12.34-32.88Z"
@@ -49,10 +41,7 @@
                d="M224.06,148.23A74.62,74.62,0,0,1,234.91,161c17.16-1.53,28.85.68,31.24,7s-5,15.7-18.91,25.84C232,204.94,208.78,217,181.8,227.14s-52.38,16.28-71.2,18c-17.17,1.52-28.86-.68-31.24-7s5-15.71,18.9-25.85a74.19,74.19,0,0,1-.19-16.71c-41.25,22.17-66.49,45-61.41,58.58s39.14,14.16,84.79,3.72a508.63,508.63,0,0,0,64.49-19.65,510,510,0,0,0,61.5-27.62c41.24-22.17,66.49-45,61.41-58.58S269.71,137.8,224.06,148.23Z"
                transform="translate(0.5 0.5)" />
          </g>
-      </svg>
 
-
-      <svg id="mission">
          <g id="rocket">
             <defs>
                <clipPath id="clip-path">
@@ -303,7 +292,6 @@
 
             </g>
          </g>
-      </svg>
 
    </svg>
 
@@ -312,36 +300,6 @@
       <div id='stars-2'></div>
       <div id='stars-3'></div>
       <div id='gradient'></div>
-   </div>
-
-   <template id="question-template">
-      <div class="question hidden">
-         <h3></h3>
-         <div class="options-container"></div>
-         <div class="controls">
-            <svg fill="none" class="prev disabled" stroke="currentColor" viewBox="0 0 24 24"
-               xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-            <p class="progress"></p>
-            <svg fill="none" class="next disabled" stroke="currentColor" viewBox="0 0 24 24"
-               xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-         </div>
-      </div>
-   </template>
-   <div class="cloud">
-      <header>
-         <h1 class="all_categories">Selecteer categorie vragen</h1>
-         <h1 class="category hidden">
-            <button>Terug</button> <span></span>
-         </h1>
-      </header>
-      <div class="content">
-         <div class="categories">
-         </div>
-      </div>
    </div>
 
 </body>

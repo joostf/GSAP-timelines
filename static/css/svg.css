@@ -16,6 +16,8 @@ body > svg {
 }
 #space-welder {
   opacity:0;
+  scale:.25;
+  transform:translate(118vw, -150px)
 }
 #space-welder #sparkles {
   transform:translate(-250px, -50px)

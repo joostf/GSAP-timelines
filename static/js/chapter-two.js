@@ -4,35 +4,21 @@ const tlChapterTwo = gsap.timeline({ defaults: { duration: 1 } })
 
 // child timelines
 
-// Introduction
-const tlIntro = () => {
-   const tl = gsap.timeline({})
-   //tl.to(el.introText, .5, {opacity:0, y:'-2.5vh'})
-
-   return tl
-}
-
 // Planet 
 const tlPlanet = () => {
    const tl = gsap.timeline({})
 
    tl.to(el.planet, 1, { scale: 6, yPercent: 120 })
+   .to(el.ch2Trigger, .5, {opacity:0, yPercent:200})
 
    return tl
 }
 
 // rocket
 const tlRocket = () => {
-   const tl = gsap.timeline({
-      onComplete: ()=>{
-         const {top, left} = el.rocket.getBoundingClientRect()
-         el.cloud.style.top = `${top}px`
-         el.cloud.style.left = `${left}px`
-         el.cloud.style.pointerEvents = 'block'
-      }
-   })
+   const tl = gsap.timeline({})
    tl.to(el.rocket, 1, { scale: .3, transformOrigin: '50% 100%' })
-      .to(el.rocket, 1, { yPercent: 120, ease: 'elastic.out(1, 0.3)' }, '+=2')
+      .to(el.rocket, 1, { yPercent: 120, ease: 'elastic.out(1, 0.3)' }, '+=0')
       .to(el.rocketFlames, 1, { display: 'none' })
 
    return tl
@@ -42,42 +28,32 @@ const tlRocket = () => {
 const tlSpaceNerd = () => {
    const tl = gsap.timeline({})
 
-   tl.to(el.spaceNerd, 3, { opacity: 0, scale: .1 })
-   return tl
-}
-const tlQuestions = () => {
-   const tl = gsap.timeline({})
-   tl
-      .to(el.cloud, 1, { 
-         opacity: 1, 
-         display: 'block',
-         scale: 1,
-         translateY: '-100%'
-      })
+   tl.to(el.spaceNerd, 1, { opacity: 1, xPercent:20, scale: .1 })
+      .to(el.spaceNerdArm, .05, { rotate: 6, repeat: -1, yoyo: true })
+   
    return tl
 }
 
 
 // space welder
 const tlSpaceWelder = () => {
-   const tl = gsap.timeline({})
+   const tl = gsap.timeline()
 
-   tl.to(el.spaceWelder, 3, { opacity: 0, scale: .1 })
-
+   tl.to(el.spaceWelder, 1, { yPercent:30, scale: .05, opacity: 1, }, '+=1')
+      .to(el.sparkes1, .1, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, stagger: .025 }, 2)
+      .to(el.sparkes2, .15, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, delay: .5, stagger: .025 }, 2)
+      
    return tl
 }
-
 
 // master timeline
 export const chapterTwo = () => {
    tlChapterTwo
       .pause()
-      .add(tlIntro(), 0)
       .add(tlPlanet(), .5)
       .add(tlRocket(), 1)
-      .add(tlSpaceWelder(), 8)
-      .add(tlSpaceNerd(), 8)
-      .add(tlQuestions(), 8)
+      .add(tlSpaceNerd(), 2)
+      .add(tlSpaceWelder(), 2)
    return tlChapterTwo;
 }
 
@@ -87,12 +63,5 @@ function coding() {
    TweenMax.to(el.spaceNerdArm, 2, { rotate: 2, repeat: -1, yoyo: true })
 }
 
-function sparks() {
-   TweenMax.staggerTo(el.sparkles1, .1, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, stagger: .025 })
-   TweenMax.staggerTo(el.sparkles2, .15, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, delay: .5, stagger: .025 })
-}
 
-function flames() {
-   TweenMax.to(el.rocketFlames, .1, { opacity: 0, repeat: -1, yoyo: true })
-}
 

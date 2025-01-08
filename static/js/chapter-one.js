@@ -4,21 +4,34 @@ const tlChapterOne = gsap.timeline({ defaults: {duration: 1 } })
 
 /* child timelines */
 
-// Introduction
+// introduction, todo: move to separate chapter
 const tlIntro = () => {
   const tl = gsap.timeline({})
   
   tl.from(el.introTitle, .5, {opacity:0})
-    .staggerFrom([el.introText, el.introCTA], .25, {opacity:0, y:'-2.5vh', stagger:.25})
+    .staggerFrom([el.introText], .25, {opacity:0, y:'-2.5vh', stagger:.25})
   return tl 
 }
+
+// planet
+const tlPlanet = () => {
+  const tl = gsap.timeline({})
+  
+  tl.set(el.planet, {xPercent:100, x:'120%', scale: 0.15,  transformOrigin:'50% 0'})
+    .to(el.planet, 1,  {opacity:1}, '+=2')
+    .to(el.planet, 3,  {xPercent:10, yPercent:50, scale: 1, ease: 'elastic.out(1, 0.3)'})
+
+  return tl 
+}
+
 // rocket
 const tlRocket = () => {
   const tl = gsap.timeline({})
   
   tl.set(el.rocket, {xPercent:-20, yPercent:80, rotate:-20, transformOrigin:'50% 50%'})
     .to(el.rocket, 1, {opacity:1, onComplete:flames(true)}, '+=3')
-    .to(el.rocket, 6, {xPercent:70, yPercent:45, scale:.1, rotate:-100, ease: 'elastic.out(.5, 0.3)'})
+    .to(el.rocket, 4, {xPercent:70, yPercent:45, scale:.1, rotate:-100, ease: 'elastic.out(.5, 0.3)'})
+    .to(el.ch2Trigger, .5, {opacity:1})
     
   return tl 
 } 
@@ -31,17 +44,6 @@ const tlRocketFlames = () => {
   
   return tl 
 } 
-
-// planet
-const tlPlanet = () => {
-  const tl = gsap.timeline({})
-  
-  tl.set(el.planet, {xPercent:100, x:'120%', scale: 0.15,  transformOrigin:'50% 0'})
-    .to(el.planet, 1,  {opacity:1}, '+=2')
-    .to(el.planet, 3,  {xPercent:10, yPercent:50, scale: 1, ease: 'elastic.out(1, 0.3)'})
-
-  return tl 
-}
 
 /* main timeline */
 export const chapterOne = () => {
