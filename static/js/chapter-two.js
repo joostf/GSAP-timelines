@@ -2,10 +2,22 @@ import { el } from './elements.js'
 
 const tlChapterTwo = gsap.timeline({ defaults: { duration: 1 } })
 
+// master timeline
+export const chapterTwo = () => {
+   tlChapterTwo
+      .pause()
+      .add(tlPlanet(), .5)
+      .add(tlRocket(), 1)
+      .add(tlSpaceNerd(), 2)
+      .add(tlSpaceWelder(), 2)
+   return tlChapterTwo;
+}
+
+// functions
 // child timelines
 
-// Planet 
-const tlPlanet = () => {
+// planet 
+function tlPlanet() {
    const tl = gsap.timeline({})
 
    tl.to(el.planet, 1, { scale: 6, yPercent: 120 })
@@ -15,7 +27,7 @@ const tlPlanet = () => {
 }
 
 // rocket
-const tlRocket = () => {
+function tlRocket() {
    const tl = gsap.timeline({})
    tl.to(el.rocket, 1, { scale: .3, transformOrigin: '50% 100%' })
       .to(el.rocket, 1, { yPercent: 120, ease: 'elastic.out(1, 0.3)' }, '+=0')
@@ -25,7 +37,7 @@ const tlRocket = () => {
 }
 
 // space nerd
-const tlSpaceNerd = () => {
+function tlSpaceNerd() {
    const tl = gsap.timeline({})
 
    tl.to(el.spaceNerd, 1, { opacity: 1, xPercent:20, scale: .1 })
@@ -36,25 +48,15 @@ const tlSpaceNerd = () => {
 
 
 // space welder
-const tlSpaceWelder = () => {
+function tlSpaceWelder () {
    const tl = gsap.timeline()
 
-   tl.to(el.spaceWelder, 1, { yPercent:30, scale: .05, opacity: 1, }, '+=1')
+   tl.to(el.spaceWelder, 1, { yPercent:30, xPercent: -28, scale: .05, opacity: 1, }, '+=1')
       .to(el.sparkes1, .1, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, stagger: .025 }, 2)
       .to(el.sparkes2, .15, { opacity: 1, x: -10, y: -10, repeat: -1, yoyo: false, delay: .5, stagger: .025 }, 2)
+      .to(el.ch3Trigger, .5, {opacity:1, yPercent:0})
       
    return tl
-}
-
-// master timeline
-export const chapterTwo = () => {
-   tlChapterTwo
-      .pause()
-      .add(tlPlanet(), .5)
-      .add(tlRocket(), 1)
-      .add(tlSpaceNerd(), 2)
-      .add(tlSpaceWelder(), 2)
-   return tlChapterTwo;
 }
 
 

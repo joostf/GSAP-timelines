@@ -1,7 +1,11 @@
 import { $, $$ } from './utils.js'
 
 export const el = {
+   main: $('main'),
+   introTitle: $('h1'),
    introText: $$('main  p'),
+   ch2Trigger: $('#to-chapter2'),
+   ch3Trigger: $('#to-chapter3'),
    spaceNerd: $('#space-nerd'),
    spaceNerdArm: $('#space-nerd-arm'),
    spaceWelder: $('#space-welder'),
@@ -10,7 +14,5 @@ export const el = {
    rocket: $('#rocket'),
    rocketFlames: $('#rocket-flames'),
    planet: $('#planet'),
-   main: $('main'),
-   introTitle: $('h1'),
-   ch2Trigger: $('#next')
+   alien:$('#alien')
 }

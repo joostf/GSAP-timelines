@@ -320,3 +320,11 @@ body > svg {
 .spark-2 {
   fill: #fbba39;
 }
+
+
+#alien {
+  rotate: 180deg;
+  scale: .25;
+  transform-origin:50% 50%;
+  opacity:0;
+}

@@ -1,0 +1,14 @@
+# intro (10 min)
+# GSAP spelen met codepen (15 min) https://codepen.io/joostf/pen/QjWRXM?editors=0010
+# DEMO https://github.dev/joostf/GSAP-timelines/
+  - SVG: workshop op zich (coordinaten systeem is anders, dus niet responsive)
+  - Vanilla JS deepdive 
+  - Performance
+# Opdracht: Voeg hoofdstuk 3 toe, iets met aliens??
+
+
+
+
+
+
+

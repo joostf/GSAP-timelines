@@ -42,7 +42,7 @@ button {
 	bottom:1em;
 	right:1em;
 	border-radius:1rem;
-	background: rgba(78, 84, 200, 0.8);
+	background: #ede902d3;
 	padding:.5rem 1rem;
 	font-size: 1em;
 	font-family: inherit;
@@ -60,11 +60,12 @@ button {
 	align-items:center;
 	gap:.5rem;
 	opacity:0;
+	translate: 0 -200%;
 }
 
 button:hover,
 button:focus {
-	background: rgba(78, 84, 200, 1);
+	background: #b5b200d3;
 	transform: scale(1.05);
 	outline: none;
 }
