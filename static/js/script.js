@@ -22,5 +22,5 @@ function startCh3() {
    ch3.play()
 }
 
-// when chapter 1 completes, start chapter 2
-//ch1.then(startCh2)
+// when chapter 1 completes, start chapter 2 
+// ch1.then(startCh2)

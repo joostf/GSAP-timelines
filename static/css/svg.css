@@ -324,7 +324,7 @@ body > svg {
 
 #alien {
   rotate: 180deg;
-  scale: .25;
   transform-origin:50% 50%;
+  scale: .01;
   opacity:0;
 }
