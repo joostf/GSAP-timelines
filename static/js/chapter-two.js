@@ -42,7 +42,7 @@ function tlRocket() {
 function tlSpaceNerd() {
    const tl = gsap.timeline({})
 
-   tl.to(el.spaceNerd, 1, { opacity: 1, xPercent:20, scale: .1 })
+   tl.to(el.spaceNerd, 1, { opacity: 1, xPercent:20, yPercent: -20, scale: .1 })
       .to(el.spaceNerdArm, .05, { rotate: 6, repeat: -1, yoyo: true })
    
    return tl

@@ -15,12 +15,16 @@ body {
 	overflow: hidden;
 	margin: 0;
 }
-
 main {
-	padding: 2.5rem 5rem;
-	max-width: 40rem;
+	padding: 1em;
+	max-width: 40em;
 	position: absolute;
 	z-index: 1000;
+}
+@media (min-width:40em) {
+	main {
+		padding: 2.5rem 5rem;
+	}
 }
 h1 {
 	line-height: 1.25;
