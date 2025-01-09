@@ -5,8 +5,9 @@ const tlChapterThree = gsap.timeline({ defaults: {duration: 1 } })
 /* main timeline */
 export const chapterThree = () => {
   tlChapterThree
-          .pause()
-          .add(tlAlien(), .25)
+    .pause()
+    .add(tlAlien(), .25)
+    //.timeScale(5)
 
   return tlChapterThree;
 }

@@ -2,34 +2,14 @@
 body > svg {
   width:100%;
   height:100%;
-
 }
 
-#rocket {
-  opacity:0;
-  transform:scale(0.1)
-}
+/* planet */
 #planet {
   background-color: rgba(0,0,0,.1);
   transform:scale(0.1);
   opacity:0;
 }
-#space-welder {
-  opacity:0;
-  scale:.25;
-  transform:translate(118vw, -150px)
-}
-#space-welder #sparkles {
-  transform:translate(-250px, -50px)
-}
-#space-welder #sparkles > * {
-  opacity:0
-}
-
-#space-nerd {
-  opacity:0;
-}
-/* planet */
 .planet-1 {
   fill: #10161c;
   stroke: #242576;
@@ -51,10 +31,44 @@ body > svg {
   stroke: #d1ce02d3;
 }
 
-/* space nerd */
-#spaceNerd g {
-  isolation: isolate;
+/* rocket */
+#rocket {
+  opacity:0;
+  transform:scale(0.1)
 }
+.rock-1 {
+  fill: none;
+}
+.rock-2 {
+  fill: #fbba39;
+}
+.rock-3 {
+  fill: #d7569a;
+}
+.rock-4 {
+  fill: #5e509d;
+}
+.rock-5 {
+  fill: #d73a8b;
+}
+.rock-6 {
+  fill: #fcc742;
+}
+.rock-7 {
+  fill: #319dd1;
+}
+.rock-8 {
+  clip-path: url(#clip-path);
+}
+.rock-9 {
+  fill: #7ab8db;
+}
+
+/* space nerd */
+#space-nerd {
+  opacity:0;
+}
+
 .nerd-2 {
   fill: #3b3c8f;
 }
@@ -101,36 +115,18 @@ body > svg {
   fill: #7ab8db;
 }
 
-/* rock */
-.rock-1 {
-  fill: none;
-}
-.rock-2 {
-  fill: #fbba39;
-}
-.rock-3 {
-  fill: #d7569a;
-}
-.rock-4 {
-  fill: #5e509d;
-}
-.rock-5 {
-  fill: #d73a8b;
-}
-.rock-6 {
-  fill: #fcc742;
-}
-.rock-7 {
-  fill: #319dd1;
-}
-.rock-8 {
-  clip-path: url(#clip-path);
-}
-.rock-9 {
-  fill: #7ab8db;
-}
-
 /* space welder */
+#space-welder {
+  opacity:0;
+  scale:.25;
+  
+}
+#space-welder #sparkles {
+  transform:translate(-250px, -50px)
+}
+#space-welder #sparkles > * {
+  opacity:0
+}
 .welder-1 {
   fill: #372771;
 }
