@@ -21,7 +21,7 @@ function tlAlien() {
     .to(el.alien, .5, {opacity:1})
     .to(el.alien, 1, {scale:.1, y:'-=15', x:'-=10', rotate:'-=15', onComplete:stackAlien},'+=.5')
     .to(el.alien, 1, {x:'+=10', y:'+=15', scale:'+=.05', rotate:'+=7.5'},'+=.5')
-    .to(el.planet, 5, {rotate:360, repeat: -1, transformOrigin:"50% 50%"})
+    .to(el.planet, 5, {rotate:360, repeat: 3, transformOrigin:"50% 50%"})
     
   return tl 
 }
