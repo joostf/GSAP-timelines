@@ -30,7 +30,9 @@ body > svg {
   fill: #d1ce02d3;
   stroke: #d1ce02d3;
 }
-
+.rings {
+  isolation: isolate;
+}
 /* rocket */
 #rocket {
   opacity:0;
@@ -323,4 +325,8 @@ body > svg {
   transform-origin:50% 50%;
   scale: .01;
   opacity:0;
+}
+
+#emojis text {
+  opacity: 0;
 }

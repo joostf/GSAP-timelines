@@ -1,9 +1,9 @@
-import { el } from './elements.js'
+import { els } from './elements.js'
 
 const tlChapterOne = gsap.timeline({ defaults: {duration: 1 } })
 
 /* main timeline */
-export const chapterOne = () => {
+export function chapterOne() {
   tlChapterOne
     .pause()
     .add(tlIntro(), .25)
@@ -14,13 +14,13 @@ export const chapterOne = () => {
   return tlChapterOne;
 }
 
-/* functions */
 /* child timelines */
+// intro
 function tlIntro() {
   const tl = gsap.timeline({})
   
-  tl.from(el.introTitle, .5, {opacity:0})
-    .staggerFrom([el.introTexts], .25, {opacity:0, y:'-2.5vh', stagger:.25})
+  tl.from(els.introTitle, .5, {opacity:0})
+    .staggerFrom(els.introTexts, .25, {opacity:0, y:'-2.5vh', stagger:.25})
   return tl 
 }
 
@@ -28,9 +28,9 @@ function tlIntro() {
 function tlPlanet() {
   const tl = gsap.timeline({})
   
-  tl.set(el.planet, {xPercent:100, x:'120%', scale: 0.15,  transformOrigin:'50% 0'})
-    .to(el.planet, 1,  {opacity:1}, '+=.25')
-    .to(el.planet, 3,  {xPercent:10, yPercent:50, scale: 1, ease: 'elastic.out(1, 0.3)'})
+  tl.set(els.planet, {xPercent:100, x:'120%', scale: 0.15,  transformOrigin:'50% 0'})
+    .to(els.planet, 1,  {opacity:1}, '+=.25')
+    .to(els.planet, 3,  {xPercent:10, yPercent:50, scale: 1, ease: 'elastic.out(1, 0.3)'})
 
   return tl 
 }
@@ -39,10 +39,10 @@ function tlPlanet() {
 function tlRocket() {
   const tl = gsap.timeline({})
   
-  tl.set(el.rocket, {xPercent:-20, yPercent:80, rotate:-20, transformOrigin:'50% 50%'})
-    .to(el.rocket, 1, {opacity:1, onComplete:flames(true)}, '+=1.5')
-    .to(el.rocket, 2, {xPercent:70, yPercent:45, scale:.1, rotate:-100, ease: 'elastic.out(.5, 0.3)'})
-    .to(el.ch2Trigger, .25, {opacity:1, yPercent:0})
+  tl.set(els.rocket, {xPercent:-20, yPercent:80, rotate:-20, transformOrigin:'50% 50%'})
+    .to(els.rocket, 1, {opacity:1, onComplete:flames(true)}, '+=1.5')
+    .to(els.rocket, 2, {xPercent:70, yPercent:45, scale:.1, rotate:-100, ease: 'elastic.out(.5, 0.3)'})
+    .to(els.ch2Trigger, .25, {opacity:1, yPercent:0})
     
   return tl 
 } 
@@ -51,7 +51,7 @@ function tlRocket() {
 function tlRocketFlames() {
   const tl = gsap.timeline({repeat: -1, yoyo:true})
 
-  tl.to(el.rocketFlames, .1, { opacity:0})
+  tl.to(els.rocketFlames, .1, { opacity:0})
   
   return tl 
 } 

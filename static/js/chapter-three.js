@@ -1,33 +1,42 @@
-import { el } from './elements.js'
+import { els } from './elements.js'
 
-const tlChapterThree = gsap.timeline({ defaults: {duration: 1 } })
+const tlChapterThree = gsap.timeline({ defaults: {duration: 1 }, paused: true })
 
 /* main timeline */
-export const chapterThree = () => {
+export function chapterThree() {
   tlChapterThree
     .pause()
     .add(tlAlien(), .25)
-    //.timeScale(5)
 
   return tlChapterThree;
 }
 
-/* functions */
 /* child timelines */
+
+// Alien
 function tlAlien() {
   const tl = gsap.timeline({})
+
+  const emojis = els.gun.querySelectorAll('#emojis text');
   
-  tl.set(el.alien, {opacity:1, xPercent:150, yPercent:65, transformOrigin:'50% 0'})
-    .to(el.ch3Trigger, .5, {opacity:0, yPercent:200})
-    .to(el.alien, .5, {opacity:1})
-    .to(el.alien, 1, {scale:.1, y:'-=15', x:'-=10', rotate:'-=15', onComplete:stackAlien},'+=.5')
-    .to(el.alien, 1, {x:'+=10', y:'+=15', scale:'+=.05', rotate:'+=7.5'},'+=.5')
-    .to(el.planet, 5, {rotate:360, repeat: 3, transformOrigin:"50% 50%"})
+  tl.set(els.alien, {opacity:1, xPercent:150, yPercent:65, transformOrigin:'50% 0'})
+    .to(els.ch3Trigger, .5, {opacity:0, yPercent:200})
+    .to(els.alien, .5, {opacity:1})
+    .to(els.alien, 1, {scale:.1, y:'-=12.5', x:'-=10', rotate:'-=15', onComplete:stackToTop(els.alien, els.topOfStack)},'+=.5')
+    .to(els.spaceNerd, 1, {x:'-110', y:'+=70',},'-=.5')
+    .to(els.alien, 1, {x:'-=10', y:'+=25', scale:'+=0.25', rotate:'+=7.5'},'+=.1')
+    .to(els.gun, 1, {rotate:'+=65', transformOrigin:'0 100%'},'+=.5')
+    .set(els.gun.querySelectorAll('text'), {x: 0, y: '+=20', scale: 2, transformOrigin: '0% 50%', transformBox:'fill-box'})
+    .to(els.gun.querySelectorAll('text'), {duration: 2, x: '+=60', y:'-=360', rotate:110, opacity: 1, stagger: 0.5, ease: 'power3.out'}, '<')
+    .to(els.gun.querySelectorAll('text'), {duration: .5, opacity: 0, stagger: -0.1, ease: 'power3.out', transformOrigin:'100% 100%'})
     
   return tl 
 }
 
-function stackAlien() {
-  el.alien.parentNode.appendChild(el.alien)
+function stackToTop(element, parent) {
+  return function() {
+    if (parent) parent.appendChild(element)
+
+    element.parentNode.appendChild(element)
+  }
 }
-//el.alien.parentNode.appendChild(el.alien);

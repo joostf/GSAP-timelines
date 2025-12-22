@@ -1,6 +1,6 @@
 import { $, $$ } from './utils.js'
 
-export const el = {
+export const els = {
    main: $('main'),
    introTitle: $('h1'),
    introTexts: $$('main  p'),
@@ -14,5 +14,8 @@ export const el = {
    rocket: $('#rocket'),
    rocketFlames: $('#rocket-flames'),
    planet: $('#planet'),
-   alien:$('#alien')
+   alien:$('#alien'),
+   gun:$('#gun'),
+   rings:$('.rings'),
+   topOfStack:$('.top-of-stack')
 }
