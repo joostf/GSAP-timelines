@@ -1,11 +1,11 @@
 import { $, $$ } from './utils.js'
 
-export const els = {
+export const DOM = {
    main: $('main'),
    introTitle: $('h1'),
    introTexts: $$('main  p'),
-   ch2Trigger: $('#to-chapter2'),
-   ch3Trigger: $('#to-chapter3'),
+   scene2Trigger: $('#to-scene2'),
+   scene3Trigger: $('#to-scene3'),
    spaceNerd: $('#space-nerd'),
    spaceNerdArm: $('#space-nerd-arm'),
    spaceWelder: $('#space-welder'),

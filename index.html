@@ -20,12 +20,11 @@
       <p>Dit voorbeeld laat zien hoe je (nested) timelines kan gebruiken om complexe animaties te structureren en te synchroniseren.</p> 
    </main>
 
-   <button id="to-chapter2">Repareer de raket <em>🛠️</em></button>
-   <button id="to-chapter3">Oh nee! Een <em>👽</em></button>
+   <button id="to-scene2">Repareer de raket <em>🛠️</em></button>
+   <button id="to-scene3">Oh nee! Een <em>👽</em></button>
    
 
    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 400" preserveAspectRatio="xMidYMax slice">
-
       <g id="alien">
          <g id="g60" transform="translate(305.9219,211.2539)">
             <path
@@ -113,10 +112,8 @@
                <text>🌈</text>
                <text>🍿</text>
                <text>👾</text>
-               <text>🚀</text>
                <text>🛸</text>
                <text>👽</text>
-
             </g>
          </g>
       </g>
@@ -389,8 +386,6 @@
          </g>
       </g>  
 
-
-
       <g class="top-of-stack">
          <text id="alien-emoji">👽</text>
       </g>
@@ -410,9 +405,9 @@
 
       /* timeline example */
 
-      gsap.timeline({ defaults: { duration: 1 } })
-         .to(document.body, .5, { rotation: 10, x: 100, scale:.5}, '+=.8')
-         .to(document.body, .5, { rotation: 0, x: 0, scale:1, skewX:0, ease: 'elastic.out(1, 0.3)' }, '+=0.25')
+      // gsap.timeline({ defaults: { duration: 1 } })
+      //    .to(document.body, .5, { rotation: 10, x: 100, scale:.5}, '+=.8')
+      //    .to(document.body, .5, { rotation: 0, x: 0, scale:1, skewX:0, ease: 'elastic.out(1, 0.3)' }, '+=0.25')
    </script>
 
 </body>

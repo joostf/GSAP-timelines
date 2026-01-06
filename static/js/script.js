@@ -1,20 +1,20 @@
-import { chapterOne } from './chapter-one.js'
-import { chapterTwo } from './chapter-two.js'
-import { chapterThree } from './chapter-three.js'
-import { els } from './elements.js'
+import { sceneOne } from './scene-one.js'
+import { sceneTwo } from './scene-two.js'
+import { sceneThree } from './scene-three.js'
+import { DOM } from './elements.js'
 
-// initialize chapters
-const ch1 = chapterOne()
-const ch2 = chapterTwo()
-const ch3 = chapterThree()
+// initialize scenes
+const scene1 = sceneOne()
+const scene2 = sceneTwo()
+const scene3 = sceneThree()
 
-// start chapter 1
-ch1.play()
+// start scene 1
+scene1.play()
 
 // add event listeners
-els.ch2Trigger.addEventListener("click", () =>{ ch2.restart() }) //.timeScale(5)
-els.ch3Trigger.addEventListener("click", () => { ch3.restart() }) //.timeScale(5)
+DOM.scene2Trigger.addEventListener("click", () =>{ scene2.restart() }) //.timeScale(5)
+DOM.scene3Trigger.addEventListener("click", () => { scene3.restart() }) //.timeScale(5)
 
-// automatically start chapter 2
-ch1.then(() => { ch2.play() })
+// automatically start scene 2
+// scene1.then(() => { scene2.play() })
 
