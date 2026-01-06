@@ -17,5 +17,5 @@ export const els = {
    alien:$('#alien'),
    gun:$('#gun'),
    rings:$('.rings'),
-   topOfStack:$('.top-of-stack')
+   topOfStack:$('.top-of-stack'),
 }

@@ -3,6 +3,19 @@
 * {
 	box-sizing: border-box;
 }
+
+/* https://gradient.style/ */
+:root {
+  --hdr-gradient: radial-gradient(
+    farthest-corner ellipse in oklch,
+    oklch(3% 0.50 222) 0%,
+    oklch(6% 0.50 294) 100%
+  );
+  --sdr-gradient: radial-gradient(farthest-corner ellipse, #01013c 0%, #4400af 100%);
+
+  background: var(--hdr-gradient);
+}
+
 body {
 	height: 100vh;
 	width: 100vw;
@@ -77,5 +90,4 @@ button:focus {
 button em {
 	font-style: normal;
 	font-size: 1.5rem;
-
 }

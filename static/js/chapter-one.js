@@ -1,16 +1,14 @@
 import { els } from './elements.js'
 
-const tlChapterOne = gsap.timeline({ defaults: {duration: 1 } })
+const tlChapterOne = gsap.timeline({ defaults: {duration: 1 }, paused:true })
 
 /* main timeline */
 export function chapterOne() {
   tlChapterOne
-    .pause()
     .add(tlIntro(), .25)
     .add(tlPlanet(), .25)
     .add(tlRocket(), .5)
-    //.timeScale(5)
-
+    
   return tlChapterOne;
 }
 
@@ -57,7 +55,6 @@ function tlRocketFlames() {
 } 
 
 // Wrapping infinite tweens in callbacks preventing them blocking the master timeline
-// This is not working???
 function flames(burning) {
   return function() {
     tlRocketFlames().paused(!burning);
