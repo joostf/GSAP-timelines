@@ -18,4 +18,5 @@ export const els = {
    gun:$('#gun'),
    rings:$('.rings'),
    topOfStack:$('.top-of-stack'),
+   alienEmoji:$('#alien-emoji'),
 }

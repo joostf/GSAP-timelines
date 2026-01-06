@@ -102,12 +102,21 @@
                   style="fill:#636466;fill-opacity:1;fill-rule:nonzero;stroke:none" />
             </g>
             
+            
             <g id="emojis" transform="translate(322 102)">
                <text>❤️</text>
                <text>🦄</text>
                <text>✨</text>
                <text>💎</text>
-               <text>🤩</text>
+               <text>⛄️</text>
+               <text>🥂</text>
+               <text>🌈</text>
+               <text>🍿</text>
+               <text>👾</text>
+               <text>🚀</text>
+               <text>🛸</text>
+               <text>👽</text>
+
             </g>
          </g>
       </g>
@@ -177,7 +186,6 @@
       </g>
 
       <g id="space-nerd">
-
          <path class="nerd-4"
             d="M145.37,328.74s96.28,8,125.28.25,43,239.92,43,239.92-71.82,18.77-112.07,18.87C201.54,587.78,138.62,524.29,145.37,328.74Z" />
          <path class="nerd-5"
@@ -381,7 +389,11 @@
          </g>
       </g>  
 
-      <g class="top-of-stack"></g>
+
+
+      <g class="top-of-stack">
+         <text id="alien-emoji">👽</text>
+      </g>
    </svg>
 
    <div id="background">
@@ -394,13 +406,13 @@
    <script>
       /* tween example */
 
-      //gsap.to(document.body, { rotation: 5, x: 100, duration: 1 })
+      // gsap.to(document.body, { rotation: 5, x: 100, duration: 1 , delay:1})
 
       /* timeline example */
 
-      // gsap.timeline({ defaults: { duration: 1 } })
-      //    .to(document.body, .5, { rotation: 5, x: 100, scale:.75})
-      //    .to(document.body, .5, { rotation: 0, x: 0, scale:1, ease: 'elastic.out(1, 0.3)' }, '+=0.25')
+      gsap.timeline({ defaults: { duration: 1 } })
+         .to(document.body, .5, { rotation: 10, x: 100, scale:.5}, '+=.8')
+         .to(document.body, .5, { rotation: 0, x: 0, scale:1, skewX:0, ease: 'elastic.out(1, 0.3)' }, '+=0.25')
    </script>
 
 </body>

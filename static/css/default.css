@@ -5,7 +5,7 @@
 }
 
 /* https://gradient.style/ */
-:root {
+html {
   --hdr-gradient: radial-gradient(
     farthest-corner ellipse in oklch,
     oklch(3% 0.50 222) 0%,
@@ -14,6 +14,10 @@
   --sdr-gradient: radial-gradient(farthest-corner ellipse, #01013c 0%, #4400af 100%);
 
   background: var(--hdr-gradient);
+}
+
+html {
+	height:100vh;
 }
 
 body {

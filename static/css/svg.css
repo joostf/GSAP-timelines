@@ -330,3 +330,8 @@ body > svg {
 #emojis text {
   opacity: 0;
 }
+
+#alien-emoji {
+  opacity:0;
+  scale:.75
+}
