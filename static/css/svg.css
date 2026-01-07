@@ -335,3 +335,14 @@ body > svg {
   opacity:0;
   scale:.75
 }
+
+#new-alien {
+  scale: 0.4;
+  position:relative;
+  z-index:100000;
+
+  #gun {
+    rotate:-90deg;
+    transform-origin:50% 50%;
+  }
+}

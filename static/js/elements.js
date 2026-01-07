@@ -6,6 +6,7 @@ export const DOM = {
    introTexts: $$('main  p'),
    scene2Trigger: $('#to-scene2'),
    scene3Trigger: $('#to-scene3'),
+   scene4Trigger: $('#to-scene4'),
    spaceNerd: $('#space-nerd'),
    spaceNerdArm: $('#space-nerd-arm'),
    spaceWelder: $('#space-welder'),
