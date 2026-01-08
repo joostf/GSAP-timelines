@@ -29,8 +29,6 @@ function tlSpaceNerd() {
    return gsap.timeline({})
       .to(DOM.spaceNerd, 1, { opacity: 1, xPercent:20, yPercent: -20, scale: .1 })
       .to(DOM.spaceNerdArm, .05, { rotate: 6, repeat: -1, yoyo: true })
-   
-   return tl
 }
 
 function tlSpaceWelder () {

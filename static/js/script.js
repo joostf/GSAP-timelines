@@ -19,5 +19,5 @@ DOM.scene3Trigger.addEventListener('click', () => { scene3.restart() })
 DOM.scene4Trigger.addEventListener('click', () => { scene4.restart() })
 
 // automatically start scene 2
-// scene1.then(() => { scene2.play() })
+scene1.then(() => { scene2.play() })
 
